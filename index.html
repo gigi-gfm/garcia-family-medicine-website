@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,6 +157,188 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Veteran Banner Custom Styles -->
+    <style>
+        /* HUGE VETERAN BANNER STYLES */
+        .veteran-hero-banner {
+            background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .veteran-hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="star-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M50 15l4.5 13.8h14.5l-11.7 8.5 4.5 13.8L50 42.6l-11.8 8.5 4.5-13.8L31 28.8h14.5z" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23star-pattern)"/></svg>') repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .veteran-banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .veteran-badge {
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .veteran-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .veteran-subtitle {
+            font-size: 1.8rem;
+            color: #FFD700;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .veteran-event-box {
+            background: rgba(140, 82, 55, 0.95);
+            border: 4px solid #FFD700;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .event-title {
+            font-size: 2.2rem;
+            color: #ffffff;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .event-date {
+            font-size: 1.8rem;
+            color: #FFD700;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .event-details {
+            font-size: 1.3rem;
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .veteran-cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .veteran-cta-primary,
+        .veteran-cta-secondary {
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .veteran-cta-primary {
+            background: #FFD700;
+            color: #1a365d;
+            border: 3px solid #FFD700;
+        }
+
+        .veteran-cta-primary:hover {
+            background: #FFC700;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        .veteran-cta-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 3px solid #ffffff;
+        }
+
+        .veteran-cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design for Veteran Banner */
+        @media (max-width: 768px) {
+            .veteran-hero-banner {
+                padding: 3rem 1.5rem;
+            }
+
+            .veteran-title {
+                font-size: 2.2rem;
+                letter-spacing: 1px;
+            }
+
+            .veteran-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .veteran-event-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .event-title {
+                font-size: 1.6rem;
+            }
+
+            .event-date {
+                font-size: 1.3rem;
+            }
+
+            .event-details {
+                font-size: 1.1rem;
+            }
+
+            .veteran-cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .veteran-cta-primary,
+            .veteran-cta-secondary {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+
 </head>
 <body>
     <!-- Header / Hero -->
@@ -169,9 +352,7 @@
             </div>
             <h1>Treating the Whole Patient:<br>Spirit, Body, and Soul</h1>
             <p class="hero-subtitle">Compassionate, comprehensive healthcare serving Blue Springs, Jackson County, and the Kansas City Metro</p>
-            <div style="background-color: rgba(44, 82, 130, 0.9); padding: 1rem 2rem; margin: 2rem auto; border-radius: 8px; max-width: 600px;">
-                <p style="font-size: 1.5rem; margin: 0; font-weight: 700; color: #fff; text-align: center; letter-spacing: 1px;">PROUDLY SERVING OUR VETERANS</p>
-            </div>
+            <p class="hero-veteran-message" style="font-size: 1.1rem; margin-top: 1rem; font-weight: 600; color: #fff;">Proudly Serving Our Veterans</p>
             <div class="hero-cta">
                 <a href="tel:816-427-5320" class="cta-button primary">Call (816) 427-5320</a>
                 <a href="#services" class="cta-button secondary">Our Services</a>
@@ -214,6 +395,30 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- HUGE VETERAN APPRECIATION BANNER -->
+    <section class="veteran-hero-banner">
+        <div class="container">
+            <div class="veteran-banner-content">
+                <div class="veteran-badge">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FFD700" stroke="#8c5237" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h1 class="veteran-title">PROUDLY SERVING OUR VETERANS</h1>
+                <p class="veteran-subtitle">Special CoreLift Pricing Available for Veterans</p>
+                <div class="veteran-event-box">
+                    <h2 class="event-title">Fall Into Confidence + Veterans Appreciation Event</h2>
+                    <p class="event-date">November 6th, 2025 | 3:00 PM - 7:00 PM</p>
+                    <p class="event-details">Join us for demonstrations, consultations, and exclusive veteran pricing on CoreLift treatments</p>
+                </div>
+                <div class="veteran-cta-buttons">
+                    <a href="tel:816-427-5320" class="veteran-cta-primary">RSVP Now: (816) 427-5320</a>
+                    <a href="#corelift-section" class="veteran-cta-secondary">Learn About CoreLift</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
