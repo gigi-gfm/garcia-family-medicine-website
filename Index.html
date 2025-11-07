@@ -122,11 +122,18 @@
         .hero-section {
             position: relative;
             overflow: hidden;
-            background: #1e3a8a;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 25%, #60a5fa 50%, #f97316 75%, #ea580c 100%);
+            background-size: 400% 400%;
+            animation: gradientWave 15s ease infinite;
             padding: 6rem 2rem;
             min-height: 600px;
             display: flex;
             align-items: center;
+        }
+
+        @keyframes gradientWave {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
         .carousel-container {
@@ -145,26 +152,6 @@
             min-width: 100%;
             text-align: center;
             color: white;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-
-        .carousel-slide::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(59, 130, 246, 0.8) 25%, rgba(96, 165, 250, 0.75) 50%, rgba(249, 115, 22, 0.8) 75%, rgba(234, 88, 12, 0.85) 100%);
-            z-index: 1;
-        }
-
-        .carousel-slide > * {
-            position: relative;
-            z-index: 2;
         }
 
         .carousel-slide h1 {
@@ -637,7 +624,7 @@
     <section class="hero-section">
         <div class="carousel-container">
             <div class="carousel-slides" id="carouselSlides">
-                <div class="carousel-slide" style="background-image: url('family_business4_png.jpg');">
+                <div class="carousel-slide">
                     <div class="practice-name">Garcia Family Medicine</div>
                     <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
                     <h1><span class="highlight">Direct Primary Care</span> That Works For You</h1>
@@ -648,7 +635,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-slide" style="background-image: url('CoreLift_Confidence_with_Emsella.png');">
+                <div class="carousel-slide">
                     <div class="practice-name">Garcia Family Medicine</div>
                     <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
                     <h1>Revolutionary <span class="highlight">CoreLift</span> Pelvic Health</h1>
@@ -659,7 +646,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-slide" style="background-image: url('anxiety1_png.jpg');">
+                <div class="carousel-slide">
                     <div class="practice-name">Garcia Family Medicine</div>
                     <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
                     <h1>Faith-Based <span class="highlight">Mental Health</span> Care</h1>
@@ -670,7 +657,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-slide" style="background-image: url('wm14_png.jpg');">
+                <div class="carousel-slide">
                     <div class="practice-name">Garcia Family Medicine</div>
                     <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
                     <h1><span class="highlight">Medical Weight Management</span> Program</h1>
@@ -681,7 +668,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-slide" style="background-image: url('injury_work_accident6_png.jpg');">
+                <div class="carousel-slide">
                     <div class="practice-name">Garcia Family Medicine</div>
                     <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
                     <h1>Expert <span class="highlight">Independent Medical Evaluations</span></h1>
@@ -727,7 +714,7 @@
                 </div>
 
                 <div class="service-card">
-                    <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift Treatment">
+                    <img src="CoreLift_Confidence_with_Emsella.jpg" alt="CoreLift Treatment">
                     <div class="service-content">
                         <h3>CoreLift Pelvic Health</h3>
                         <p><strong>Revolutionary Non-Invasive Treatment</strong></p>
