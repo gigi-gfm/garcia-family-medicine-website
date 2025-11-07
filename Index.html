@@ -8,866 +8,584 @@
     <meta name="description" content="Garcia Family Medicine - Treating the whole patient: Spirit, Body, and Soul. Compassionate healthcare with Dr. Tess Garcia serving Blue Springs, Jackson County, and the Kansas City Metro.">
     
     <!-- SEO Meta Tags -->
-    <meta name="keywords" content="family medicine Blue Springs, primary care Blue Springs, Dr. Tess Garcia, CoreLift Emsella Blue Springs, Direct Primary Care Missouri, KC Metro healthcare">
+    <meta name="keywords" content="family medicine, Blue Springs, Jackson County, Kansas City, Dr. Tess Garcia, primary care, CoreLift, hormone therapy, aesthetics, women's health, preventive care, Missouri healthcare">
+    <meta name="author" content="Garcia Family Medicine">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#2c5282">
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.garciafamilymedicine.care/">
     
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.garciafamilymedicine.care/">
     <meta property="og:title" content="Garcia Family Medicine - Blue Springs, Jackson County & KC Metro">
-    <meta property="og:description" content="Treating the whole patient: Spirit, Body, and Soul">
-    <meta property="og:image" content="https://www.garciafamilymedicine.care/Logo_New_GFM.webp">
+    <meta property="og:description" content="Treating the whole patient: Spirit, Body, and Soul. Compassionate healthcare with Dr. Tess Garcia serving Blue Springs, Jackson County, and the Kansas City Metro area.">
+    <meta property="og:image" content="https://www.garciafamilymedicine.care/images/logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Garcia Family Medicine">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.garciafamilymedicine.care/">
+    <meta name="twitter:title" content="Garcia Family Medicine - Blue Springs, Jackson County & KC Metro">
+    <meta name="twitter:description" content="Treating the whole patient: Spirit, Body, and Soul. Compassionate healthcare serving Blue Springs, Jackson County, and Kansas City Metro.">
+    <meta name="twitter:image" content="https://www.garciafamilymedicine.care/images/logo.png">
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            overflow-x: hidden;
-            line-height: 1.7;
-            color: #2d3748;
-            font-size: 18px;
-        }
-
-        /* FLOATING LOGO */
-        .floating-logo {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            background: white;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-            max-width: 180px;
-        }
-
-        .floating-logo:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .floating-logo img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* HEADER NAVIGATION */
-        header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            padding: 1.5rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s;
-            font-size: 1.05rem;
-        }
-
-        .nav-links a:hover {
-            color: #f97316;
-        }
-
-        .nav-cta {
-            background: #f97316;
-            color: white;
-            padding: 0.85rem 1.75rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s;
-        }
-
-        .nav-cta:hover {
-            background: #ea580c;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
-        }
-
-        /* HERO CAROUSEL SECTION */
-        .hero-section {
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 25%, #60a5fa 50%, #f97316 75%, #ea580c 100%);
-            background-size: 400% 400%;
-            animation: gradientWave 15s ease infinite;
-            padding: 6rem 2rem;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-        }
-
-        @keyframes gradientWave {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .carousel-slides {
-            display: flex;
-            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            text-align: center;
-            color: white;
-        }
-
-        .carousel-slide h1 {
-            font-family: 'Merriweather', Georgia, serif;
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            line-height: 1.3;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .carousel-slide .highlight {
-            color: #fed7aa;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .carousel-slide p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-
-        .practice-name {
-            font-family: 'Merriweather', Georgia, serif;
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-        }
-
-        .practice-tagline {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-            font-weight: 600;
-        }
-
-        .carousel-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .hero-button {
-            padding: 1.1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            text-transform: uppercase;
-        }
-
-        .hero-button-primary {
-            background: white;
-            color: #1e40af;
-        }
-
-        .hero-button-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-        }
-
-        .hero-button-secondary {
-            background: #f97316;
-            color: white;
-        }
-
-        .hero-button-secondary:hover {
-            background: #ea580c;
-            transform: translateY(-3px);
-        }
-
-        /* CAROUSEL DOTS */
-        .carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2.5rem;
-        }
-
-        .dot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .dot:hover {
-            background: rgba(255, 255, 255, 0.8);
-        }
-
-        .dot.active {
-            background: white;
-            width: 35px;
-            border-radius: 7px;
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        section h2 {
-            font-family: 'Merriweather', Georgia, serif;
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #1e40af;
-            margin-bottom: 1.25rem;
-            text-align: center;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.35rem;
-            color: #4b5563;
-            margin-bottom: 3.5rem;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* SERVICES GRID */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 1rem;
-            padding: 0;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-            border-left: 4px solid #3b82f6;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            border-left-color: #f97316;
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-bottom: 3px solid #3b82f6;
-        }
-
-        .service-content {
-            padding: 2rem;
-        }
-
-        .service-card h3 {
-            font-family: 'Merriweather', Georgia, serif;
-            font-size: 1.75rem;
-            color: #1e40af;
-            margin-bottom: 1rem;
-            font-weight: 900;
-        }
-
-        .service-card p {
-            color: #4b5563;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .service-card ul {
-            margin: 1rem 0;
-            padding-left: 1.75rem;
-            color: #4b5563;
-        }
-
-        .service-card ul li {
-            margin-bottom: 0.6rem;
-        }
-
-        .service-button {
-            display: inline-block;
-            margin-top: 1.25rem;
-            padding: 0.9rem 1.75rem;
-            background: linear-gradient(135deg, #3b82f6, #1e40af);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            transition: all 0.3s;
-        }
-
-        .service-button:hover {
-            background: linear-gradient(135deg, #f97316, #ea580c);
-            transform: translateY(-2px);
-        }
-
-        /* ABOUT SECTION */
-        .about-content {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            padding: 3.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            align-items: start;
-        }
-
-        .about-content img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 1rem;
-            border: 3px solid #3b82f6;
-        }
-
-        .about-text p {
-            margin-bottom: 1.75rem;
-            font-size: 1.15rem;
-            line-height: 1.85;
-            color: #4b5563;
-        }
-
-        .about-text .highlight-text {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: #1e40af;
-            text-align: center;
-            margin-top: 2.5rem;
-            padding-top: 2rem;
-            border-top: 3px solid #e0f2fe;
-        }
-
-        /* TESTIMONIALS */
-        .video-testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3.5rem;
-        }
-
-        .video-testimonial-card {
-            background: white;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-        }
-
-        .video-testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-radius: 1rem;
-            padding: 2.5rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            border-left: 6px solid #f97316;
-            transition: all 0.3s;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-            border-left-color: #3b82f6;
-        }
-
-        .stars {
-            color: #f97316;
-            font-size: 1.6rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .testimonial-text {
-            color: #4b5563;
-            font-style: italic;
-            margin-bottom: 1.25rem;
-            line-height: 1.8;
-        }
-
-        .testimonial-author {
-            font-weight: 700;
-            color: #1e40af;
-        }
-
-        /* CONTACT SECTION */
-        .contact-section {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 1.25rem;
-            align-items: flex-start;
-        }
-
-        .contact-label {
-            font-weight: 800;
-            color: #1e40af;
-            margin-bottom: 0.4rem;
-            font-size: 1.15rem;
-        }
-
-        .contact-value {
-            color: #4b5563;
-            font-size: 1.05rem;
-        }
-
-        .contact-value a {
-            color: #3b82f6;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 600;
-        }
-
-        .contact-value a:hover {
-            color: #f97316;
-        }
-
-        /* FORM */
-        .contact-form {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.75rem;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 0.6rem;
-            font-weight: 700;
-            color: #1e40af;
-        }
-
-        .form-input,
-        .form-textarea {
-            width: 100%;
-            padding: 1.1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 0.5rem;
-            font-size: 1.05rem;
-            font-family: 'Open Sans', sans-serif;
-            transition: all 0.3s;
-        }
-
-        .form-input:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        .submit-button {
-            background: linear-gradient(135deg, #3b82f6, #1e40af);
-            color: white;
-            padding: 1.15rem 3rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            width: 100%;
-        }
-
-        .submit-button:hover {
-            background: linear-gradient(135deg, #f97316, #ea580c);
-            transform: translateY(-3px);
-        }
-
-        /* FOOTER */
-        footer {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-logo {
-            font-family: 'Merriweather', Georgia, serif;
-            font-size: 1.9rem;
-            font-weight: 900;
-            margin-bottom: 1.25rem;
-        }
-
-        .footer-tagline {
-            font-size: 1.15rem;
-            margin-bottom: 1.25rem;
-            font-weight: 600;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .floating-logo {
-                max-width: 110px;
-                top: 10px;
-                left: 10px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .carousel-slide h1 {
-                font-size: 2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Garcia Family Medicine",
+      "image": "https://www.garciafamilymedicine.care/images/logo.png",
+      "description": "Treating the whole patient: Spirit, Body, and Soul. Compassionate family medicine practice serving Blue Springs, Jackson County, and the Kansas City Metro area.",
+      "url": "https://www.garciafamilymedicine.care",
+      "telephone": "+1-816-427-5320",
+      "faxNumber": "+1-888-807-2718",
+      "email": "admin@garciafamilymedicine.care",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "801 NW Saint Mary's Drive, Suite 209",
+        "addressLocality": "Blue Springs",
+        "addressRegion": "MO",
+        "postalCode": "64014",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.0197",
+        "longitude": "-94.2816"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
+      "priceRange": "$$",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Blue Springs"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Jackson County"
+        },
+        {
+          "@type": "City",
+          "name": "Kansas City"
+        }
+      ],
+      "medicalSpecialty": ["Family Medicine", "Primary Care", "Women's Health", "Preventive Medicine"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "150"
+      }
+    }
+    </script>
+    
+    <!-- Physician Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Tess Garcia",
+      "jobTitle": "Family Medicine Physician",
+      "worksFor": {
+        "@type": "MedicalClinic",
+        "name": "Garcia Family Medicine"
+      },
+      "medicalSpecialty": "Family Medicine",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "801 NW Saint Mary's Drive, Suite 209",
+        "addressLocality": "Blue Springs",
+        "addressRegion": "MO",
+        "postalCode": "64014",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+    <meta name="description" content="Garcia Family Medicine - Treating the whole patient: Spirit, Body, and Soul. Compassionate healthcare with Dr. Tess Garcia serving Blue Springs, Jackson County, and the Kansas City Metro.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- FLOATING LOGO -->
-    <div class="floating-logo">
-        <img src="Logo.png" alt="Garcia Family Medicine">
+    <!-- Fixed Logo -->
+    <div class="logo-container">
+        <img src="New_Logo_GFM.png" alt="Garcia Family Medicine Logo" class="logo">
     </div>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <a href="tel:816-427-5320" class="nav-cta">(816) 427-5320</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- HERO CAROUSEL -->
-    <section class="hero-section">
-        <div class="carousel-container">
-            <div class="carousel-slides" id="carouselSlides">
-                <div class="carousel-slide">
-                    <div class="practice-name">Garcia Family Medicine</div>
-                    <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
-                    <h1><span class="highlight">Direct Primary Care</span> That Works For You</h1>
-                    <p>24/7 access to Dr. Garcia - No copays, no surprise bills</p>
-                    <div class="carousel-buttons">
-                        <a href="tel:816-427-5320" class="hero-button hero-button-primary">📞 Become a Member</a>
-                        <a href="#services" class="hero-button hero-button-secondary">See Benefits</a>
-                    </div>
-                </div>
-
-                <div class="carousel-slide">
-                    <div class="practice-name">Garcia Family Medicine</div>
-                    <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
-                    <h1>Revolutionary <span class="highlight">CoreLift</span> Pelvic Health</h1>
-                    <p>FDA-cleared Emsella technology treats urinary incontinence without surgery</p>
-                    <div class="carousel-buttons">
-                        <a href="tel:816-427-5320" class="hero-button hero-button-primary">📞 Schedule Consultation</a>
-                        <a href="#services" class="hero-button hero-button-secondary">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="carousel-slide">
-                    <div class="practice-name">Garcia Family Medicine</div>
-                    <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
-                    <h1>Faith-Based <span class="highlight">Mental Health</span> Care</h1>
-                    <p>Compassionate counseling for depression, anxiety, and life's challenges</p>
-                    <div class="carousel-buttons">
-                        <a href="tel:816-427-5320" class="hero-button hero-button-primary">📞 Start Your Journey</a>
-                        <a href="#services" class="hero-button hero-button-secondary">Our Approach</a>
-                    </div>
-                </div>
-
-                <div class="carousel-slide">
-                    <div class="practice-name">Garcia Family Medicine</div>
-                    <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
-                    <h1><span class="highlight">Medical Weight Management</span> Program</h1>
-                    <p>12-month physician-supervised program with GLP-1 medications</p>
-                    <div class="carousel-buttons">
-                        <a href="tel:816-427-5320" class="hero-button hero-button-primary">📞 Start Transformation</a>
-                        <a href="#services" class="hero-button hero-button-secondary">Program Details</a>
-                    </div>
-                </div>
-
-                <div class="carousel-slide">
-                    <div class="practice-name">Garcia Family Medicine</div>
-                    <div class="practice-tagline">Treating the whole patient: Spirit, Body, and Soul</div>
-                    <h1>Expert <span class="highlight">Independent Medical Evaluations</span></h1>
-                    <p>Comprehensive IME services for legal and disability claims</p>
-                    <div class="carousel-buttons">
-                        <a href="tel:816-427-5320" class="hero-button hero-button-primary">📞 Request IME</a>
-                        <a href="#services" class="hero-button hero-button-secondary">IME Information</a>
-                    </div>
-                </div>
+    <!-- Hero Carousel -->
+    <div class="hero-carousel">
+        <!-- #1 CoreLift - TOP SERVICE -->
+        <div class="hero-slide active" style="background-image: url('CoreLift_Confidence_with_Emsella.png'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">CoreLift&trade; Pelvic Health</h1>
+                <p class="hero-subtitle">with Emsella</p>
+                <p class="hero-description">Revolutionary FDA-cleared treatment for bladder control and intimate wellness. Non-invasive, comfortable, and highly effective with 95% success rate.</p>
+                <a href="#services" class="hero-button">Learn More</a>
             </div>
+        </div>
 
-            <div class="carousel-dots">
-                <span class="dot active" onclick="showSlide(0)"></span>
-                <span class="dot" onclick="showSlide(1)"></span>
-                <span class="dot" onclick="showSlide(2)"></span>
-                <span class="dot" onclick="showSlide(3)"></span>
-                <span class="dot" onclick="showSlide(4)"></span>
+        <!-- #2 IME - TOP SERVICE -->
+        <div class="hero-slide" style="background-image: url('injury_work_accident6_png.jpg'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Independent Medical Evaluations</h1>
+                <p class="hero-subtitle">Professional & Comprehensive Assessments</p>
+                <p class="hero-description">Expert medical evaluations for legal and insurance cases. Thorough, objective assessments you can trust.</p>
+                <a href="#contact" class="hero-button">Schedule Evaluation</a>
+            </div>
+        </div>
+
+        <!-- #3 Weight Management - TOP SERVICE -->
+        <div class="hero-slide" style="background-image: url('wm14_png.jpg'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Medical Weight Management</h1>
+                <p class="hero-subtitle">Personalized Programs That Work</p>
+                <p class="hero-description">Science-based weight loss programs tailored to your metabolism, lifestyle, and health goals. Board-certified obesity medicine specialist.</p>
+                <a href="#services" class="hero-button">Start Your Journey</a>
+            </div>
+        </div>
+
+        <!-- Welcome Slide with Dr. Tess -->
+        <div class="hero-slide" style="background-image: url('Dr__Tess2_png.webp'); background-size: cover; background-position: center;">
+            <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(234, 88, 12, 0.25) 100%);"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Garcia Family Medicine</h1>
+                <p class="hero-subtitle">Blue Springs, Jackson County & KC Metro</p>
+                <p class="hero-description">Treating the whole patient: Spirit, Body, and Soul. Available 24/7 for your healthcare needs.</p>
+                <a href="tel:816-427-5320" class="hero-button">Call (816) 427-5320</a>
+            </div>
+        </div>
+
+        <button class="carousel-button carousel-button-left" onclick="prevSlide()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="carousel-button carousel-button-right" onclick="nextSlide()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+
+        <div class="carousel-nav">
+            <button class="dot active" onclick="goToSlide(0)"></button>
+            <button class="dot" onclick="goToSlide(1)"></button>
+            <button class="dot" onclick="goToSlide(2)"></button>
+            <button class="dot" onclick="goToSlide(3)"></button>
+            <button class="dot" onclick="goToSlide(4)"></button>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="welcome-container">
+                <div class="video-container">
+                    <img src="Dr__Tess2_png.webp" alt="Dr. Tess Garcia" style="width: 100%; border-radius: 8px;">
+                </div>
+                <div>
+                    <h2 style="text-align: left;">Welcome to Garcia Family Medicine</h2>
+                    <p class="welcome-text">
+                        At Garcia Family Medicine, we treat the whole patient: spirit, body, and soul. I'm Dr. Tess Garcia, and I'm honored to serve Blue Springs, Jackson County, and the KC Metro with compassionate, comprehensive care. Whether you're managing a chronic condition, seeking preventive care, or exploring innovative treatments like CoreLift, our team is here to support your health journey every step of the way.
+                    </p>
+                    <div class="availability-box">
+                        <strong>☎ We're Here When You Need Us:</strong><br>
+                        Available 24/7 for non-urgent medical questions and concerns. Dr. Tess personally responds to patient needs around the clock.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- Team Section -->
+    <section>
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <p class="section-subtitle">Compassionate professionals dedicated to your health and wellbeing</p>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo-container">
+                        <img src="Dr__Tess2_png.webp" alt="Dr. Tess Garcia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Dr. Tess Garcia</h3>
+                        <p class="team-title">Board Certified Family Medicine & Obesity Medicine</p>
+                        <p class="team-statement">With over 25 years of experience, I am honored to serve our community with compassionate, comprehensive care. My approach treats the whole patient&mdash;€”spirit, body, and soul&mdash;€”because true health encompasses every aspect of your life.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo-container"></div>
+                    <div class="team-content">
+                        <h3 class="team-name">Gigi</h3>
+                        <p class="team-title">Practice Manager</p>
+                        <p class="team-statement">I ensure our practice runs smoothly so that every patient receives exceptional care and attention. My goal is to make your healthcare journey as seamless and comfortable as possible.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo-container"></div>
+                    <div class="team-content">
+                        <h3 class="team-name">Marisela</h3>
+                        <p class="team-title">Medical Assistant</p>
+                        <p class="team-statement">I work closely with Dr. Tess to provide excellent patient care. From preparing you for your visit to following up on your treatment plan, I am here to support your health journey every step of the way.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo-container"></div>
+                    <div class="team-content">
+                        <h3 class="team-name">Maria</h3>
+                        <p class="team-title">Patient Services Coordinator</p>
+                        <p class="team-statement">As your first point of contact, I handle all incoming and outgoing calls with care and professionalism. I am here to answer your questions, schedule appointments, and ensure you receive the support you need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Patients Served</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
     <section id="services">
         <div class="container">
-            <h2>Complete Care Services</h2>
-            <p class="section-subtitle">From prevention to treatment, we're here for every stage of your health journey</p>
+            <h2>Our Services</h2>
+            <p class="section-subtitle">Comprehensive care tailored to your unique needs</p>
 
             <div class="services-grid">
+                <!-- CoreLift -->
                 <div class="service-card">
-                    <img src="family_business4_png.jpg" alt="Direct Primary Care">
+                    <div class="service-image-container">
+                        <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift Pelvic Health Treatment" style="width: 100%; border-radius: 8px;">
+                    </div>
                     <div class="service-content">
-                        <h3>Direct Primary Care</h3>
-                        <p><strong>24/7 Access to Your Doctor</strong></p>
-                        <ul>
-                            <li>Annual wellness exams</li>
-                            <li>Acute illness treatment</li>
-                            <li>Chronic disease management</li>
-                            <li>Text, email, and phone access</li>
-                            <li>Discounted lab work</li>
-                        </ul>
-                        <a href="tel:816-427-5320" class="service-button">Become A Member →</a>
+                        <h3 class="service-title">CoreLift&trade; Pelvic Health</h3>
+                        <p class="service-subtitle">with Emsella</p>
+                        <p class="service-description">Revolutionary FDA-cleared treatment for bladder control and intimate wellness. Non-invasive, comfortable, and highly effective.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Non-invasive</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> No downtime</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> FDA cleared</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> 95% success rate</div>
+                        </div>
+                        <a href="#contact" class="service-button">Schedule Consultation</a>
                     </div>
                 </div>
 
+                <!-- IME -->
                 <div class="service-card">
-                    <img src="CoreLift_Confidence_with_Emsella.jpg" alt="CoreLift Treatment">
+                    <div class="service-image-container">
+                        <img src="injury_work_accident6_png.jpg" alt="Independent Medical Evaluations">
+                    </div>
                     <div class="service-content">
-                        <h3>CoreLift Pelvic Health</h3>
-                        <p><strong>Revolutionary Non-Invasive Treatment</strong></p>
-                        <p>FDA-cleared Emsella technology strengthens pelvic floor muscles.</p>
-                        <ul>
-                            <li>28-minute sessions</li>
-                            <li>No downtime</li>
-                            <li>95% patient satisfaction</li>
-                        </ul>
-                        <a href="tel:816-427-5320" class="service-button">Schedule Consultation →</a>
+                        <h3 class="service-title">Independent Medical Evaluations</h3>
+                        <p class="service-subtitle">Professional & Comprehensive</p>
+                        <p class="service-description">Expert medical evaluations for legal and insurance cases. Thorough, objective assessments you can trust.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Expert analysis</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Detailed reports</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Legal support</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Fast turnaround</div>
+                        </div>
+                        <button class="service-button">Learn More</button>
                     </div>
                 </div>
 
+                <!-- Weight Management -->
                 <div class="service-card">
-                    <img src="anxiety1_png.jpg" alt="Mental Health Counseling">
+                    <div class="service-image-container">
+                        <img src="wm14_png.jpg" alt="Medical Weight Management">
+                    </div>
                     <div class="service-content">
-                        <h3>Mental Health Counseling</h3>
-                        <p><strong>Faith-Based Compassionate Care</strong></p>
-                        <ul>
-                            <li>Depression and anxiety treatment</li>
-                            <li>Stress management</li>
-                            <li>Faith-integrated counseling</li>
-                        </ul>
-                        <a href="tel:816-427-5320" class="service-button">Begin Your Journey →</a>
+                        <h3 class="service-title">Medical Weight Management</h3>
+                        <p class="service-subtitle">Personalized Programs</p>
+                        <p class="service-description">Science-based weight loss programs tailored to your metabolism, lifestyle, and health goals.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Custom plans</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Medical supervision</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Proven results</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Ongoing support</div>
+                        </div>
+                        <button class="service-button">Learn More</button>
                     </div>
                 </div>
 
+                <!-- Mental Health -->
                 <div class="service-card">
-                    <img src="wm14_png.jpg" alt="Weight Management">
+                    <div class="service-image-container">
+                        <img src="anxiety1_png.jpg" alt="Mental Health Counseling">
+                    </div>
                     <div class="service-content">
-                        <h3>Medical Weight Management</h3>
-                        <p><strong>12-Month Physician-Supervised Program</strong></p>
-                        <ul>
-                            <li>GLP-1 medications</li>
-                            <li>Nutrition coaching</li>
-                            <li>Behavioral counseling</li>
-                        </ul>
-                        <a href="tel:816-427-5320" class="service-button">Start Transformation →</a>
+                        <h3 class="service-title">Mental Health Counseling</h3>
+                        <p class="service-subtitle">Compassionate Support</p>
+                        <p class="service-description">Professional counseling for anxiety, depression, and life transitions. Safe, confidential care when you need it most.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Licensed therapists</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Faith-integrated options</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Flexible scheduling</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Confidential care</div>
+                        </div>
+                        <button class="service-button">Learn More</button>
                     </div>
                 </div>
 
+                <!-- DOT Exams -->
                 <div class="service-card">
-                    <img src="injury_work_accident6_png.jpg" alt="IME Services">
+                    <div class="service-image-container">
+                        <img src="semi_truck12_png.jpg" alt="DOT Physical Exams">
+                    </div>
                     <div class="service-content">
-                        <h3>Independent Medical Evaluations</h3>
-                        <p><strong>Expert Medical-Legal Assessments</strong></p>
-                        <ul>
-                            <li>Workers' compensation</li>
-                            <li>Disability determinations</li>
-                            <li>Insurance reviews</li>
-                        </ul>
-                        <a href="tel:816-427-5320" class="service-button">Request IME →</a>
+                        <h3 class="service-title">DOT Physical Exams</h3>
+                        <p class="service-subtitle">Certified Examiners</p>
+                        <p class="service-description">Fast, thorough DOT physicals to keep commercial drivers on the road. Certified examiners, quick turnaround.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Same-day service</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> FMCSA certified</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Fast results</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Walk-ins welcome</div>
+                        </div>
+                        <button class="service-button">Learn More</button>
                     </div>
                 </div>
 
+                <!-- Small Business -->
                 <div class="service-card">
-                    <img src="semi_scenery11_png.jpg" alt="DOT Physicals">
+                    <div class="service-image-container">
+                        <img src="small_business13_png.jpg" alt="Small Business Wellness">
+                    </div>
                     <div class="service-content">
-                        <h3>DOT Physicals</h3>
-                        <p><strong>Certified Medical Examinations</strong></p>
-                        <ul>
-                            <li>FMCSA-certified examiner</li>
-                            <li>Same-day appointments</li>
-                            <li>Certificate issued on-site</li>
-                        </ul>
-                        <a href="tel:816-427-5320" class="service-button">Schedule DOT Physical →</a>
+                        <h3 class="service-title">Small Business Wellness</h3>
+                        <p class="service-subtitle">For Teams of 5+</p>
+                        <p class="service-description">Comprehensive workplace health solutions tailored for small businesses. Keep your team healthy and productive.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> On-site options</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Custom programs</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Employee wellness</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Cost-effective</div>
+                        </div>
+                        <button class="service-button">Learn More</button>
                     </div>
                 </div>
 
+                <!-- CareCredit -->
                 <div class="service-card">
-                    <img src="paymentplan9_png.jpg" alt="CareCredit">
+                    <div class="service-image-container">
+                        <img src="paymentplan9_png.jpg" alt="CareCredit Financing">
+                    </div>
                     <div class="service-content">
-                        <h3>CareCredit Financing</h3>
-                        <p><strong>Flexible Payment Options</strong></p>
-                        <ul>
-                            <li>Special financing options</li>
-                            <li>No upfront costs</li>
-                            <li>Flexible payment plans</li>
-                        </ul>
-                        <a href="tel:816-427-5320" class="service-button">Learn More →</a>
+                        <h3 class="service-title">CareCredit Financing</h3>
+                        <p class="service-subtitle">0% Financing Available</p>
+                        <p class="service-description">Making quality healthcare affordable for everyone. Flexible payment plans with 0% interest options available.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> 0% interest plans</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Quick approval</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Flexible terms</div>
+                            <div class="benefit-item"><div class="checkmark">&#10003;</div> Easy application</div>
+                        </div>
+                        <button class="service-button">Learn More</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);">
+    <!-- Nourish & Thrive Section -->
+    <section id="nourish-thrive" class="nourish-thrive-section">
         <div class="container">
-            <h2>About Dr. Tess Garcia</h2>
-            <p class="section-subtitle">Compassionate, Faith-Based Family Medicine</p>
+            <h2>Nourish & Thrive</h2>
+            <p class="section-subtitle">Your Partner in Holistic Wellness</p>
             
-            <div class="about-content">
-                <img src="Dr__Tess2_png.webp" alt="Dr. Tess Garcia">
-                
-                <div class="about-text">
-                    <p>Dr. Tess Garcia founded Garcia Family Medicine with a simple mission: to provide personalized, compassionate healthcare that treats the whole patient—Spirit, Body, and Soul.</p>
-                    <p>Through our Direct Primary Care model, we've removed the barriers that traditional insurance creates between doctors and patients. This means longer appointments, same-day visits, and 24/7 access.</p>
-                    <p>At Garcia Family Medicine, we believe healthcare should be a partnership. We take the time to listen, understand your unique needs, and create personalized treatment plans.</p>
-                    <p class="highlight-text">Serving Blue Springs, Jackson County, and the Greater Kansas City Metro Area</p>
+            <div class="nourish-intro">
+                <p>At Garcia Family Medicine, we believe true health goes beyond treating symptoms. Our <strong>Nourish & Thrive</strong> program is designed to help you achieve optimal wellness through personalized nutrition guidance, lifestyle coaching, and comprehensive support.</p>
+            </div>
+
+            <div class="nourish-grid">
+                <div class="nourish-card">
+                    <div class="nourish-icon"><img src="4.png" alt="Personalized Nutrition Plans" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;"></div>
+                    <h3>Personalized Nutrition Plans</h3>
+                    <p>Custom meal plans tailored to your health goals, preferences, and medical needs. Whether you're managing diabetes, heart health, or weight loss, we create a nutrition strategy that works for you.</p>
+                </div>
+
+                <div class="nourish-card">
+                    <div class="nourish-icon"><img src="5.png" alt="Lifestyle Coaching" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;"></div>
+                    <h3>Lifestyle Coaching</h3>
+                    <p>One-on-one coaching sessions to help you build sustainable healthy habits. We address sleep, stress management, exercise, and daily routines that support your wellness journey.</p>
+                </div>
+
+                <div class="nourish-card">
+                    <div class="nourish-icon"><img src="6.png" alt="Progress Tracking" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;"></div>
+                    <h3>Progress Tracking</h3>
+                    <p>Regular check-ins and monitoring to track your progress. We celebrate your wins and adjust your plan as needed to ensure you're always moving forward.</p>
+                </div>
+
+                <div class="nourish-card">
+                    <div class="nourish-icon"><img src="7.png" alt="Goal Setting & Support" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;"></div>
+                    <h3>Goal Setting & Support</h3>
+                    <p>Set realistic, achievable health goals with ongoing support from our team. You're never alone on your wellness journey - we're with you every step of the way.</p>
+                </div>
+
+                <div class="nourish-card">
+                    <div class="nourish-icon"><img src="2.png" alt="Mind-Body Connection" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;"></div>
+                    <h3>Mind-Body Connection</h3>
+                    <p>Integrate mental wellness with physical health. Learn stress reduction techniques, mindfulness practices, and strategies to support emotional well-being.</p>
+                </div>
+
+                <div class="nourish-card">
+                    <div class="nourish-icon"><img src="3.png" alt="Educational Resources" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;"></div>
+                    <h3>Educational Resources</h3>
+                    <p>Access to recipes, meal prep guides, educational materials, and tools to empower you with knowledge about nutrition and healthy living.</p>
+                </div>
+            </div>
+
+            <div class="nourish-cta">
+                <h3>Ready to Transform Your Health?</h3>
+                <p>Join our Nourish & Thrive program and take the first step toward lasting wellness.</p>
+                <a href="#contact" class="nourish-button">Start Your Journey Today</a>
+            </div>
+
+            <div class="nourish-benefits">
+                <h3>What You'll Receive:</h3>
+                <div class="benefits-columns">
+                    <div class="benefit-column">
+                        <ul class="nourish-list">
+                            <li>✓ Initial comprehensive health assessment</li>
+                            <li>✓ Personalized nutrition plan</li>
+                            <li>✓ Weekly coaching sessions</li>
+                            <li>✓ Custom meal planning templates</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-column">
+                        <ul class="nourish-list">
+                            <li>✓ Progress tracking tools</li>
+                            <li>✓ Recipe database access</li>
+                            <li>✓ Email and text support</li>
+                            <li>✓ Quarterly wellness reviews</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials">
+    <!-- Google Reviews -->
+    <section class="google-reviews-section">
         <div class="container">
             <h2>What Our Patients Say</h2>
-            <p class="section-subtitle">Real stories from real patients</p>
+            <div class="google-badge">
+                <div class="google-star">&#9733;</div>
+                <div>
+                    <div class="rating-number">4.9</div>
+                    <div class="rating-text">Google Rating</div>
+                </div>
+            </div>
+            <p>
+                <a href="https://www.google.com/search?q=garcia+family+medicine+blue+springs" target="_blank" rel="noopener noreferrer" class="review-link">
+                    Read Our Google Reviews &mdash;†’
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+        <div class="container">
+            <h2>Patient Testimonials</h2>
+            <p class="section-subtitle">Real stories from our patients</p>
 
             <div class="video-testimonials-grid">
                 <div class="video-testimonial-card">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/1TJh3vq4Anc" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/3pc60PTMGH8" 
+                    title="Patient Testimonial 1" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen style="border-radius: 8px;"></iframe>
                 </div>
                 <div class="video-testimonial-card">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/hb8uW1fMXOA" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/m0S31koeG-A" 
+                    title="Patient Testimonial 2" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen style="border-radius: 8px;"></iframe>
                 </div>
                 <div class="video-testimonial-card">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/wLtblFNMdMA" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/wLtblFNMdMA" 
+                    title="Patient Testimonial 3" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen style="border-radius: 8px;"></iframe>
                 </div>
                 <div class="video-testimonial-card">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/h6JlsFF-tp4" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/h6JlsFF-tp4" 
+                    title="Patient Testimonial 4" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen style="border-radius: 8px;"></iframe>
                 </div>
                 <div class="video-testimonial-card">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jVVtcVwQZwM" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jVVtcVwQZwM" 
+                    title="Patient Testimonial 5" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen style="border-radius: 8px;"></iframe>
                 </div>
                 <div class="video-testimonial-card">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/xspHr7i8StU" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/xspHr7i8StU" 
+                    title="Patient Testimonial 6" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen style="border-radius: 8px;"></iframe>
                 </div>
-            </div>
+            </div></div>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     <p class="testimonial-text">"Dr. Tess truly cares about her patients. She takes the time to listen and provides excellent care."</p>
-                    <p class="testimonial-author">—Sarah M.</p>
+                    <p class="testimonial-author">&mdash;€” Sarah M.</p>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     <p class="testimonial-text">"The CoreLift treatment has been life-changing. I'm so grateful for this practice!"</p>
-                    <p class="testimonial-author">—Jennifer K.</p>
+                    <p class="testimonial-author">&mdash;€” Jennifer K.</p>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     <p class="testimonial-text">"Professional, compassionate, and thorough. Best family medicine practice in Blue Springs!"</p>
-                    <p class="testimonial-author">—Michael R.</p>
+                    <p class="testimonial-author">&mdash;€” Michael R.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- Contact -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Get In Touch</h2>
@@ -876,6 +594,7 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
+                        <div class="contact-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="#2c5282"/></svg></div>
                         <div>
                             <div class="contact-label">Phone</div>
                             <div class="contact-value"><a href="tel:816-427-5320">(816) 427-5320</a></div>
@@ -883,6 +602,7 @@
                     </div>
 
                     <div class="contact-item">
+                        <div class="contact-icon">&#9993;</div>
                         <div>
                             <div class="contact-label">Email</div>
                             <div class="contact-value"><a href="mailto:admin@garciafamilymedicine.care">admin@garciafamilymedicine.care</a></div>
@@ -890,40 +610,57 @@
                     </div>
 
                     <div class="contact-item">
+                        <div class="contact-icon"></div>
                         <div>
                             <div class="contact-label">Address</div>
-                            <div class="contact-value">801 NW Saint Mary's Drive, Suite 209<br>Blue Springs, MO 64014</div>
+                            <div class="contact-value">
+                                801 NW Saint Mary's Drive<br>
+                                Suite 209<br>
+                                Blue Springs, MO 64014
+                            </div>
                         </div>
                     </div>
 
                     <div class="contact-item">
+                        <div class="contact-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="#2c5282"/><circle cx="12" cy="10" r="3" fill="white"/></svg></div>
+                        <div>
+                            <div class="contact-label">Fax</div>
+                            <div class="contact-value">(888) 807-2718</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">&#128348;</div>
                         <div>
                             <div class="contact-label">Office Hours</div>
-                            <div class="contact-value">Tuesday - Friday: 9 AM - 5 PM<br>Evening & weekend appointments available</div>
+                            <div class="contact-value">
+                                Tuesday - Friday: 9 AM - 5 PM<br>
+                                Evening & weekend appointments available
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-form">
-                    <form>
+                    <form >
                         <div class="form-group">
                             <label class="form-label">Name *</label>
-                            <input type="text" class="form-input" required>
+                            <input type="text" class="form-input" required placeholder="Your name">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Email *</label>
-                            <input type="email" class="form-input" required>
+                            <input type="email" class="form-input" required placeholder="your@email.com">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Phone</label>
-                            <input type="tel" class="form-input">
+                            <input type="tel" class="form-input" placeholder="(123) 456-7890">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Message *</label>
-                            <textarea class="form-textarea" rows="4" required></textarea>
+                            <textarea class="form-textarea" rows="4" required placeholder="How can we help you?"></textarea>
                         </div>
 
                         <button type="submit" class="submit-button">Send Message</button>
@@ -933,46 +670,20 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-logo">Garcia Family Medicine</div>
+        <div class="footer-logo">
+            <span>&#10004;</span>
+            <span>Garcia Family Medicine</span>
+        </div>
         <p class="footer-tagline">Treating the whole patient: Spirit, Body, and Soul</p>
-        <p>801 NW Saint Mary's Drive, Suite 209<br>Blue Springs, MO 64014</p>
-        <p style="margin-top: 1rem;">&copy; 2019-2025 Garcia Family Medicine. All rights reserved.</p>
+        <p class="footer-address">
+            801 NW Saint Mary's Drive, Suite 209<br>
+            Blue Springs, MO 64014
+        </p>
+        <p class="footer-copyright">&copy; 2019-2025 Garcia Family Medicine. All rights reserved.</p>
     </footer>
 
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.dot');
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            if (index >= totalSlides) {
-                currentSlide = 0;
-            } else if (index < 0) {
-                currentSlide = totalSlides - 1;
-            } else {
-                currentSlide = index;
-            }
-
-            const offset = -currentSlide * 100;
-            document.getElementById('carouselSlides').style.transform = `translateX(${offset}%)`;
-
-            dots.forEach((dot, i) => {
-                if (i === currentSlide) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-
-        setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 8000);
-
-        showSlide(0);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
