@@ -8,7 +8,11 @@ def update_html_form(input_file='index.html', output_file='index_UPDATED.html'):
     """Update the HTML file to use Netlify Forms"""
     
     # The old Formspree form tag to replace
-    OLD_FORM = '<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">'
+    OLD_FORM = <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+       <input type="hidden" name="form-name" value="contact">
+       <p style="display:none;">
+           <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+       </p>
     
     # The new Netlify form with spam protection
     NEW_FORM = '''<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
