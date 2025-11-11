@@ -27,12 +27,13 @@ header {
 .logo-container {
     padding-left: 20px;
     text-align: left;
+    overflow: hidden; /* Contains float */
 }
 
 .logo {
     max-width: 250px;
     height: auto;
-    display: block;
+    float: left; /* Actually float the logo */
 }
 
 /* Hero Carousel */
