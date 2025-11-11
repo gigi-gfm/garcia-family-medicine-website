@@ -138,20 +138,7 @@ if (contactForm) {
 }
 
 // ===== HEADER SCROLL EFFECT =====
-let lastScroll = 0;
-const header = document.querySelector('header');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-    } else {
-        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
-    }
-    
-    lastScroll = currentScroll;
-});
+// Header is now transparent, so no scroll effect needed
 
 // ===== LAZY LOADING FOR IMAGES =====
 if ('IntersectionObserver' in window) {
