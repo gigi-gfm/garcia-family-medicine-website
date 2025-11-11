@@ -56,6 +56,29 @@ header {
 .logo {
     max-width: 300px;
     height: auto;
+    animation: floatBob 6s ease-in-out infinite;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* Logo Float and Bob Animation */
+@keyframes floatBob {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(-2deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
 
 /* ===== HERO CAROUSEL ===== */
