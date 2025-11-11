@@ -28,10 +28,11 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    overflow: hidden; /* Clear floats */
 }
 
 .logo {
-    max-width: 300px;
+    max-width: 250px;
     height: auto;
     float: left;
 }
@@ -42,6 +43,7 @@ header {
     width: 100%;
     height: 600px;
     overflow: hidden;
+    clear: both; /* Clear the logo float */
 }
 
 .hero-slide {
@@ -53,7 +55,7 @@ header {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     background-size: cover;
-    background-position: center;
+    background-position: center top; /* Show from top to avoid cutting heads */
 }
 
 .hero-slide.active {
@@ -62,17 +64,17 @@ header {
 
 /* Default background images for slides - you can customize these */
 .hero-slide:nth-child(1) {
-    background-image: linear-gradient(rgba(44, 82, 130, 0.7), rgba(44, 82, 130, 0.7)), url('CoreLift_Confidence_with_Emsella.png');
+    background-image: linear-gradient(rgba(44, 82, 130, 0.5), rgba(44, 82, 130, 0.5)), url('CoreLift_Confidence_with_Emsella.png');
     background-color: #2C5282; /* Fallback color */
 }
 
 .hero-slide:nth-child(2) {
-    background-image: linear-gradient(rgba(44, 82, 130, 0.7), rgba(44, 82, 130, 0.7)), url('injury_work_accident6_png.jpg');
+    background-image: linear-gradient(rgba(44, 82, 130, 0.5), rgba(44, 82, 130, 0.5)), url('injury_work_accident6_png.jpg');
     background-color: #2C5282;
 }
 
 .hero-slide:nth-child(3) {
-    background-image: linear-gradient(rgba(44, 82, 130, 0.7), rgba(44, 82, 130, 0.7)), url('wm14_png.jpg');
+    background-image: linear-gradient(rgba(44, 82, 130, 0.5), rgba(44, 82, 130, 0.5)), url('wm14_png.jpg');
     background-color: #2C5282;
 }
 
