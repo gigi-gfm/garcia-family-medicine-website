@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,6 +84,124 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- NEW: Header & Flying Hawk Styles -->
+    <style>
+        /* ===== TRANSPARENT LOGO & FLYING HAWK STYLES ===== */
+        
+        /* Header Styles */
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 0 20px;
+        }
+        
+        .logo-container {
+            flex-shrink: 0;
+        }
+        
+        .logo {
+            height: 100px;
+            width: auto;
+            background: transparent !important;
+        }
+        
+        .practice-name {
+            flex-grow: 1;
+        }
+        
+        .practice-name h1 {
+            color: #2C5282;
+            font-size: 2rem;
+            margin: 0 0 5px 0;
+            font-weight: 700;
+        }
+        
+        .practice-name .tagline {
+            color: #E67E22;
+            font-size: 1.1rem;
+            margin: 0;
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        /* Flying Hawk Animation */
+        .flying-hawk {
+            position: absolute;
+            top: 10px;
+            left: -150px;
+            animation: flyAcross 8s ease-in-out infinite;
+            z-index: 10;
+            pointer-events: none;
+        }
+        
+        .hawk-image {
+            height: 80px;
+            width: auto;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+        
+        @keyframes flyAcross {
+            0% {
+                left: -150px;
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            50% {
+                left: 50%;
+                transform: translateY(0) rotate(-5deg);
+            }
+            75% {
+                transform: translateY(-15px) rotate(3deg);
+            }
+            100% {
+                left: calc(100% + 150px);
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .logo {
+                height: 80px;
+            }
+            
+            .practice-name h1 {
+                font-size: 1.5rem;
+            }
+            
+            .practice-name .tagline {
+                font-size: 0.9rem;
+            }
+            
+            .hawk-image {
+                height: 50px;
+            }
+            
+            .flying-hawk {
+                animation: flyAcross 6s ease-in-out infinite;
+            }
+        }
+    </style>
     
     <!-- Exit Intent Popup Styles -->
     <style>
@@ -348,10 +465,20 @@
     </div>
 </div>
 
-<!-- Header with Logo -->
+<!-- UPDATED: Header with Logo, Practice Name, and Flying Hawk -->
 <header>
-    <div class="logo-container">
-        <img src="New_Logo_GFM.png" alt="Garcia Family Medicine Logo" class="logo">
+    <div class="header-wrapper">
+        <div class="logo-container">
+            <img src="New_Logo_GFM.png" alt="Garcia Family Medicine Logo" class="logo">
+        </div>
+        <div class="practice-name">
+            <h1>Garcia Family Medicine</h1>
+            <p class="tagline">Treating the whole patient: Spirit, Body, and Soul</p>
+        </div>
+    </div>
+    <!-- Flying Hawk Animation -->
+    <div class="flying-hawk">
+        <img src="hawk-flying.png" alt="Flying Hawk" class="hawk-image">
     </div>
 </header>
 
@@ -393,7 +520,7 @@
         </div>
     </div>
     
-    <!-- Slide 4: Mental Health Counseling - NEW -->
+    <!-- Slide 4: Mental Health Counseling -->
     <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('anxiety1_png.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay">
             <div class="hero-content">
@@ -795,7 +922,7 @@
                 </div>
             </div>
             
-            <!-- Weight Management - EXPANDED -->
+            <!-- Weight Management -->
             <div class="service-card">
                 <div class="service-image-container">
                     <img src="wm14_png.jpg" alt="Medical Weight Management">
@@ -841,7 +968,7 @@
                 </div>
             </div>
             
-            <!-- Mental Health - UPDATED -->
+            <!-- Mental Health -->
             <div class="service-card">
                 <div class="service-image-container">
                     <img src="anxiety1_png.jpg" alt="Mental Health Counseling">
@@ -1101,7 +1228,7 @@
     </div>
 </section>
 
-<!-- Nourish & Thrive Section - CLARIFIED -->
+<!-- Nourish & Thrive Section -->
 <section id="nourish-thrive" class="nourish-thrive-section">
     <div class="container">
         <h2>Nourish & Thrive Wellness Coaching</h2>
@@ -1327,6 +1454,40 @@ function toggleDetails(serviceId) {
         btnIcon.style.transform = 'rotate(180deg)';
     } else {
         details.style.display = 'none';
+        btnText.textContent = 'Read More';
+        btnIcon.style.transform = 'rotate(0deg)';
+    }
+}
+
+// Toggle Dr. Tess Bio
+function toggleDrTessBio() {
+    const bioFull = document.getElementById('drTessBioFull');
+    const btnText = document.getElementById('drTessReadMoreText');
+    const btnIcon = document.getElementById('drTessReadMoreIcon');
+    
+    if (bioFull.style.display === 'none' || bioFull.style.display === '') {
+        bioFull.style.display = 'block';
+        btnText.textContent = 'Read Less';
+        btnIcon.style.transform = 'rotate(180deg)';
+    } else {
+        bioFull.style.display = 'none';
+        btnText.textContent = 'Read More';
+        btnIcon.style.transform = 'rotate(0deg)';
+    }
+}
+
+// Toggle Gigi Bio
+function toggleGigiBio() {
+    const bioFull = document.getElementById('gigiBioFull');
+    const btnText = document.getElementById('gigiReadMoreText');
+    const btnIcon = document.getElementById('gigiReadMoreIcon');
+    
+    if (bioFull.style.display === 'none' || bioFull.style.display === '') {
+        bioFull.style.display = 'block';
+        btnText.textContent = 'Read Less';
+        btnIcon.style.transform = 'rotate(180deg)';
+    } else {
+        bioFull.style.display = 'none';
         btnText.textContent = 'Read More';
         btnIcon.style.transform = 'rotate(0deg)';
     }
