@@ -19,13 +19,13 @@ body {
 
 /* Header */
 header {
-    background: transparent; /* No white background */
+    background: transparent;
     padding: 15px 0;
-    position: absolute; /* Float over carousel */
+    position: fixed; /* Stay at top while scrolling */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100; /* Above carousel */
+    z-index: 100;
 }
 
 .logo-container {
@@ -36,7 +36,10 @@ header {
 .logo {
     max-width: 250px;
     height: auto;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); /* Add shadow for visibility */
+    background: white; /* White background */
+    padding: 10px; /* Space around logo */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Shadow for depth */
 }
 
 /* Hero Carousel */
