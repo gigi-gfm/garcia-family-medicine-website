@@ -86,9 +86,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- NEW: Header & Flying Hawk Styles -->
+    <!-- UPDATED: Header & Flying Hawk Styles - STATIONARY LOGO REMOVED -->
     <style>
-        /* ===== TRANSPARENT LOGO & FLYING HAWK STYLES ===== */
+        /* ===== FLYING LOGO ONLY (STATIONARY LOGO REMOVED) ===== */
         
         /* Header Styles */
         header {
@@ -104,22 +104,12 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
-            gap: 30px;
+            justify-content: center;
             padding: 0 20px;
         }
         
-        .logo-container {
-            flex-shrink: 0;
-        }
-        
-        .logo {
-            height: 100px;
-            width: auto;
-            background: transparent !important;
-        }
-        
         .practice-name {
-            flex-grow: 1;
+            text-align: center;
         }
         
         .practice-name h1 {
@@ -177,13 +167,7 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .header-wrapper {
-                flex-direction: column;
                 text-align: center;
-                gap: 15px;
-            }
-            
-            .logo {
-                height: 80px;
             }
             
             .practice-name h1 {
@@ -466,12 +450,9 @@
     </div>
 </div>
 
-<!-- UPDATED: Header with Logo, Practice Name, and Flying Hawk -->
+<!-- UPDATED: Header with Practice Name and Flying Logo ONLY (Stationary Logo Removed) -->
 <header>
     <div class="header-wrapper">
-        <div class="logo-container">
-            <img src="New_Logo_GFM.png" alt="Garcia Family Medicine Logo" class="logo">
-        </div>
         <div class="practice-name">
             <h1>Garcia Family Medicine</h1>
             <p class="tagline">Treating the whole patient: Spirit, Body, and Soul</p>
@@ -483,10 +464,10 @@
     </div>
 </header>
 
-<!-- Hero Carousel -->
+<!-- Hero Carousel - UPDATED: MUCH LIGHTER FILTERS (0.15-0.2 instead of 0.4-0.5) -->
 <section class="hero-carousel">
-    <!-- Slide 1: CoreLift -->
-    <div class="hero-slide active" style="background-image: linear-gradient(rgba(44, 82, 130, 0.4), rgba(44, 82, 130, 0.5)), url('fall_into_confidence3_png.jpg'); background-size: cover; background-position: center;">
+    <!-- Slide 1: CoreLift - UPDATED: New image corelift_emsella.png & lighter filter -->
+    <div class="hero-slide active" style="background-image: linear-gradient(rgba(44, 82, 130, 0.15), rgba(44, 82, 130, 0.2)), url('corelift_emsella.png'); background-size: cover; background-position: center;">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1 class="hero-title">CoreLift™ Pelvic Health</h1>
@@ -497,8 +478,8 @@
         </div>
     </div>
     
-    <!-- Slide 2: IME -->
-    <div class="hero-slide" style="background-image: linear-gradient(rgba(44, 82, 130, 0.4), rgba(44, 82, 130, 0.5)), url('injury_work_accident6_png.jpg'); background-size: cover; background-position: center;">
+    <!-- Slide 2: IME - UPDATED: Lighter filter -->
+    <div class="hero-slide" style="background-image: linear-gradient(rgba(44, 82, 130, 0.15), rgba(44, 82, 130, 0.2)), url('injury_work_accident6_png.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1 class="hero-title">Independent Medical Evaluations</h1>
@@ -509,8 +490,8 @@
         </div>
     </div>
     
-    <!-- Slide 3: Weight Management -->
-    <div class="hero-slide" style="background-image: linear-gradient(rgba(44, 82, 130, 0.4), rgba(44, 82, 130, 0.5)), url('wm14_png.jpg'); background-size: cover; background-position: center;">
+    <!-- Slide 3: Weight Management - UPDATED: Lighter filter -->
+    <div class="hero-slide" style="background-image: linear-gradient(rgba(44, 82, 130, 0.15), rgba(44, 82, 130, 0.2)), url('wm14_png.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1 class="hero-title">Medical Weight Management</h1>
@@ -521,8 +502,8 @@
         </div>
     </div>
     
-    <!-- Slide 4: Mental Health Counseling -->
-    <div class="hero-slide" style="background-image: linear-gradient(rgba(44, 82, 130, 0.4), rgba(44, 82, 130, 0.5)), url('anxiety1_png.jpg'); background-size: cover; background-position: center;">
+    <!-- Slide 4: Mental Health Counseling - UPDATED: Lighter filter -->
+    <div class="hero-slide" style="background-image: linear-gradient(rgba(44, 82, 130, 0.15), rgba(44, 82, 130, 0.2)), url('anxiety1_png.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1 class="hero-title">Mental Health Counseling</h1>
@@ -1366,7 +1347,7 @@
                 
                 <div class="contact-item">
                     <div class="contact-label">Email</div>
-                    <div class="contact-value"><a href="/cdn-cgi/l/email-protection#32555b555b72555340515b5354535f5b5e4b5f57565b515b5c571c51534057"><span class="__cf_email__" data-cfemail="87e0eee0eec7e0e6f5e4eee6e1e6eaeeebfeeae2e3eee4eee9e2a9e4e6f5e2">[email&#160;protected]</span></a></div>
+                    <div class="contact-value"><a href="mailto:gigi@garciafamilymedicine.care">gigi@garciafamilymedicine.care</a></div>
                 </div>
                 
                 <div class="contact-item">
@@ -1441,7 +1422,7 @@
     </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+<script src="script.js"></script>
 <script>
 // Toggle function for service details
 function toggleDetails(serviceId) {
@@ -1563,4 +1544,17 @@ const observer = new MutationObserver(function(mutations) {
         if (mutation.attributeName === 'class') {
             const popup = document.getElementById('exitPopup');
             if (popup.classList.contains('active')) {
-         
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+    });
+});
+
+observer.observe(document.getElementById('exitPopup'), {
+    attributes: true
+});
+</script>
+</body>
+</html>
