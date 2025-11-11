@@ -137,39 +137,39 @@
             font-weight: 500;
         }
         
-        /* Flying Hawk Animation */
-        .flying-hawk {
+        /* Flying FULL LOGO Animation */
+        .flying-logo {
             position: absolute;
-            top: 10px;
-            left: -150px;
-            animation: flyAcross 8s ease-in-out infinite;
+            top: 20px;
+            left: -200px;
+            animation: flyLogoAcross 10s ease-in-out infinite;
             z-index: 10;
             pointer-events: none;
         }
         
-        .hawk-image {
-            height: 80px;
+        .flying-logo-image {
+            height: 100px;
             width: auto;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+            filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.3));
         }
         
-        @keyframes flyAcross {
+        @keyframes flyLogoAcross {
             0% {
-                left: -150px;
+                left: -200px;
                 transform: translateY(0) rotate(0deg);
             }
             25% {
-                transform: translateY(-20px) rotate(5deg);
+                transform: translateY(-15px) rotate(3deg);
             }
             50% {
                 left: 50%;
-                transform: translateY(0) rotate(-5deg);
+                transform: translateY(0) rotate(-3deg);
             }
             75% {
-                transform: translateY(-15px) rotate(3deg);
+                transform: translateY(-10px) rotate(2deg);
             }
             100% {
-                left: calc(100% + 150px);
+                left: calc(100% + 200px);
                 transform: translateY(0) rotate(0deg);
             }
         }
@@ -194,12 +194,12 @@
                 font-size: 0.9rem;
             }
             
-            .hawk-image {
-                height: 50px;
+            .flying-logo-image {
+                height: 60px;
             }
             
-            .flying-hawk {
-                animation: flyAcross 6s ease-in-out infinite;
+            .flying-logo {
+                animation: flyLogoAcross 8s ease-in-out infinite;
             }
         }
     </style>
@@ -477,16 +477,16 @@
             <p class="tagline">Treating the whole patient: Spirit, Body, and Soul</p>
         </div>
     </div>
-    <!-- Flying Hawk Animation -->
-    <div class="flying-hawk">
-        <img src="hawk-flying.png" alt="Flying Hawk" class="hawk-image">
+    <!-- Flying FULL LOGO Animation -->
+    <div class="flying-logo">
+        <img src="New_Logo_GFM.png" alt="Flying Logo" class="flying-logo-image">
     </div>
 </header>
 
 <!-- Hero Carousel -->
 <section class="hero-carousel">
     <!-- Slide 1: CoreLift -->
-    <div class="hero-slide active">
+    <div class="hero-slide active" style="background-image: linear-gradient(rgba(44, 82, 130, 0.7), rgba(44, 82, 130, 0.85)), url('fall_into_confidence3_png.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1 class="hero-title">CoreLift™ Pelvic Health</h1>
@@ -498,7 +498,7 @@
     </div>
     
     <!-- Slide 2: IME -->
-    <div class="hero-slide">
+    <div class="hero-slide" style="background-image: linear-gradient(rgba(44, 82, 130, 0.7), rgba(44, 82, 130, 0.85)), url('injury_work_accident6_png.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1 class="hero-title">Independent Medical Evaluations</h1>
@@ -510,7 +510,7 @@
     </div>
     
     <!-- Slide 3: Weight Management -->
-    <div class="hero-slide">
+    <div class="hero-slide" style="background-image: linear-gradient(rgba(44, 82, 130, 0.7), rgba(44, 82, 130, 0.85)), url('wm14_png.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1 class="hero-title">Medical Weight Management</h1>
@@ -522,7 +522,7 @@
     </div>
     
     <!-- Slide 4: Mental Health Counseling -->
-    <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('anxiety1_png.jpg'); background-size: cover; background-position: center;">
+    <div class="hero-slide" style="background-image: linear-gradient(rgba(44, 82, 130, 0.7), rgba(44, 82, 130, 0.85)), url('anxiety1_png.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1 class="hero-title">Mental Health Counseling</h1>
@@ -1366,7 +1366,7 @@
                 
                 <div class="contact-item">
                     <div class="contact-label">Email</div>
-                    <div class="contact-value"><a href="mailto:gigi@garciafamilymedicine.care">gigi@garciafamilymedicine.care</a></div>
+                    <div class="contact-value"><a href="/cdn-cgi/l/email-protection#32555b555b72555340515b5354535f5b5e4b5f57565b515b5c571c51534057"><span class="__cf_email__" data-cfemail="87e0eee0eec7e0e6f5e4eee6e1e6eaeeebfeeae2e3eee4eee9e2a9e4e6f5e2">[email&#160;protected]</span></a></div>
                 </div>
                 
                 <div class="contact-item">
@@ -1441,7 +1441,7 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 <script>
 // Toggle function for service details
 function toggleDetails(serviceId) {
@@ -1563,17 +1563,4 @@ const observer = new MutationObserver(function(mutations) {
         if (mutation.attributeName === 'class') {
             const popup = document.getElementById('exitPopup');
             if (popup.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        }
-    });
-});
-
-observer.observe(document.getElementById('exitPopup'), {
-    attributes: true
-});
-</script>
-</body>
-</html>
+         
