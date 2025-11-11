@@ -1,70 +1,100 @@
-// Hero Carousel Functionality
+// Carousel functionality
 let currentSlide = 0;
 const slides = document.querySelectorAll('.hero-slide');
 const dots = document.querySelectorAll('.dot');
-let autoSlideInterval;
 
-// Show specific slide
-function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
-    currentSlide = index;
+function showSlide(n) {
+    // Hide all slides
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    
+    // Remove active class from all dots
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    
+    // Wrap around if necessary
+    if (n >= slides.length) {
+        currentSlide = 0;
+    } else if (n < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = n;
+    }
+    
+    // Show the current slide
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
 }
 
-// Next slide
 function nextSlide() {
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
-    resetAutoSlide();
+    showSlide(currentSlide + 1);
 }
 
-// Previous slide
 function prevSlide() {
-    let prev = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prev);
-    resetAutoSlide();
+    showSlide(currentSlide - 1);
 }
 
-// Go to specific slide
-function goToSlide(index) {
-    showSlide(index);
-    resetAutoSlide();
+function goToSlide(n) {
+    showSlide(n);
 }
 
-// Auto-advance slides
-function startAutoSlide() {
-    autoSlideInterval = setInterval(() => {
-        nextSlide();
-    }, 5000);
-}
+// Auto-advance carousel every 5 seconds
+setInterval(() => {
+    nextSlide();
+}, 5000);
 
-// Reset auto-slide timer
-function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
-}
-
-// Initialize carousel
-document.addEventListener('DOMContentLoaded', function() {
-    showSlide(0);
-    startAutoSlide();
-});
-
-// Toggle Dr. Tess Bio
+// Bio toggle functions
 function toggleDrTessBio() {
     const bioFull = document.getElementById('drTessBioFull');
     const btn = document.getElementById('drTessReadMoreBtn');
     const btnText = document.getElementById('drTessReadMoreText');
+    const btnIcon = document.getElementById('drTessReadMoreIcon');
     
     if (bioFull.style.display === 'none' || bioFull.style.display === '') {
         bioFull.style.display = 'block';
         btnText.textContent = 'Read Less';
-        btn.classList.add('expanded');
+        btnIcon.style.transform = 'rotate(180deg)';
     } else {
         bioFull.style.display = 'none';
         btnText.textContent = 'Read More';
-        btn.classList.remove('expanded');
+        btnIcon.style.transform = 'rotate(0deg)';
     }
 }
+
+function toggleGigiBio() {
+    const bioFull = document.getElementById('gigiBioFull');
+    const btn = document.getElementById('gigiReadMoreBtn');
+    const btnText = document.getElementById('gigiReadMoreText');
+    const btnIcon = document.getElementById('gigiReadMoreIcon');
+    
+    if (bioFull.style.display === 'none' || bioFull.style.display === '') {
+        bioFull.style.display = 'block';
+        btnText.textContent = 'Read Less';
+        btnIcon.style.transform = 'rotate(180deg)';
+    } else {
+        bioFull.style.display = 'none';
+        btnText.textContent = 'Read More';
+        btnIcon.style.transform = 'rotate(0deg)';
+    }
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Initialize carousel on page load
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(0);
+});
