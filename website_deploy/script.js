@@ -1,4 +1,4 @@
-// Carousel functionality
+// Carousel functionality with sliding animation
 let currentSlide = 0;
 const slides = document.querySelectorAll('.hero-slide');
 const dots = document.querySelectorAll('.dot');
@@ -10,12 +10,8 @@ function initCarousel() {
     startAutoplay();
 }
 
-// Show specific slide
+// Show specific slide with sliding animation
 function showSlide(n) {
-    // Remove active class from all slides and dots
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-    
     // Handle wrap around
     if (n >= slides.length) {
         currentSlide = 0;
@@ -25,9 +21,21 @@ function showSlide(n) {
         currentSlide = n;
     }
     
-    // Add active class to current slide and dot
-    slides[currentSlide].classList.add('active');
-    dots[currentSlide].classList.add('active');
+    // Update all slides positioning
+    slides.forEach((slide, index) => {
+        slide.classList.remove('active', 'prev');
+        
+        if (index === currentSlide) {
+            slide.classList.add('active');
+        } else if (index < currentSlide) {
+            slide.classList.add('prev');
+        }
+    });
+    
+    // Update dots
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
 }
 
 // Next slide
