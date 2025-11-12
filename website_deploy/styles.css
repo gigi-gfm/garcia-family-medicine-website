@@ -39,7 +39,7 @@ h1, h2, h3, h4 {
 }
 
 /* ===================================
-   HEADER - LOGO ON LEFT
+   HEADER - LOGO ON LEFT WITH BOBBING ANIMATION
    =================================== */
 header {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
@@ -76,6 +76,23 @@ header {
     align-items: center;
     justify-content: center;
     border: 3px solid var(--white);
+    animation: bobFloat 4s ease-in-out infinite;
+}
+
+/* BOBBING AND FLOATING ANIMATION */
+@keyframes bobFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-8px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-8px) rotate(-1deg);
+    }
 }
 
 .header-logo {
@@ -115,7 +132,7 @@ nav a:hover {
 }
 
 /* ===================================
-   HERO CAROUSEL
+   HERO CAROUSEL - VERY LIGHT OVERLAY
    =================================== */
 .hero-carousel {
     position: relative;
@@ -146,13 +163,14 @@ nav a:hover {
     left: -100%;
 }
 
+/* VERY LIGHT OVERLAY - IMAGES VISIBLE! */
 .slide-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .slide-content {
@@ -396,6 +414,16 @@ nav a:hover {
     color: var(--dark-gray);
     font-weight: 300;
     font-size: 1.05rem;
+}
+
+.team-bio a {
+    color: var(--secondary-orange);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.team-bio a:hover {
+    text-decoration: underline;
 }
 
 /* ===================================
