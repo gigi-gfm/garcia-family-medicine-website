@@ -1,121 +1,126 @@
-// Carousel functionality with sliding animation
-let currentSlide = 0;
+// ======================================
+// GARCIA FAMILY MEDICINE - SCRIPT.JS
+// ======================================
+
+// ==================
+// HERO CAROUSEL
+// ==================
+let currentSlideIndex = 0;
 const slides = document.querySelectorAll('.hero-slide');
-const dots = document.querySelectorAll('.dot');
-let autoplayInterval;
+const dots = document.querySelectorAll('.carousel-nav .dot');
+let autoSlideTimer;
 
 // Initialize carousel
 function initCarousel() {
-    showSlide(0);
-    startAutoplay();
+    if (slides.length > 0) {
+        showSlide(0);
+        startAutoSlide();
+    }
 }
 
-// Show specific slide with sliding animation
-function showSlide(n) {
-    // Handle wrap around
-    if (n >= slides.length) {
-        currentSlide = 0;
-    } else if (n < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = n;
-    }
-    
-    // Update all slides positioning
-    slides.forEach((slide, index) => {
+// Show specific slide
+function showSlide(index) {
+    // Remove active classes
+    slides.forEach(slide => {
         slide.classList.remove('active', 'prev');
-        
-        if (index === currentSlide) {
-            slide.classList.add('active');
-        } else if (index < currentSlide) {
-            slide.classList.add('prev');
-        }
+    });
+    dots.forEach(dot => {
+        dot.classList.remove('active');
     });
     
-    // Update dots
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlide);
-    });
+    // Add active class to current slide
+    currentSlideIndex = index;
+    if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
+    if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+    
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
 }
 
 // Next slide
 function nextSlide() {
-    showSlide(currentSlide + 1);
-    resetAutoplay();
+    showSlide(currentSlideIndex + 1);
+    resetAutoSlide();
 }
 
 // Previous slide
 function prevSlide() {
-    showSlide(currentSlide - 1);
-    resetAutoplay();
+    showSlide(currentSlideIndex - 1);
+    resetAutoSlide();
 }
 
 // Go to specific slide
-function goToSlide(n) {
-    showSlide(n);
-    resetAutoplay();
+function goToSlide(index) {
+    showSlide(index);
+    resetAutoSlide();
 }
 
-// Autoplay functionality
-function startAutoplay() {
-    autoplayInterval = setInterval(() => {
-        showSlide(currentSlide + 1);
-    }, 6000); // Change slide every 6 seconds
+// Auto advance slides
+function startAutoSlide() {
+    autoSlideTimer = setInterval(() => {
+        nextSlide();
+    }, 5000); // Change slide every 5 seconds
 }
 
-function stopAutoplay() {
-    clearInterval(autoplayInterval);
+// Reset auto slide timer
+function resetAutoSlide() {
+    clearInterval(autoSlideTimer);
+    startAutoSlide();
 }
 
-function resetAutoplay() {
-    stopAutoplay();
-    startAutoplay();
-}
-
-// Read More toggle functionality
+// ==================
+// READ MORE TOGGLES
+// ==================
 function toggleReadMore(button) {
-    const serviceCard = button.closest('.service-card');
-    const fullContent = serviceCard.querySelector('.service-full');
+    const serviceContent = button.closest('.service-content');
+    const fullContent = serviceContent.querySelector('.service-full');
     
     if (fullContent.classList.contains('hidden')) {
-        // Show full content
         fullContent.classList.remove('hidden');
         button.textContent = 'Read Less';
-        
-        // Smooth scroll to show content
-        setTimeout(() => {
-            fullContent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
     } else {
-        // Hide full content
         fullContent.classList.add('hidden');
         button.textContent = 'Read More';
-        
-        // Scroll back to top of card
-        setTimeout(() => {
-            serviceCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
     }
 }
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-    initCarousel();
-    
-    // Pause autoplay when hovering over carousel
-    const carousel = document.querySelector('.hero-carousel');
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
+// ==================
+// SMOOTH SCROLLING
+// ==================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
 });
 
-// Form submission handler (optional - customize as needed)
+// ==================
+// INITIALIZE ON PAGE LOAD
+// ==================
 document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.contact-form form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your interest! We will contact you soon.');
-            contactForm.reset();
-        });
-    }
+    initCarousel();
+    console.log('Garcia Family Medicine website loaded successfully!');
 });
+
+// ==================
+// PAUSE CAROUSEL ON HOVER
+// ==================
+const heroCarousel = document.querySelector('.hero-carousel');
+if (heroCarousel) {
+    heroCarousel.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideTimer);
+    });
+    
+    heroCarousel.addEventListener('mouseleave', () => {
+        startAutoSlide();
+    });
+}
