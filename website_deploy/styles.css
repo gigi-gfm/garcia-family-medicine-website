@@ -39,7 +39,7 @@ h1, h2, h3, h4 {
 }
 
 /* ===================================
-   HEADER - LOGO ON LEFT WITH BOBBING ANIMATION
+   HEADER - LOGO ON LEFT WITH BOBBING ANIMATION (LARGER SIZE)
    =================================== */
 header {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
@@ -64,18 +64,18 @@ header {
 .header-left {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .logo-wrapper {
     background: var(--white);
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid var(--white);
+    border: 4px solid var(--white);
     animation: bobFloat 4s ease-in-out infinite;
 }
 
@@ -95,19 +95,20 @@ header {
     }
 }
 
+/* LARGER LOGO - 100px instead of 60px */
 .header-logo {
-    height: 60px;
+    height: 100px;
     width: auto;
 }
 
 .header-text h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 0.25rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .tagline {
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.95;
     font-style: italic;
     font-weight: 300;
@@ -349,7 +350,7 @@ nav a:hover {
 }
 
 /* ===================================
-   TEAM SECTION
+   TEAM SECTION - FIXED PHOTO CROPPING
    =================================== */
 .team-section {
     padding: 5rem 0;
@@ -388,7 +389,12 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center center;
+}
+
+/* GIGI'S PHOTO - SPECIAL POSITIONING TO SHOW FULL FACE */
+.team-card:nth-child(2) .team-photo img {
+    object-position: center 20%;
 }
 
 .team-info {
@@ -731,6 +737,17 @@ footer p {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
+@media (max-width: 1200px) {
+    /* Keep logo on left for tablets and medium screens */
+    .header-container {
+        justify-content: space-between;
+    }
+    
+    .header-left {
+        flex-direction: row;
+    }
+}
+
 @media (max-width: 968px) {
     .header-container {
         flex-direction: column;
@@ -775,7 +792,7 @@ footer p {
 
 @media (max-width: 480px) {
     .header-logo {
-        height: 50px;
+        height: 70px;
     }
     
     .header-text h1 {
