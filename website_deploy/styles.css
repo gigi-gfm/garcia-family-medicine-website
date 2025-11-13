@@ -118,6 +118,7 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -438,23 +439,31 @@ nav a:hover {
 }
 
 /* ===================================
-   SERVICES SECTION - VERTICAL BOXES
+   SERVICES SECTION - 2 COLUMN LAYOUT
    =================================== */
 .services-section {
     padding: 5rem 0;
     background: linear-gradient(135deg, var(--white), var(--light-gray));
 }
 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
 .service-box {
     background: var(--white);
     border-radius: 20px;
     padding: 0;
-    margin-bottom: 3rem;
     box-shadow: var(--shadow-lg);
     transition: transform 0.3s ease;
     border: 3px solid transparent;
     background-clip: padding-box;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-box:hover {
@@ -484,7 +493,7 @@ nav a:hover {
 
 .service-image {
     width: 100%;
-    height: 400px;
+    height: 300px;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -498,7 +507,10 @@ nav a:hover {
 }
 
 .service-content {
-    padding: 2.5rem;
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .video-placeholder {
@@ -520,35 +532,35 @@ nav a:hover {
 }
 
 .service-content h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--primary-blue);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     border-bottom: 3px solid transparent;
     border-image: linear-gradient(90deg, var(--primary-blue), var(--secondary-orange)) 1;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
 }
 
 .service-highlight {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: var(--primary-blue);
     font-style: italic;
     font-weight: 500;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
     background: linear-gradient(135deg, var(--light-blue), #e0f2fe);
     border-radius: 10px;
     border-left: 4px solid var(--secondary-orange);
 }
 
 .service-short {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
     font-weight: 300;
 }
 
 .service-full {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .service-full.hidden {
@@ -557,15 +569,15 @@ nav a:hover {
 
 .service-benefits {
     list-style: none;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 
 .service-benefits li {
-    padding: 0.75rem 0;
-    padding-left: 2rem;
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
     position: relative;
-    font-size: 1.05rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .service-benefits li:before {
@@ -574,15 +586,15 @@ nav a:hover {
     font-weight: bold;
     position: absolute;
     left: 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .service-cta {
     font-weight: 600;
     color: var(--primary-blue);
-    font-size: 1.15rem;
-    margin-top: 1.5rem;
-    padding: 1.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
     background: linear-gradient(135deg, #e0f2fe, var(--light-blue));
     border-radius: 10px;
     border-left: 4px solid var(--secondary-orange);
@@ -592,13 +604,13 @@ nav a:hover {
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
     color: var(--white);
     border: none;
-    padding: 0.875rem 2.5rem;
-    font-size: 1.1rem;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 1.5rem;
+    margin-top: auto;
     box-shadow: 0 4px 15px rgba(44, 82, 130, 0.3);
 }
 
@@ -776,6 +788,10 @@ footer p {
     }
     
     .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
         grid-template-columns: 1fr;
     }
     
