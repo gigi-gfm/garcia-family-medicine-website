@@ -184,3 +184,25 @@ document.addEventListener('keydown', (e) => {
         closeExitPopup();
     }
 });
+
+// ===================================
+// BACK TO TOP BUTTON
+// ===================================
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Show/hide back to top button based on scroll position
+window.addEventListener('scroll', () => {
+    const backToTopButton = document.getElementById('backToTop');
+    if (backToTopButton) {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    }
+});
