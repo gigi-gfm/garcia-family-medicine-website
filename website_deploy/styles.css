@@ -535,9 +535,11 @@ nav a:hover {
 .service-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     border-radius: 0;
     box-shadow: none;
+    background: var(--light-gray);
 }
 
 .service-image video {
@@ -772,17 +774,23 @@ nav a:hover {
     margin-right: auto;
 }
 
-.tesstalk-image {
+.tesstalk-video {
     flex: 1;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
 }
 
-.tesstalk-image img {
+.tesstalk-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    border-radius: 20px;
 }
 
 .tesstalk-description {
@@ -823,33 +831,21 @@ nav a:hover {
     transform: translateY(-5px);
 }
 
-.testimonial-placeholder {
+.testimonial-video-embed {
     width: 100%;
-    height: 350px;
-    background: linear-gradient(135deg, var(--light-blue), #D6EAF8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+    overflow: hidden;
+    background: #000;
 }
 
-.placeholder-icon {
-    font-size: 4rem;
-}
-
-.testimonial-placeholder > p {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--primary-blue);
-    margin: 0;
-}
-
-.placeholder-subtext {
-    font-size: 1rem;
-    color: var(--dark-gray);
-    opacity: 0.7;
-    font-style: italic;
+.testimonial-video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .testimonial-info {
