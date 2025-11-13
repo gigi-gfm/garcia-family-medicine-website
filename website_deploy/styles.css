@@ -540,6 +540,13 @@ nav a:hover {
     box-shadow: none;
 }
 
+.service-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
 .service-content {
     padding: 2rem;
     flex-grow: 1;
@@ -748,6 +755,63 @@ nav a:hover {
 }
 
 /* ===================================
+   TESTIMONIALS SECTION
+   =================================== */
+.testimonials-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--light-gray), var(--white));
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-video {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: #000;
+}
+
+.testimonial-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.testimonial-info h4 {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-info p {
+    color: var(--dark-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ===================================
    FOOTER
    =================================== */
 footer {
@@ -820,6 +884,10 @@ footer p {
     }
     
     .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 }
