@@ -130,3 +130,57 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ===================================
+// EXIT INTENT POPUP
+// ===================================
+let exitPopupShown = false;
+
+function showExitPopup() {
+    const popup = document.getElementById('exitPopup');
+    if (popup && !exitPopupShown) {
+        popup.classList.remove('hidden');
+        exitPopupShown = true;
+        // Store in session storage so it only shows once per session
+        sessionStorage.setItem('exitPopupShown', 'true');
+    }
+}
+
+function closeExitPopup() {
+    const popup = document.getElementById('exitPopup');
+    if (popup) {
+        popup.classList.add('hidden');
+    }
+}
+
+// Detect exit intent
+document.addEventListener('mouseleave', (e) => {
+    // Check if mouse is leaving from the top of the page
+    if (e.clientY <= 0 && !exitPopupShown && !sessionStorage.getItem('exitPopupShown')) {
+        showExitPopup();
+    }
+});
+
+// Close popup when clicking outside
+document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('exitPopup');
+    if (popup) {
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                closeExitPopup();
+            }
+        });
+    }
+    
+    // Check if popup was already shown in this session
+    if (sessionStorage.getItem('exitPopupShown')) {
+        exitPopupShown = true;
+    }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeExitPopup();
+    }
+});
