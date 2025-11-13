@@ -1,126 +1,132 @@
-// ======================================
-// GARCIA FAMILY MEDICINE - SCRIPT.JS
-// ======================================
-
-// ==================
-// HERO CAROUSEL
-// ==================
-let currentSlideIndex = 0;
+// ===================================
+// CAROUSEL FUNCTIONALITY
+// ===================================
+let currentSlide = 0;
 const slides = document.querySelectorAll('.hero-slide');
-const dots = document.querySelectorAll('.carousel-nav .dot');
-let autoSlideTimer;
+const dots = document.querySelectorAll('.dot');
+let autoPlayInterval;
 
-// Initialize carousel
-function initCarousel() {
-    if (slides.length > 0) {
-        showSlide(0);
-        startAutoSlide();
-    }
-}
-
-// Show specific slide
 function showSlide(index) {
-    // Remove active classes
+    // Remove active class from all slides
     slides.forEach(slide => {
         slide.classList.remove('active', 'prev');
     });
+    
+    // Remove active class from all dots
     dots.forEach(dot => {
         dot.classList.remove('active');
     });
     
-    // Add active class to current slide
-    currentSlideIndex = index;
-    if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
-    if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+    // Mark previous slide
+    if (currentSlide !== index) {
+        slides[currentSlide].classList.add('prev');
+    }
     
-    slides[currentSlideIndex].classList.add('active');
-    dots[currentSlideIndex].classList.add('active');
+    // Add active class to current slide and dot
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    
+    currentSlide = index;
 }
 
-// Next slide
 function nextSlide() {
-    showSlide(currentSlideIndex + 1);
-    resetAutoSlide();
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+    resetAutoPlay();
 }
 
-// Previous slide
 function prevSlide() {
-    showSlide(currentSlideIndex - 1);
-    resetAutoSlide();
+    let prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+    resetAutoPlay();
 }
 
-// Go to specific slide
 function goToSlide(index) {
     showSlide(index);
-    resetAutoSlide();
+    resetAutoPlay();
 }
 
-// Auto advance slides
-function startAutoSlide() {
-    autoSlideTimer = setInterval(() => {
+function autoPlay() {
+    autoPlayInterval = setInterval(() => {
         nextSlide();
     }, 5000); // Change slide every 5 seconds
 }
 
-// Reset auto slide timer
-function resetAutoSlide() {
-    clearInterval(autoSlideTimer);
-    startAutoSlide();
+function resetAutoPlay() {
+    clearInterval(autoPlayInterval);
+    autoPlay();
 }
 
-// ==================
-// READ MORE TOGGLES
-// ==================
+// Start auto-play when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(0);
+    autoPlay();
+});
+
+// ===================================
+// SERVICE READ MORE TOGGLE
+// ===================================
 function toggleReadMore(button) {
-    const serviceContent = button.closest('.service-content');
-    const fullContent = serviceContent.querySelector('.service-full');
+    const serviceBox = button.closest('.service-box');
+    const shortContent = serviceBox.querySelector('.service-short');
+    const fullContent = serviceBox.querySelector('.service-full');
     
     if (fullContent.classList.contains('hidden')) {
         fullContent.classList.remove('hidden');
+        if (shortContent) {
+            shortContent.style.display = 'none';
+        }
         button.textContent = 'Read Less';
+        
+        // Smooth scroll to the service box
+        serviceBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } else {
         fullContent.classList.add('hidden');
+        if (shortContent) {
+            shortContent.style.display = 'block';
+        }
         button.textContent = 'Read More';
+        
+        // Smooth scroll back to top of service box
+        serviceBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
 
-// ==================
-// SMOOTH SCROLLING
-// ==================
+// ===================================
+// TEAM BIO READ MORE TOGGLE
+// ===================================
+function toggleTeamBio(button) {
+    const teamCard = button.closest('.team-card');
+    const shortBio = teamCard.querySelector('.team-bio-short');
+    const fullBio = teamCard.querySelector('.team-bio-full');
+    
+    if (fullBio.classList.contains('hidden')) {
+        fullBio.classList.remove('hidden');
+        button.textContent = 'Read Less';
+        
+        // Smooth scroll to the team card
+        teamCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+        fullBio.classList.add('hidden');
+        button.textContent = 'Read More';
+        
+        // Smooth scroll back to top of team card
+        teamCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+}
+
+// ===================================
+// SMOOTH SCROLLING FOR NAVIGATION
+// ===================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && href.startsWith('#')) {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
 });
-
-// ==================
-// INITIALIZE ON PAGE LOAD
-// ==================
-document.addEventListener('DOMContentLoaded', function() {
-    initCarousel();
-    console.log('Garcia Family Medicine website loaded successfully!');
-});
-
-// ==================
-// PAUSE CAROUSEL ON HOVER
-// ==================
-const heroCarousel = document.querySelector('.hero-carousel');
-if (heroCarousel) {
-    heroCarousel.addEventListener('mouseenter', () => {
-        clearInterval(autoSlideTimer);
-    });
-    
-    heroCarousel.addEventListener('mouseleave', () => {
-        startAutoSlide();
-    });
-}
