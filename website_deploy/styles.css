@@ -39,7 +39,7 @@ h1, h2, h3, h4 {
 }
 
 /* ===================================
-   HEADER - LOGO ON LEFT WITH BOBBING ANIMATION (LARGER SIZE)
+   HEADER - LOGO ON LEFT, NAV RIGHT
    =================================== */
 header {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
@@ -79,7 +79,6 @@ header {
     animation: bobFloat 4s ease-in-out infinite;
 }
 
-/* BOBBING AND FLOATING ANIMATION */
 @keyframes bobFloat {
     0%, 100% {
         transform: translateY(0px) rotate(0deg);
@@ -95,7 +94,6 @@ header {
     }
 }
 
-/* LARGER LOGO - 100px instead of 60px */
 .header-logo {
     height: 100px;
     width: auto;
@@ -134,7 +132,7 @@ nav a:hover {
 }
 
 /* ===================================
-   HERO CAROUSEL - VERY LIGHT OVERLAY
+   HERO CAROUSEL - LIGHTER OVERLAY
    =================================== */
 .hero-carousel {
     position: relative;
@@ -165,7 +163,6 @@ nav a:hover {
     left: -100%;
 }
 
-/* VERY LIGHT OVERLAY - IMAGES VISIBLE! */
 .slide-overlay {
     position: absolute;
     top: 0;
@@ -239,7 +236,6 @@ nav a:hover {
     box-shadow: 0 8px 25px rgba(230, 126, 34, 0.5);
 }
 
-/* Carousel Controls */
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -351,7 +347,7 @@ nav a:hover {
 }
 
 /* ===================================
-   TEAM SECTION - FIXED PHOTO CROPPING
+   TEAM SECTION - 2 COLUMNS
    =================================== */
 .team-section {
     padding: 5rem 0;
@@ -393,12 +389,10 @@ nav a:hover {
     object-position: center top;
 }
 
-/* DR. TESS'S PHOTO - SHOW FACE */
 .team-card:nth-child(1) .team-photo img {
     object-position: center 15%;
 }
 
-/* GIGI'S PHOTO - SHOW FULL FACE INCLUDING MOUTH */
 .team-card:nth-child(2) .team-photo img {
     object-position: center 25%;
 }
@@ -438,8 +432,20 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.team-bio-short {
+    margin-bottom: 1rem;
+}
+
+.team-bio-full {
+    margin-top: 1rem;
+}
+
+.team-bio-full.hidden {
+    display: none;
+}
+
 /* ===================================
-   SERVICES SECTION - 2 COLUMN LAYOUT
+   SERVICES SECTION - 2 COLUMNS
    =================================== */
 .services-section {
     padding: 5rem 0;
@@ -754,21 +760,7 @@ footer p {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
-@media (max-width: 1200px) {
-    /* Keep logo on left for tablets and medium screens */
-    .header-container {
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    
-    .header-left {
-        flex-direction: row;
-        align-items: center;
-    }
-}
-
 @media (max-width: 968px) {
-    /* Only stack on mobile */
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -792,37 +784,6 @@ footer p {
     }
     
     .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .service-image {
-        height: 300px;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
-    
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-    
-    .hero-carousel {
-        height: 450px;
-    }
-    
-    .slide-content {
-        padding: 2rem;
-    }
-    
-    .slide-content h2 {
-        font-size: 2rem;
-    }
-    
-    .team-grid {
         grid-template-columns: 1fr;
     }
     
