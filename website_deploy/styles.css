@@ -179,7 +179,7 @@ nav a:hover {
     z-index: 2;
     text-align: center;
     color: var(--white);
-    background: linear-gradient(135deg, rgba(44, 82, 130, 0.9), rgba(60, 107, 168, 0.85));
+    background: linear-gradient(135deg, rgba(44, 82, 130, 0.5), rgba(60, 107, 168, 0.4));
     padding: 3rem;
     border-radius: 20px;
     max-width: 800px;
@@ -359,7 +359,7 @@ nav a:hover {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     margin-top: 2rem;
     max-width: 1400px;
@@ -389,12 +389,17 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
 }
 
-/* GIGI'S PHOTO - SPECIAL POSITIONING TO SHOW FULL FACE */
+/* DR. TESS'S PHOTO - SHOW FACE */
+.team-card:nth-child(1) .team-photo img {
+    object-position: center 15%;
+}
+
+/* GIGI'S PHOTO - SHOW FULL FACE INCLUDING MOUTH */
 .team-card:nth-child(2) .team-photo img {
-    object-position: center 20%;
+    object-position: center 25%;
 }
 
 .team-info {
@@ -741,23 +746,47 @@ footer p {
     /* Keep logo on left for tablets and medium screens */
     .header-container {
         justify-content: space-between;
+        flex-direction: row;
     }
     
     .header-left {
         flex-direction: row;
+        align-items: center;
     }
 }
 
 @media (max-width: 968px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
+    /* Only stack on mobile */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
     }
     
-    .header-left {
-        flex-direction: column;
-        margin-bottom: 1rem;
+    .hero-carousel {
+        height: 450px;
     }
+    
+    .slide-content {
+        padding: 2rem;
+    }
+    
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-image {
+        height: 300px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
     
     nav ul {
         flex-wrap: wrap;
