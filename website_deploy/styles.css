@@ -448,27 +448,28 @@ nav a:hover {
    TESTIMONY BOX
    =================================== */
 .testimony-box {
-    background: linear-gradient(135deg, #9333EA, #7C3AED);
-    color: var(--white);
+    background: linear-gradient(135deg, #FED7AA, #FDBA74);
+    color: var(--dark-gray);
     padding: 2rem;
     border-radius: 15px;
     margin-top: 2rem;
-    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.3);
-    border-left: 5px solid #A855F7;
+    box-shadow: 0 8px 20px rgba(254, 215, 170, 0.3);
+    border-left: 5px solid var(--secondary-orange);
 }
 
 .testimony-box h4 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--secondary-orange-dark);
     font-family: 'Playfair Display', Georgia, serif;
 }
 
 .testimony-box p {
     font-size: 1.05rem;
     line-height: 1.8;
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
+    color: var(--dark-gray);
 }
 
 /* ===================================
@@ -1065,5 +1066,69 @@ footer p {
     .exit-btn-primary,
     .exit-btn-secondary {
         min-width: 100%;
+    }
+}
+
+/* ===================================
+   BACK TO TOP BUTTON
+   =================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--secondary-orange), var(--secondary-orange-dark));
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(230, 126, 34, 0.5);
+}
+
+.back-to-top svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .back-to-top span {
+        display: none;
+    }
+    
+    .back-to-top {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 0;
+        justify-content: center;
     }
 }
