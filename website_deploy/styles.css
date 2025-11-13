@@ -755,6 +755,48 @@ nav a:hover {
 }
 
 /* ===================================
+   TESSTALK SECTION
+   =================================== */
+.tesstalk-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--light-blue), var(--white));
+}
+
+.tesstalk-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tesstalk-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.tesstalk-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tesstalk-description {
+    flex: 1;
+}
+
+.tesstalk-description p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    font-weight: 300;
+}
+
+/* ===================================
    TESTIMONIALS SECTION
    =================================== */
 .testimonials-section {
@@ -889,6 +931,10 @@ footer p {
     
     .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .tesstalk-content {
+        flex-direction: column;
     }
 }
 
