@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,120 +5,789 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Garcia Family Medicine - Direct Primary Care in Blue Springs, MO | DPC, Weight Loss, CoreLift</title>
-    <meta name="title" content="Garcia Family Medicine - Direct Primary Care in Blue Springs, MO">
-    <meta name="description" content="Affordable Direct Primary Care (DPC) in Blue Springs, Missouri. Dr. Tess Garcia offers weight management ($27 first month), CoreLift pelvic health, mental health counseling, DOT physicals, and more. No insurance needed. Treating Spirit, Body, and Soul.">
-    <meta name="keywords" content="Direct Primary Care Blue Springs, DPC Missouri, Garcia Family Medicine, Dr Tess Garcia, weight management Blue Springs, medical weight loss, CoreLift Blue Springs, pelvic floor therapy, BTL EMSELLA, mental health counseling, DOT physical Blue Springs, opioid-free pain management, Blue Springs doctor, affordable healthcare Missouri, no insurance doctor, family medicine Blue Springs, obesity medicine specialist, CareCredit financing">
+    <title>Garcia Family Medicine - Direct Primary Care in Blue Springs, MO</title>
+    <meta name="description" content="Affordable Direct Primary Care in Blue Springs, Missouri. Dr. Tess Garcia offers weight management, CoreLift pelvic health, mental health counseling, DOT physicals. Treating Spirit, Body, and Soul.">
+    <meta name="keywords" content="Direct Primary Care Blue Springs, DPC Missouri, Garcia Family Medicine, Dr Tess Garcia, weight management Blue Springs, CoreLift, mental health counseling, DOT physical Blue Springs">
     <meta name="author" content="Garcia Family Medicine">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://garciafamilymedicine.care/">
-    <meta property="og:title" content="Garcia Family Medicine - Direct Primary Care in Blue Springs, MO">
-    <meta property="og:description" content="Affordable Direct Primary Care with Dr. Tess Garcia. Weight management $27 first month, CoreLift pelvic health, mental health care. Treating the whole patient: Spirit, Body, and Soul.">
+    <meta property="og:title" content="Garcia Family Medicine - Direct Primary Care">
+    <meta property="og:description" content="Direct Primary Care with Dr. Tess Garcia. Treating Spirit, Body, and Soul.">
     <meta property="og:image" content="https://garciafamilymedicine.care/Logo_New_GFM.webp">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://garciafamilymedicine.care/">
-    <meta property="twitter:title" content="Garcia Family Medicine - Direct Primary Care in Blue Springs, MO">
-    <meta property="twitter:description" content="Affordable Direct Primary Care with Dr. Tess Garcia. Weight management $27 first month, CoreLift pelvic health, mental health care.">
-    <meta property="twitter:image" content="https://garciafamilymedicine.care/Logo_New_GFM.webp">
     
     <!-- Geo Tags -->
     <meta name="geo.region" content="US-MO">
     <meta name="geo.placename" content="Blue Springs">
-    <meta name="geo.position" content="39.0169;-94.2816">
-    <meta name="ICBM" content="39.0169, -94.2816">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://garciafamilymedicine.care/">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Schema.org Structured Data for Local Business -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalClinic",
-      "name": "Garcia Family Medicine",
-      "image": "https://garciafamilymedicine.care/Logo_New_GFM.webp",
-      "description": "Direct Primary Care practice in Blue Springs, Missouri offering affordable healthcare, weight management, CoreLift pelvic health, mental health counseling, and more. Treating the whole patient: Spirit, Body, and Soul.",
-      "url": "https://garciafamilymedicine.care/",
-      "telephone": "+18164275320",
-      "email": "gigi@garciafamilymedicine.care",
-      "priceRange": "$99/month DPC membership",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "801 NW Saint Mary's Drive, Suite 209",
-        "addressLocality": "Blue Springs",
-        "addressRegion": "MO",
-        "postalCode": "64014",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "39.0169",
-        "longitude": "-94.2816"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "17:00"
+    <!-- ALL CSS EMBEDDED HERE -->
+    <style>
+        /* ===================================
+           GLOBAL STYLES
+           =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      ],
-      "areaServed": {
-        "@type": "City",
-        "name": "Blue Springs",
-        "containedIn": {
-          "@type": "State",
-          "name": "Missouri"
+
+        :root {
+            --primary-blue: #0066CC;
+            --primary-blue-dark: #0052A3;
+            --secondary-orange: #FF6600;
+            --secondary-orange-dark: #E55A00;
+            --dark-gray: #333333;
+            --light-gray: #F5F5F5;
+            --white: #FFFFFF;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-      },
-      "medicalSpecialty": [
-        "Family Medicine",
-        "Obesity Medicine",
-        "Direct Primary Care",
-        "Mental Health",
-        "Pain Management"
-      ],
-      "paymentAccepted": ["Cash", "Credit Card", "CareCredit"],
-      "availableService": [
-        {
-          "@type": "MedicalProcedure",
-          "name": "Direct Primary Care Membership"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Medical Weight Management"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "CoreLift Pelvic Health Treatment"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Mental Health Counseling"
-        },
-        {
-          "@type": "MedicalTest",
-          "name": "DOT Physical Examinations"
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            overflow-x: hidden;
         }
-      ]
-    }
-    </script>
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===================================
+           HEADER
+           =================================== */
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue-dark), var(--primary-blue));
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-orange);
+        }
+
+        .cta-button {
+            background: var(--secondary-orange);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--secondary-orange-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ===================================
+           HERO SECTION
+           =================================== */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: var(--secondary-orange);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--secondary-orange);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-orange-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+        }
+
+        /* ===================================
+           SECTIONS
+           =================================== */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* ===================================
+           ABOUT SECTION
+           =================================== */
+        .about-section {
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .mission-box {
+            background: linear-gradient(135deg, #CCE5FF, #FFE5CC);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .mission-box h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .mission-statement {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-orange);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .mission-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mission-list li {
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===================================
+           TEAM SECTION
+           =================================== */
+        .team-section {
+            background: var(--light-gray);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .team-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--primary-blue);
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: var(--secondary-orange);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .testimony-box {
+            background: linear-gradient(135deg, #FED7AA, #FDBA74);
+            color: var(--dark-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            border-left: 5px solid var(--secondary-orange);
+        }
+
+        .testimony-box h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-orange-dark);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .testimony-box p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* ===================================
+           SERVICES SECTION
+           =================================== */
+        .services-section {
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .service-box {
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            transition: transform 0.3s;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .special-box {
+            position: relative;
+            border: 3px solid var(--secondary-orange);
+        }
+
+        .special-ribbon {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--secondary-orange);
+            color: var(--white);
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-weight: 700;
+            box-shadow: var(--shadow-md);
+            z-index: 10;
+        }
+
+        .service-image {
+            width: 300px;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-short {
+            margin-bottom: 1rem;
+        }
+
+        .service-short p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .service-full {
+            margin-top: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .service-full.hidden {
+            display: none;
+        }
+
+        .service-benefits {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0;
+        }
+
+        .service-benefits li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-orange);
+            font-weight: bold;
+        }
+
+        .service-cta {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #E6F3FF;
+            border-radius: 10px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .read-more-toggle {
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+
+        .read-more-toggle:hover {
+            background: var(--primary-blue-dark);
+            transform: scale(1.05);
+        }
+
+        /* ===================================
+           TESTIMONIALS SECTION
+           =================================== */
+        .testimonials-section {
+            background: var(--light-gray);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-video {
+            width: 100%;
+            height: 250px;
+        }
+
+        .testimonial-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .testimonial-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .testimonial-info h4 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-info p {
+            color: #666;
+        }
+
+        /* ===================================
+           CONTACT SECTION
+           =================================== */
+        .contact-section {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item h4 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-item p {
+            line-height: 1.8;
+        }
+
+        .contact-item a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary-orange);
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, #E6F3FF, #FFE5CC);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .contact-form h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .submit-button {
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .submit-button:hover {
+            background: var(--primary-blue-dark);
+            transform: translateY(-3px);
+        }
+
+        /* ===================================
+           FOOTER
+           =================================== */
+        .footer {
+            background: linear-gradient(135deg, var(--primary-blue-dark), var(--primary-blue));
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-contact {
+            margin-top: 1.5rem;
+        }
+
+        .footer-contact a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* ===================================
+           EXIT POPUP
+           =================================== */
+        .exit-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .exit-popup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .exit-popup-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 600px;
+            position: relative;
+            text-align: center;
+        }
+
+        .exit-popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .exit-popup h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .exit-popup h3 {
+            color: var(--secondary-orange);
+            margin-bottom: 1rem;
+        }
+
+        .exit-benefits {
+            text-align: left;
+            margin: 1.5rem 0;
+        }
+
+        .exit-benefits li {
+            padding: 0.5rem 0;
+        }
+
+        .exit-popup-button {
+            background: var(--secondary-orange);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        /* ===================================
+           RESPONSIVE
+           =================================== */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-box {
+                grid-template-columns: 1fr;
+            }
+
+            .service-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -149,13 +817,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-badge">Direct Primary Care</div>
+        <div class="container">
+            <div class="hero-badge">🏥 Direct Primary Care</div>
             <h1 class="hero-title">Treating the Whole Patient:<br><span class="highlight">Spirit, Body, and Soul</span></h1>
             <p class="hero-subtitle">Compassionate, faith-based family medicine serving Blue Springs, Jackson County, and the Kansas City Metro</p>
             <div class="hero-buttons">
-                <a href="tel:816-427-5320" class="btn btn-primary">Call (816) 427-5320</a>
+                <a href="tel:816-427-5320" class="btn btn-primary">📞 Call (816) 427-5320</a>
                 <a href="#services" class="btn btn-secondary">Explore Services</a>
             </div>
         </div>
@@ -223,7 +890,6 @@
                 </div>
             </div>
             
-            <!-- Gigi's Testimony -->
             <div class="testimony-box">
                 <h4>Gigi's Journey</h4>
                 <p>"Working alongside Dr. Tess has been transformative. Together, we lost 70 pounds each and learned that sustainable health comes from addressing the whole person—spirit, body, and soul. I'm here to walk alongside you on your own journey to wellness."</p>
@@ -249,12 +915,9 @@
                 <div class="service-content">
                     <h3>Direct Primary Care</h3>
                     <div class="service-short">
-                        <p><strong>Healthcare without the insurance hassle.</strong> Affordable monthly membership gives you unlimited access to Dr. Garcia.</p>
+                        <p><strong>Healthcare without the insurance hassle.</strong> Affordable monthly membership gives you unlimited access to Dr. Garcia for just $99/month.</p>
                     </div>
                     <div class="service-full hidden">
-                        <p><strong>What is Direct Primary Care (DPC)?</strong></p>
-                        <p>Direct Primary Care is a healthcare model where you pay a simple monthly membership fee for comprehensive primary care services—no insurance needed, no copays, no surprise bills.</p>
-                        
                         <p><strong>Your DPC Membership Includes:</strong></p>
                         <ul class="service-benefits">
                             <li>Unlimited office visits</li>
@@ -264,9 +927,7 @@
                             <li>Basic lab work at wholesale prices</li>
                             <li>Preventive care and chronic disease management</li>
                         </ul>
-                        
-                        <p><strong>Monthly Membership: $99/month</strong></p>
-                        <p class="service-cta">Healthcare the way it should be. Contact us to become a member today!</p>
+                        <p class="service-cta">Healthcare the way it should be. Contact us today!</p>
                     </div>
                     <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
                 </div>
@@ -275,198 +936,82 @@
             <!-- CoreLift Service -->
             <div id="corelift" class="service-box">
                 <div class="service-image">
-                    <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift Pelvic Health">
+                    <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift">
                 </div>
                 <div class="service-content">
                     <h3>CoreLift Pelvic Health</h3>
                     <div class="service-short">
-                        <p><strong>Revolutionary non-invasive electromagnetic therapy for pelvic floor strengthening and bladder control.</strong> FDA-cleared EMSELLA technology treats stress and urge incontinence in comfortable 28-minute sessions.</p>
+                        <p><strong>Revolutionary non-invasive electromagnetic therapy.</strong> FDA-cleared EMSELLA technology treats incontinence in comfortable 28-minute sessions.</p>
                     </div>
                     <div class="service-full hidden">
-                        <p><strong>What is CoreLift?</strong></p>
-                        <p>CoreLift uses the FDA-cleared BTL EMSELLA chair, which delivers high-intensity focused electromagnetic (HIFEM) technology to strengthen your pelvic floor muscles. You remain fully clothed while sitting comfortably in the chair during your 28-minute treatment session.</p>
-                        
-                        <p><strong>How It Works:</strong></p>
-                        <p>The EMSELLA chair causes thousands of supramaximal pelvic floor muscle contractions in a single session—the equivalent of doing thousands of Kegel exercises. These deep pelvic floor contractions restore neuromuscular control and strengthen the muscles that support your bladder and pelvic organs.</p>
-
-                        <p><strong>Conditions Treated:</strong></p>
+                        <p><strong>How It Works:</strong> The EMSELLA chair delivers thousands of pelvic floor contractions per session—equivalent to thousands of Kegel exercises.</p>
                         <ul class="service-benefits">
-                            <li><strong>Stress Incontinence:</strong> Leakage when coughing, sneezing, laughing, or exercising</li>
-                            <li><strong>Urge Incontinence:</strong> Sudden, strong urge to urinate with leakage</li>
-                            <li><strong>Pelvic Floor Weakness:</strong> Following childbirth or due to aging</li>
-                            <li><strong>Sexual Dysfunction:</strong> Improved pelvic muscle tone can enhance intimacy</li>
+                            <li>95% of patients report improved quality of life</li>
+                            <li>No surgery, no downtime</li>
+                            <li>Fully clothed treatment</li>
+                            <li>6 sessions over 3 weeks recommended</li>
                         </ul>
-
-                        <p><strong>Treatment Protocol:</strong></p>
-                        <ul class="service-benefits">
-                            <li>Recommended series: 6 sessions over 3 weeks</li>
-                            <li>Each session: 28 minutes</li>
-                            <li>Fully clothed, non-invasive treatment</li>
-                            <li>No downtime or recovery needed</li>
-                            <li>Most patients see improvement after 3-4 sessions</li>
-                            <li>Maintenance treatments every 6-12 months</li>
-                        </ul>
-
-                        <p><strong>Results You Can Expect:</strong></p>
-                        <p>Clinical studies show that 95% of patients report significant improvement in their quality of life. Many patients experience a dramatic reduction in pad usage, with some no longer needing pads at all. Results typically improve over 2-4 weeks following your treatment series.</p>
-                        <p class="service-cta">Stop letting leaks limit your life. Schedule your CoreLift consultation today!</p>
+                        <p class="service-cta">Stop letting leaks limit your life. Schedule today!</p>
                     </div>
                     <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
                 </div>
             </div>
 
-            <!-- Mental Health Service -->
-            <div id="mental-health" class="service-box">
-                <div class="service-image">
-                    <img src="anxiety1_png.jpg" alt="Mental Health Counseling">
-                </div>
-                <div class="service-content">
-                    <h3>Mental Health Counseling</h3>
-                    <div class="service-short">
-                        <p><strong>Compassionate mental health support in a faith-based setting.</strong> Dr. Garcia provides counseling for anxiety, depression, stress, and life transitions.</p>
-                    </div>
-                    <div class="service-full hidden">
-                        <p><strong>Integrating Faith and Mental Health:</strong></p>
-                        <p>At Garcia Family Medicine, we understand that mental and spiritual health are deeply connected. Dr. Garcia offers counseling that respects your faith while providing evidence-based mental health care.</p>
-                        
-                        <p><strong>Services Include:</strong></p>
-                        <ul class="service-benefits">
-                            <li>Anxiety and depression management</li>
-                            <li>Stress and burnout recovery</li>
-                            <li>Life transitions and adjustment issues</li>
-                            <li>Relationship challenges</li>
-                            <li>Grief and loss counseling</li>
-                            <li>Faith-integrated therapy</li>
-                        </ul>
-
-                        <p><strong>Our Approach:</strong></p>
-                        <p>We believe in treating the whole person—addressing mental health concerns while honoring your spiritual beliefs and values. Sessions provide a safe, confidential space to process emotions, develop coping strategies, and find healing.</p>
-                        <p class="service-cta">Healing begins with being heard. Schedule your confidential consultation today.</p>
-                    </div>
-                    <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                </div>
-            </div>
-
-            <!-- Medical Weight Management Service -->
+            <!-- Weight Management -->
             <div id="weight-management" class="service-box special-box">
                 <div class="special-ribbon">
                     <span>First Month $27!</span>
                 </div>
                 <div class="service-image">
-                    <img src="wm14_png.jpg" alt="Medical Weight Management">
+                    <img src="wm14_png.jpg" alt="Weight Management">
                 </div>
                 <div class="service-content">
                     <h3>Medical Weight Management</h3>
                     <div class="service-short">
-                        <p><strong>Achieving sustainable, long-term health through comprehensive physician-supervised weight management.</strong> This is not a quick fix—it's a commitment to lasting change.</p>
+                        <p><strong>Physician-supervised weight management for lasting change.</strong> Not a quick fix—a commitment to sustainable health.</p>
                     </div>
                     <div class="service-full hidden">
-                        <p><strong>Let Us Be Clear:</strong></p>
-                        <p>If you are looking for a 3-month program in which you starve yourself and use a GLP-1a to quickly take off pounds to get you into your bikini for the summer or fit into your wedding dress in time for the big day, our program is not for you. It takes time to change your eating habits so that once you come off the program, you will be able to maintain your weight loss. Our weight management program is for people who are committed to change.</p>
-
-                        <p><strong>What Is Our Weight Management Program?</strong></p>
-                        <p>Weight management at Garcia Family Medicine involves more than just losing pounds; it's about creating sustainable, healthy behaviors that reduce the risk of chronic diseases such as diabetes, heart disease, and hypertension and allow the patient to come off the program without experiencing weight regain.</p>
-
-                        <p><strong>The First Appointment:</strong></p>
+                        <p><strong>Program Includes:</strong></p>
                         <ul class="service-benefits">
-                            <li>Body composition analysis</li>
-                            <li>Vital signs assessment</li>
-                            <li>In-depth medical history</li>
-                            <li>Thorough physical exam by Dr. Tess</li>
-                            <li>Comprehensive lab panel to detect metabolic causes and comorbidities</li>
-                            <li>Follow-up in 2 weeks to learn results and begin counseling</li>
+                            <li>Biweekly counseling with Dr. Tess</li>
+                            <li>Biweekly coaching with Gigi</li>
+                            <li>Nutrition education</li>
+                            <li>Exercise program</li>
+                            <li>GLP-1a medications when appropriate</li>
+                            <li>24/7 support via text/phone</li>
                         </ul>
-
-                        <p><strong>Program Components:</strong></p>
-                        <ul class="service-benefits">
-                            <li><strong>Biweekly Counseling with Dr. Tess:</strong> Understanding your relationship with food and emotional eating patterns</li>
-                            <li><strong>Biweekly Coaching with Gigi:</strong> Implementing changes and maintaining motivation</li>
-                            <li><strong>Nutrition Education:</strong> Learn what to eat and when—not about portion control or starvation</li>
-                            <li><strong>Exercise Program:</strong> Personalized to your fitness level and goals</li>
-                            <li><strong>Cyanocobalamin Injections:</strong> Fat-burning B12 injections to enhance metabolism</li>
-                            <li><strong>GLP-1a Agonists:</strong> Tirzepatide (with NAD precursors) when medically appropriate</li>
-                            <li><strong>24/7 Support:</strong> Dr. Tess and Gigi available by text or phone to support you through challenges</li>
-                        </ul>
-
-                        <p><strong>About Tirzepatide:</strong></p>
-                        <p>Tirzepatide is more than just a GLP-1a agonist; it's also a GIP agonist. These hormones work in the GI system to make digestion slower, but also in the brain to decrease your appetite. Dr. Tess thoroughly evaluates each patient's eligibility before prescribing tirzepatide, ensuring that the treatment is safe, effective, and appropriate for their weight loss journey. You will not walk into the first appointment and walk out with tirzepatide—medical evaluation comes first.</p>
-
-                        <p><strong>Why Choose Dr. Tess?</strong></p>
-                        <p>Dr. Tess is a board-certified Obesity Medicine Specialist who has proven the program's effectiveness to herself by losing 70 pounds—without Tirzepatide, but with the coaching help of Gigi who lost 70 pounds with her. Knowing ourselves how important this is, we hold your hand every step of the way.</p>
-
-                        <p><strong>Compassion and Acceptance:</strong></p>
-                        <p>We believe that any weight management program that perpetuates feelings of shame or failure should not be in business. Compassion and acceptance are major parts of our weight management program. We do not allow you to be alone on your weight loss journey.</p>
-                        <p class="service-cta">Start your transformation today with our special $27 first month offer!</p>
+                        <p class="service-cta">Start your transformation with our $27 first month special!</p>
                     </div>
                     <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
                 </div>
             </div>
 
-            <!-- Wellness Coaching Service -->
-            <div id="wellness-coaching" class="service-box">
+            <!-- Mental Health -->
+            <div id="mental-health" class="service-box">
                 <div class="service-image">
-                    <img src="Gigi_left.png" alt="Wellness Coaching with Gigi">
+                    <img src="anxiety1_png.jpg" alt="Mental Health">
                 </div>
                 <div class="service-content">
-                    <h3>Wellness Coaching</h3>
+                    <h3>Mental Health Counseling</h3>
                     <div class="service-short">
-                        <p><strong>Personalized wellness coaching to support your health journey.</strong> Gigi provides compassionate coaching for lifestyle changes, healthy habits, and holistic wellness.</p>
+                        <p><strong>Compassionate mental health support in a faith-based setting.</strong> Anxiety, depression, stress, and life transitions.</p>
                     </div>
                     <div class="service-full hidden">
-                        <p><strong>What is Wellness Coaching?</strong></p>
-                        <p>Wellness coaching is a collaborative partnership between you and Gigi, designed to help you achieve your health and lifestyle goals. Unlike traditional medical treatment that focuses on disease, wellness coaching focuses on optimizing your overall well-being and preventing future health problems.</p>
-
-                        <p><strong>Services Provided:</strong></p>
                         <ul class="service-benefits">
-                            <li><strong>One-on-One Coaching Sessions:</strong> Personalized guidance tailored to your unique needs and goals</li>
-                            <li><strong>Lifestyle & Behavior Change Support:</strong> Help implementing changes recommended by Dr. Garcia</li>
-                            <li><strong>Nutrition Guidance:</strong> Healthy eating strategies and meal planning support</li>
-                            <li><strong>Stress Management:</strong> Techniques for reducing stress and improving mental well-being</li>
-                            <li><strong>Exercise & Movement:</strong> Support for starting and maintaining an exercise program</li>
-                            <li><strong>Accountability & Motivation:</strong> Regular check-ins to keep you on track</li>
+                            <li>Faith-integrated therapy</li>
+                            <li>Anxiety and depression management</li>
+                            <li>Stress and burnout recovery</li>
+                            <li>Life transitions counseling</li>
+                            <li>Grief and loss support</li>
                         </ul>
-
-                        <p><strong>Gigi's Approach:</strong></p>
-                        <p>Gigi brings a compassionate, non-judgmental approach to wellness coaching. Having personally lost 70 pounds alongside Dr. Tess, she understands the challenges of making significant lifestyle changes.</p>
-                        <p class="service-cta">Let Gigi support you on your journey to better health and wellness. Contact us to learn more!</p>
+                        <p class="service-cta">Healing begins with being heard. Schedule today.</p>
                     </div>
                     <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
                 </div>
             </div>
 
-            <!-- IME Service -->
-            <div id="ime" class="service-box">
-                <div class="service-image">
-                    <img src="injury_work_accident6_png.jpg" alt="Independent Medical Evaluations">
-                </div>
-                <div class="service-content">
-                    <h3>Independent Medical Evaluations</h3>
-                    <div class="service-short">
-                        <p><strong>Comprehensive, objective medical assessments for legal and administrative purposes.</strong> Dr. Garcia provides thorough IMEs for workers' comp, disability, and insurance cases.</p>
-                    </div>
-                    <div class="service-full hidden">
-                        <p><strong>What is an Independent Medical Evaluation (IME)?</strong></p>
-                        <p>An IME is a comprehensive medical examination conducted by an impartial physician to provide an objective assessment of a patient's medical condition, typically for legal, insurance, or workers' compensation purposes.</p>
-                        
-                        <p><strong>When You Need an IME:</strong></p>
-                        <ul class="service-benefits">
-                            <li>Workers' compensation claims</li>
-                            <li>Disability determinations</li>
-                            <li>Personal injury litigation</li>
-                            <li>Insurance claim disputes</li>
-                            <li>Return-to-work assessments</li>
-                        </ul>
-
-                        <p><strong>What to Expect:</strong></p>
-                        <p>Dr. Garcia will conduct a thorough medical examination, review your medical records, and provide a detailed written report addressing specific questions about your condition, treatment, causation, and prognosis.</p>
-                        <p class="service-cta">Professional, thorough, and objective evaluations. Schedule your IME today.</p>
-                    </div>
-                    <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                </div>
-            </div>
-
-            <!-- DOT Physicals Service -->
-            <div id="dot-physicals" class="service-box">
+            <!-- DOT Physicals -->
+            <div id="dot" class="service-box">
                 <div class="service-image">
                     <img src="semi_truck12_png.jpg" alt="DOT Physicals">
                 </div>
@@ -476,94 +1021,36 @@
                         <p><strong>FMCSA-certified medical examinations for commercial drivers.</strong> Fast, professional service to keep you on the road.</p>
                     </div>
                     <div class="service-full hidden">
-                        <p><strong>What is a DOT Physical?</strong></p>
-                        <p>A DOT physical is a health examination mandated by the Federal Motor Carrier Safety Administration (FMCSA) for commercial motor vehicle (CMV) drivers. Dr. Garcia is a certified medical examiner listed on the FMCSA National Registry.</p>
-                        
-                        <p><strong>The Examination Includes:</strong></p>
                         <ul class="service-benefits">
-                            <li>Vision and hearing tests</li>
-                            <li>Blood pressure and pulse rate</li>
-                            <li>Urinalysis</li>
-                            <li>Physical examination</li>
-                            <li>Review of medical history</li>
-                            <li>Assessment of medications</li>
+                            <li>FMCSA certified examiner</li>
+                            <li>Same-day appointments</li>
+                            <li>Quick turnaround</li>
+                            <li>Convenient Blue Springs location</li>
                         </ul>
-
-                        <p><strong>What to Bring:</strong></p>
-                        <ul class="service-benefits">
-                            <li>Current driver's license</li>
-                            <li>List of current medications</li>
-                            <li>Glasses or contacts (if you wear them)</li>
-                            <li>Hearing aids (if you use them)</li>
-                            <li>Medical records for any chronic conditions</li>
-                        </ul>
-
-                        <p><strong>Convenient Blue Springs Location:</strong></p>
-                        <p>Our office is conveniently located in Blue Springs, Missouri, easily accessible from I-70 and major trucking routes through the Kansas City metro area.</p>
-                        <p class="service-cta">Get your DOT physical and get back on the road. Call (816) 427-5320 to schedule!</p>
+                        <p class="service-cta">Call (816) 427-5320 to schedule!</p>
                     </div>
                     <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
                 </div>
             </div>
 
-            <!-- Opioid-Free Pain Management - SERVICE -->
-            <div id="pain-management" class="service-box">
-                <div class="service-image">
-                    <img src="pain_management.jpg" alt="Opioid-Free Pain Management">
-                </div>
-                <div class="service-content">
-                    <h3>Opioid-Free Pain Management</h3>
-                    <div class="service-short">
-                        <p><strong>Effective pain relief without opioids or controlled substances.</strong> Dr. Garcia provides comprehensive pain management solutions focused on safe, non-addictive alternatives.</p>
-                    </div>
-                    <div class="service-full hidden">
-                        <p><strong>Our Approach to Pain Management:</strong></p>
-                        <p>We believe in treating pain effectively without relying on opioids or controlled substances. Dr. Garcia does not prescribe phentermine or any controlled substances, focusing instead on safer, evidence-based alternatives.</p>
-                        
-                        <p><em>Detailed information about opioid-free pain management treatments will be provided during your consultation with Dr. Tess.</em></p>
-                        <p class="service-cta">Schedule a consultation to discuss your pain management options.</p>
-                    </div>
-                    <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                </div>
-            </div>
-
-            <!-- CareCredit Financing - SERVICE -->
+            <!-- CareCredit -->
             <div id="carecredit" class="service-box">
                 <div class="service-image">
-                    <img src="__paymentplan9_png.jpg" alt="CareCredit Financing">
+                    <img src="__paymentplan9_png.jpg" alt="CareCredit">
                 </div>
                 <div class="service-content">
-                    <h3>CareCredit® Financing - 0% Interest Available</h3>
+                    <h3>CareCredit® Financing - 0% Interest</h3>
                     <div class="service-short">
-                        <p><strong>Healthcare financing made easy with 0% interest options.</strong> CareCredit helps you pay for healthcare expenses not covered by insurance, allowing you to get the care you need now and pay over time.</p>
+                        <p><strong>Healthcare financing with 0% interest options.</strong> Get the care you need now, pay over time.</p>
                     </div>
                     <div class="service-full hidden">
-                        <p><strong>What is CareCredit?</strong></p>
-                        <p>CareCredit is a healthcare credit card designed specifically for your health and wellness needs. It's accepted at over 250,000 healthcare providers nationwide, including Garcia Family Medicine.</p>
-
-                        <p><strong>Special Financing Options:</strong></p>
                         <ul class="service-benefits">
-                            <li><strong>0% Interest if Paid in Full Within 6, 12, 18, or 24 Months:</strong> On purchases of $200 or more</li>
-                            <li><strong>No Annual Fee:</strong> Your CareCredit card has no annual fees</li>
-                            <li><strong>Instant Decisions:</strong> Apply online and get a decision in seconds</li>
-                            <li><strong>Use Again and Again:</strong> Once approved, you can use your card for future healthcare expenses</li>
+                            <li>0% interest for 6, 12, 18, or 24 months</li>
+                            <li>No annual fee</li>
+                            <li>Instant decisions</li>
+                            <li>Covers all our services</li>
                         </ul>
-
-                        <p><strong>What Can CareCredit Cover at Garcia Family Medicine?</strong></p>
-                        <ul class="service-benefits">
-                            <li>Direct Primary Care membership fees</li>
-                            <li>Weight Management program costs</li>
-                            <li>CoreLift pelvic health treatments</li>
-                            <li>Mental health counseling sessions</li>
-                            <li>Wellness coaching services</li>
-                            <li>Independent Medical Evaluations</li>
-                            <li>DOT physicals</li>
-                        </ul>
-
-                        <p><strong>Ready to Apply?</strong></p>
-                        <p>Visit <a href="https://www.carecredit.com" target="_blank" rel="noopener noreferrer">www.carecredit.com</a> to apply online, or ask our staff about applying during your next visit.</p>
-
-                        <p class="service-cta"><em>*Subject to credit approval. Minimum monthly payments required. 0% promotional financing options available on purchases of $200 or more. Interest will be charged to your account from the purchase date if the promotional balance is not paid in full within the promotional period.</em></p>
+                        <p>Visit <a href="https://www.carecredit.com" target="_blank">www.carecredit.com</a> to apply.</p>
                     </div>
                     <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
                 </div>
@@ -573,7 +1060,7 @@
         </div>
     </section>
 
-    <!-- Video Testimonials Section -->
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials-section">
         <div class="container">
             <div class="section-header">
@@ -582,87 +1069,33 @@
             </div>
             
             <div class="testimonials-grid">
-                <!-- Testimonial Video 1 -->
                 <div class="testimonial-card">
                     <div class="testimonial-video">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/GzQH1qUhWQ0"
-                        title="Patient Testimonial 1" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/GzQH1qUhWQ0" title="Testimonial 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="testimonial-info">
                         <h4>Patient Success Story</h4>
-                        <p>Hear how our Direct Primary Care model changed their life</p>
+                        <p>Direct Primary Care changed their life</p>
                     </div>
                 </div>
 
-                <!-- Testimonial Video 2 -->
                 <div class="testimonial-card">
                     <div class="testimonial-video">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/bLLSmh1j8sQ"
-                        title="Patient Testimonial 2" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/bLLSmh1j8sQ" title="Testimonial 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="testimonial-info">
                         <h4>Weight Management Journey</h4>
-                        <p>A transformative experience with Dr. Tess and Gigi</p>
+                        <p>Transformative experience</p>
                     </div>
                 </div>
 
-                <!-- Testimonial Video 3 -->
                 <div class="testimonial-card">
                     <div class="testimonial-video">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/wLtblFNMdMA"
-                        title="Patient Testimonial 3" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/wLtblFNMdMA" title="Testimonial 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="testimonial-info">
                         <h4>CoreLift Results</h4>
-                        <p>Life-changing pelvic health treatment</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial Video 4 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-video">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/h6JlsFF-tp4"
-                        title="Patient Testimonial 4" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    </div>
-                    <div class="testimonial-info">
-                        <h4>Mental Health Support</h4>
-                        <p>Finding hope through compassionate care</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial Video 5 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-video">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/jVVtcVwQZwM"
-                        title="Patient Testimonial 5" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    </div>
-                    <div class="testimonial-info">
-                        <h4>Comprehensive Family Care</h4>
-                        <p>Healthcare that treats the whole family</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial Video 6 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-video">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/xspHr7i8StU"
-                        title="Patient Testimonial 6" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    </div>
-                    <div class="testimonial-info">
-                        <h4>Wellness Transformation</h4>
-                        <p>A holistic approach to health and healing</p>
+                        <p>Life-changing treatment</p>
                     </div>
                 </div>
             </div>
@@ -680,7 +1113,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <h4>📍 Address</h4>
-                        <p>801 NW Saint Mary's Drive<br>Suite 209<br>Blue Springs, MO 64014</p>
+                        <p>801 NW Saint Mary's Drive, Suite 209<br>Blue Springs, MO 64014</p>
                     </div>
                     <div class="contact-item">
                         <h4>📞 Phone</h4>
@@ -692,32 +1125,23 @@
                     </div>
                     <div class="contact-item">
                         <h4>🕐 Hours</h4>
-                        <p>Monday: Closed<br>Tuesday - Friday: 9:00 AM - 5:00 PM<br>Saturday: By Appointment<br>Sunday: Closed</p>
-                    </div>
-                    <div class="contact-item" id="gigisafehouse">
-                        <h4>🏠 gigiSafeHOUSE</h4>
-                        <p>Learn more about our nonprofit mission to remove barriers to healthcare access.<br>
-                        <em>Landing page coming soon!</em></p>
+                        <p>Tuesday - Friday: 9:00 AM - 5:00 PM<br>Saturday: By Appointment</p>
                     </div>
                 </div>
                 <div class="contact-form">
                     <h3>Request Information</h3>
                     <form>
                         <input type="text" placeholder="Your Name *" required>
-                        <input type="email" placeholder="Email Address *" required>
-                        <input type="tel" placeholder="Phone Number">
+                        <input type="email" placeholder="Email *" required>
+                        <input type="tel" placeholder="Phone">
                         <select required>
                             <option value="">I'm interested in...</option>
                             <option value="dpc">DPC Membership</option>
-                            <option value="weight">Weight Management ($27 Special!)</option>
+                            <option value="weight">Weight Management ($27!)</option>
                             <option value="corelift">CoreLift</option>
-                            <option value="mental-health">Mental Health Counseling</option>
-                            <option value="wellness">Wellness Coaching</option>
-                            <option value="ime">Independent Medical Evaluation</option>
+                            <option value="mental">Mental Health</option>
                             <option value="dot">DOT Physical</option>
-                            <option value="pain-management">Opioid-Free Pain Management</option>
-                            <option value="carecredit">CareCredit Financing</option>
-                            <option value="other">Other Services</option>
+                            <option value="carecredit">CareCredit</option>
                         </select>
                         <textarea placeholder="Your Message" rows="4"></textarea>
                         <button type="submit" class="submit-button">Send Message</button>
@@ -736,7 +1160,7 @@
                     <p>Treating the whole patient: Spirit, Body, and Soul</p>
                 </div>
                 <div class="footer-contact">
-                    <p>801 NW Saint Mary's Drive, Suite 209<br>Blue Springs, MO 64014</p>
+                    <p>801 NW Saint Mary's Drive, Suite 209, Blue Springs, MO 64014</p>
                     <p>Phone: <a href="tel:816-427-5320">(816) 427-5320</a></p>
                     <p>Email: <a href="mailto:gigi@garciafamilymedicine.care">gigi@garciafamilymedicine.care</a></p>
                 </div>
@@ -747,49 +1171,70 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-    
-    <!-- Exit Intent Popup Script -->
+    <!-- ALL JAVASCRIPT EMBEDDED HERE -->
     <script>
-    let exitPopupShown = false;
-
-    document.addEventListener('mouseleave', function(e) {
-        if (e.clientY < 0 && !exitPopupShown) {
-            showExitPopup();
-            exitPopupShown = true;
+        // Read More Toggle
+        function toggleReadMore(button) {
+            const serviceContent = button.parentElement;
+            const fullContent = serviceContent.querySelector('.service-full');
+            
+            if (fullContent.classList.contains('hidden')) {
+                fullContent.classList.remove('hidden');
+                button.textContent = 'Read Less';
+            } else {
+                fullContent.classList.add('hidden');
+                button.textContent = 'Read More';
+            }
         }
-    });
 
-    function showExitPopup() {
-        const popup = document.createElement('div');
-        popup.className = 'exit-popup';
-        popup.innerHTML = `
-            <div class="exit-popup-content">
-                <button class="exit-popup-close" onclick="closeExitPopup()">&times;</button>
-                <h2>Wait! Before You Go...</h2>
-                <h3>🎉 Special Offer: Medical Weight Management - First Month Only $27!</h3>
-                <p>Start your transformation today with physician-supervised weight management.</p>
-                <ul class="exit-benefits">
-                    <li>✓ Personalized weight loss plan with Dr. Garcia</li>
-                    <li>✓ Prescription medications (Semaglutide and other non-controlled options)</li>
-                    <li>✓ Monthly check-ins and progress monitoring</li>
-                    <li>✓ Nutrition and lifestyle coaching with Gigi</li>
-                    <li>✓ No insurance needed - affordable care for everyone</li>
-                </ul>
-                <a href="tel:816-427-5320" class="exit-popup-button">Call Now: (816) 427-5320</a>
-                <p class="exit-popup-note">Limited time offer - Call today!</p>
-            </div>
-        `;
-        document.body.appendChild(popup);
-        setTimeout(() => popup.classList.add('show'), 10);
-    }
+        // Exit Intent Popup
+        let exitPopupShown = false;
 
-    function closeExitPopup() {
-        const popup = document.querySelector('.exit-popup');
-        popup.classList.remove('show');
-        setTimeout(() => popup.remove(), 300);
-    }
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY < 0 && !exitPopupShown) {
+                showExitPopup();
+                exitPopupShown = true;
+            }
+        });
+
+        function showExitPopup() {
+            const popup = document.createElement('div');
+            popup.className = 'exit-popup';
+            popup.innerHTML = `
+                <div class="exit-popup-content">
+                    <button class="exit-popup-close" onclick="closeExitPopup()">&times;</button>
+                    <h2>Wait! Before You Go...</h2>
+                    <h3>🎉 Medical Weight Management - First Month Only $27!</h3>
+                    <p>Start your transformation today with physician-supervised weight management.</p>
+                    <ul class="exit-benefits">
+                        <li>✓ Personalized plan with Dr. Garcia</li>
+                        <li>✓ Medications when appropriate</li>
+                        <li>✓ Nutrition coaching with Gigi</li>
+                        <li>✓ 24/7 support</li>
+                    </ul>
+                    <a href="tel:816-427-5320" class="exit-popup-button">Call Now: (816) 427-5320</a>
+                </div>
+            `;
+            document.body.appendChild(popup);
+            setTimeout(() => popup.classList.add('show'), 10);
+        }
+
+        function closeExitPopup() {
+            const popup = document.querySelector('.exit-popup');
+            popup.classList.remove('show');
+            setTimeout(() => popup.remove(), 300);
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
     </script>
 
 </body>
