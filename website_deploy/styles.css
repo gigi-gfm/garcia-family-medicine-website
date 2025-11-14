@@ -643,6 +643,112 @@ nav a:hover {
     border-left: 4px solid var(--secondary-orange);
 }
 
+/* Pricing Badge */
+.pricing-badge {
+    background: linear-gradient(135deg, var(--secondary-orange), var(--secondary-orange-dark));
+    color: var(--white);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+    animation: pulse 2s infinite;
+}
+
+/* Pricing Box Container */
+.pricing-box {
+    background: linear-gradient(135deg, #fff9f5, var(--white));
+    border: 2px solid var(--secondary-orange);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.2);
+}
+
+.pricing-box h4 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* First Visit Note */
+.first-visit-note {
+    background: linear-gradient(135deg, #e0f2fe, var(--light-blue));
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.first-visit-note strong {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.first-visit-note p {
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.price-item {
+    background: var(--white);
+    border: 2px solid var(--primary-blue);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(44, 82, 130, 0.1);
+}
+
+.price-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(44, 82, 130, 0.2);
+    border-color: var(--secondary-orange);
+}
+
+.price-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.price-item .price {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary-orange);
+    margin: 0.5rem 0;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.price-item small {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
 .read-more-toggle {
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
     color: var(--white);
@@ -948,6 +1054,11 @@ footer p {
     .tesstalk-content {
         flex-direction: column;
     }
+    
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -969,6 +1080,15 @@ footer p {
     
     .service-content h3 {
         font-size: 2rem;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-badge {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.5rem;
     }
 }
 
