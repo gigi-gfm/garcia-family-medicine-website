@@ -170,6 +170,32 @@ nav a:hover {
     font-size: 1.1rem;
 }
 
+.language-toggle {
+    background: var(--white);
+    color: var(--secondary-orange);
+    border: 2px solid var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.language-toggle:hover {
+    background: var(--secondary-orange-dark);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.lang-en, .lang-es {
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
 /* ===================================
    HERO CAROUSEL - LIGHTER OVERLAY
    =================================== */
@@ -1044,6 +1070,56 @@ nav a:hover {
     line-height: 1.8;
     color: var(--dark-gray);
     font-weight: 300;
+}
+
+/* ===================================
+   WRITTEN TESTIMONIALS SECTION
+   =================================== */
+.written-testimonials-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.testimonials-grid-written {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card-written {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card-written:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-orange);
+    box-shadow: 0 12px 30px rgba(230, 126, 34, 0.2);
+}
+
+.testimonial-card-written .stars {
+    color: var(--secondary-orange);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 0.95rem;
 }
 
 /* ===================================
