@@ -542,6 +542,10 @@ nav a:hover {
     background: var(--light-gray);
 }
 
+.service-image img.rotate-right {
+    transform: rotate(90deg);
+}
+
 .service-image video {
     width: 100%;
     height: 100%;
