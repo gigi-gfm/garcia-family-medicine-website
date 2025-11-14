@@ -94,17 +94,17 @@
                 </div>
                 <div class="header-text">
                     <h1>Garcia Family Medicine</h1>
-                    <p class="tagline">Treating the whole patient: Spirit, Body, and Soul</p>
+                    <p class="tagline" data-translate="tagline">Treating the whole patient: Spirit, Body, and Soul</p>
                 </div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#team">Our Team</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" data-translate="nav-home">Home</a></li>
+                    <li><a href="#about" data-translate="nav-about">About</a></li>
+                    <li><a href="#team" data-translate="nav-team">Our Team</a></li>
+                    <li><a href="#services" data-translate="nav-services">Services</a></li>
+                    <li><a href="#testimonials" data-translate="nav-testimonials">Testimonials</a></li>
+                    <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -116,6 +116,10 @@
             <div class="banner-content">
                 <span class="banner-icon">🌎</span>
                 <span class="banner-text"><strong>Multicultural Care</strong> | Se Habla Español | Serving Our Diverse Community with Compassion</span>
+                <button class="language-toggle" onclick="toggleLanguage()">
+                    <span class="lang-en">🇺🇸 English</span>
+                    <span class="lang-es hidden">🇲🇽 Español</span>
+                </button>
             </div>
         </div>
     </div>
@@ -561,7 +565,7 @@
             <!-- Wellness Coaching Service -->
             <div id="wellness-coaching" class="service-box">
                 <div class="service-image">
-                    <img src="Gigi left.png" alt="Wellness Coaching with Gigi">
+                    <img src="igi_left.png" alt="Wellness Coaching with Gigi">
                 </div>
                 <div class="service-content">
                     <h3>Wellness Coaching</h3>
@@ -671,7 +675,7 @@
             <!-- DOT Physicals - SERVICE -->
             <div id="dot-physicals" class="service-box">
                 <div class="service-image">
-                    <img src="semi_truck12_png.jpg" alt="DOT Physicals" class="rotate-right">
+                    <img src="semi_truck12_png.jpg" alt="DOT Physicals">
                 </div>
                 <div class="service-content">
                     <h3>DOT Physicals</h3>
@@ -877,6 +881,64 @@
         </div>
     </section>
 
+    <!-- Written Testimonials Section -->
+    <section class="written-testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <p class="section-subtitle">Real experiences from our Garcia Family Medicine community</p>
+            
+            <div class="testimonials-grid-written">
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Dr. Garcia has taken excellent care of my family members. She has compassion and explains fully all diagnosis, prescriptions, and procedures."</p>
+                    <p class="testimonial-author">– Verified Patient</p>
+                </div>
+
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Care and complete concern for my health issues. This is healthcare the way it should be - personal and focused on me."</p>
+                    <p class="testimonial-author">– DPC Member, Blue Springs</p>
+                </div>
+
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Finally, a doctor who takes the time to listen! No more rushed appointments or insurance hassles. Best healthcare decision I ever made."</p>
+                    <p class="testimonial-author">– Sarah M., DPC Member</p>
+                </div>
+
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The CoreLift treatment changed my life. I can laugh, sneeze, and exercise without worrying. Thank you, Dr. Tess!"</p>
+                    <p class="testimonial-author">– Jennifer K., Blue Springs</p>
+                </div>
+
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"As a veteran, I appreciate the respect and quality care I receive here. Dr. Garcia truly serves those who served."</p>
+                    <p class="testimonial-author">– Michael R., US Army Veteran</p>
+                </div>
+
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Lost 45 pounds with the weight management program! Gigi's coaching and Dr. Tess's medical expertise were the perfect combination."</p>
+                    <p class="testimonial-author">– David L., Weight Management Patient</p>
+                </div>
+
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Se habla español aquí! Finally found a practice where I can communicate comfortably about my health. Gracias, Dr. Tess."</p>
+                    <p class="testimonial-author">– Maria G., Kansas City</p>
+                </div>
+
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The $99/month DPC membership saves me thousands compared to my old insurance. Plus, I can text Dr. Tess directly!"</p>
+                    <p class="testimonial-author">– Robert T., Blue Springs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Video Testimonials Section -->
     <section id="testimonials" class="testimonials-section">
         <div class="container">
@@ -1067,6 +1129,72 @@
         </svg>
         <span>Back to Top</span>
     </button>
+
+    <script>
+        // Language Toggle Functionality
+        let currentLang = 'en';
+        
+        const translations = {
+            // Navigation
+            'nav-home': { en: 'Home', es: 'Inicio' },
+            'nav-about': { en: 'About', es: 'Acerca de' },
+            'nav-team': { en: 'Our Team', es: 'Nuestro Equipo' },
+            'nav-services': { en: 'Services', es: 'Servicios' },
+            'nav-testimonials': { en: 'Testimonials', es: 'Testimonios' },
+            'nav-contact': { en: 'Contact', es: 'Contacto' },
+            
+            // Header
+            'tagline': { 
+                en: 'Treating the whole patient: Spirit, Body, and Soul', 
+                es: 'Tratando al paciente completo: Espíritu, Cuerpo y Alma' 
+            },
+            
+            // About Section
+            'about-title': { en: 'Welcome to Garcia Family Medicine', es: 'Bienvenido a Garcia Family Medicine' },
+            'about-lead': { 
+                en: 'We believe in treating the whole patient - addressing not just physical symptoms, but the emotional and spiritual aspects of health as well. Our practice is built on compassion, evidence-based medicine, and the understanding that true wellness comes from caring for your complete self: Spirit, Body, and Soul.',
+                es: 'Creemos en tratar al paciente completo, abordando no solo los síntomas físicos, sino también los aspectos emocionales y espirituales de la salud. Nuestra práctica se basa en la compasión, la medicina basada en evidencia y la comprensión de que el verdadero bienestar proviene del cuidado de su ser completo: Espíritu, Cuerpo y Alma.'
+            },
+            
+            // DPC Section
+            'dpc-title': { en: 'Direct Primary Care', es: 'Atención Primaria Directa' },
+            'dpc-short': { 
+                en: 'Skip the insurance hassle. Get unlimited access to your doctor for one simple monthly fee. No copays, no deductibles, just quality healthcare focused on you.',
+                es: 'Evite las complicaciones del seguro. Obtenga acceso ilimitado a su médico por una tarifa mensual simple. Sin copagos, sin deducibles, solo atención médica de calidad enfocada en usted.'
+            },
+            
+            // Contact
+            'contact-title': { en: 'Get in Touch', es: 'Contáctenos' },
+            'contact-info-title': { en: 'Contact Information', es: 'Información de Contacto' },
+        };
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'es' : 'en';
+            
+            // Toggle language button text
+            document.querySelectorAll('.lang-en').forEach(el => {
+                el.classList.toggle('hidden');
+            });
+            document.querySelectorAll('.lang-es').forEach(el => {
+                el.classList.toggle('hidden');
+            });
+            
+            // Update all translated elements
+            Object.keys(translations).forEach(key => {
+                const element = document.querySelector(`[data-translate="${key}"]`);
+                if (element) {
+                    element.textContent = translations[key][currentLang];
+                }
+            });
+            
+            // Update special elements
+            if (currentLang === 'es') {
+                document.querySelector('.banner-text').innerHTML = '<strong>Atención Multicultural</strong> | Se Habla Español | Sirviendo a Nuestra Comunidad Diversa con Compasión';
+            } else {
+                document.querySelector('.banner-text').innerHTML = '<strong>Multicultural Care</strong> | Se Habla Español | Serving Our Diverse Community with Compassion';
+            }
+        }
+    </script>
 
     <script src="script.js"></script>
 </body>
