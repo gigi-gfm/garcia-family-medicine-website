@@ -37,9 +37,10 @@ function initializeCarousel() {
             currentSlide = index;
         }
         
-        // Move carousel
-        const offset = -currentSlide * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
+        // Update slides with fade effect
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === currentSlide);
+        });
         
         // Update dots
         dots.forEach((dot, i) => {
@@ -59,7 +60,7 @@ function initializeCarousel() {
     
     // Start auto-rotation
     function startAutoRotate() {
-        autoRotateInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        autoRotateInterval = setInterval(nextSlide, 8000); // Change slide every 8 seconds
     }
     
     // Stop auto-rotation
