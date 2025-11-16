@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,22 +8,22 @@
     <!-- Primary Meta Tags -->
     <title>Garcia Family Medicine - Direct Primary Care in Blue Springs, MO | $99/Month</title>
     <meta name="title" content="Garcia Family Medicine - Direct Primary Care in Blue Springs, MO | $99/Month">
-    <meta name="description" content="Affordable Direct Primary Care in Blue Springs, Missouri. Only $99/month for unlimited visits, no copays, no deductibles. Medical weight management, CoreLift pelvic health, mental health care, DOT physicals, and wellness coaching. Dr. Tess Garcia offers compassionate, comprehensive family medicine.">
-    <meta name="keywords" content="Direct Primary Care Blue Springs, DPC Missouri, family medicine Blue Springs, affordable healthcare, medical weight management Blue Springs, CoreLift Blue Springs, pelvic health Missouri, DOT physicals Blue Springs, mental health care Blue Springs, wellness coaching, Dr Tess Garcia, obesity medicine, opioid-free pain management, Hispanic physician, Native American physician, gigiSafeHOUSE, Kansas City area DPC, Lee's Summit family doctor, Independence MO healthcare, Grain Valley doctor, concierge medicine Missouri, membership-based healthcare, no insurance healthcare, CareCredit accepted, IME Blue Springs, stress incontinence treatment">
+    <meta name="description" content="Direct Primary Care in Blue Springs, Missouri - $99/month unlimited visits. SPECIAL OFFER: Medical Weight Management $27 first month (reg. $299)! CoreLift pelvic health, mental health care, DOT physicals, wellness coaching. Dr. Tess Garcia - Board-certified Obesity Medicine Specialist. No copays, no deductibles. CareCredit 0% financing available. Serving Blue Springs, Lee's Summit, Independence, Grain Valley, Kansas City area.">
+    <meta name="keywords" content="Direct Primary Care Blue Springs, DPC Missouri, $27 weight loss special, medical weight management Blue Springs, affordable weight loss program, tirzepatide Blue Springs, GLP-1 agonist Missouri, weight loss $27 first month, family medicine Blue Springs, CoreLift Blue Springs, pelvic health Missouri, stress incontinence treatment, DOT physicals Blue Springs, mental health care Blue Springs, wellness coaching, Dr Tess Garcia, obesity medicine specialist, board certified obesity medicine, opioid-free pain management, CareCredit 0% financing, no insurance healthcare, $99 month healthcare, Hispanic physician, Native American physician, gigiSafeHOUSE, Kansas City area DPC, Lee's Summit family doctor, Independence MO healthcare, Grain Valley doctor, concierge medicine Missouri, membership healthcare Blue Springs, IME Blue Springs, independent medical evaluation">
     <meta name="author" content="Garcia Family Medicine">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://garciafamilymedicine.care/">
     <meta property="og:title" content="Garcia Family Medicine - Direct Primary Care $99/Month">
-    <meta property="og:description" content="Compassionate Direct Primary Care in Blue Springs, MO. Unlimited visits, no copays, treating the whole patient: Spirit, Body, and Soul.">
+    <meta property="og:description" content="Compassionate Direct Primary Care in Blue Springs, MO. $99/month unlimited visits + SPECIAL: Weight Management $27 first month! No copays, treating the whole patient: Spirit, Body, and Soul.">
     <meta property="og:image" content="https://garciafamilymedicine.care/Logo_New_GFM.webp">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://garciafamilymedicine.care/">
     <meta property="twitter:title" content="Garcia Family Medicine - Direct Primary Care $99/Month">
-    <meta property="twitter:description" content="Compassionate Direct Primary Care in Blue Springs, MO. Unlimited visits, no copays, treating the whole patient: Spirit, Body, and Soul.">
+    <meta property="twitter:description" content="Compassionate Direct Primary Care in Blue Springs, MO. $99/month unlimited visits + SPECIAL: Weight Management $27 first month! No copays, treating the whole patient: Spirit, Body, and Soul.">
     <meta property="twitter:image" content="https://garciafamilymedicine.care/Logo_New_GFM.webp">
     
     <!-- Schema.org markup for Google -->
@@ -34,6 +35,275 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* $27 Special Offer Banner - Vibrant & Eye-Catching! */
+        .special-offer-banner {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 25%, #FFA552 50%, #FFB662 75%, #FF8C42 100%);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+            animation: gradientShift 8s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .special-offer-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .special-offer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .special-offer-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .special-offer-icon {
+            font-size: 2.5em;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .special-offer-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .special-offer-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .special-offer-subtitle {
+            font-size: 1em;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 500;
+        }
+        
+        .special-offer-price {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .price-strike {
+            font-size: 1.8em;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: line-through;
+            font-weight: 600;
+        }
+        
+        .price-special {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            animation: pulse 2s ease-in-out infinite;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .special-offer-button {
+            background: white;
+            color: #FF6B35;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .special-offer-button:hover {
+            background: #0066B2;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Sticky Mobile $27 Button */
+        .sticky-mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.6);
+            border: 3px solid white;
+            cursor: pointer;
+            animation: pulse 2s ease-in-out infinite;
+            text-align: center;
+        }
+        
+        .sticky-mobile-cta .mobile-cta-price {
+            font-size: 1.8em;
+            display: block;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .sticky-mobile-cta .mobile-cta-text {
+            font-size: 0.8em;
+            opacity: 0.95;
+        }
+        
+        @media (max-width: 768px) {
+            .special-offer-banner {
+                padding: 15px 0;
+            }
+            
+            .special-offer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .special-offer-left {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .special-offer-title {
+                font-size: 1.2em;
+            }
+            
+            .special-offer-subtitle {
+                font-size: 0.9em;
+            }
+            
+            .price-special {
+                font-size: 2.5em;
+            }
+            
+            .price-strike {
+                font-size: 1.3em;
+            }
+            
+            .special-offer-button {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+            
+            .sticky-mobile-cta {
+                display: block;
+            }
+        }
+        
+        /* ===== VIDEO SECTIONS ===== */
+        .video-section {
+            padding: 80px 20px;
+            background: #ffffff;
+        }
+        
+        .video-section.alt-bg {
+            background: linear-gradient(135deg, #F0F8FF 0%, #E6F2FF 100%);
+        }
+        
+        .video-section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .video-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+        
+        .video-intro h2 {
+            color: #0066B2;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .video-intro p {
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .video-section {
+                padding: 60px 15px;
+            }
+            
+            .video-intro h2 {
+                font-size: 2em;
+            }
+            
+            .video-intro p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
     
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
@@ -164,8 +434,26 @@
         </div>
     </div>
 
-    <!-- Hero Carousel -->
-    <section id="home" class="hero-carousel">
+    <!-- $27 Special Offer Banner -->
+    <div class="special-offer-banner">
+        <div class="container">
+            <div class="special-offer-content">
+                <div class="special-offer-left">
+                    <span class="special-offer-icon">🎉</span>
+                    <div class="special-offer-text">
+                        <span class="special-offer-title">LIMITED TIME SPECIAL!</span>
+                        <span class="special-offer-subtitle">Medical Weight Management - First Month Only</span>
+                    </div>
+                </div>
+                <div class="special-offer-price">
+                    <span class="price-strike">$299</span>
+                    <span class="price-special">$27</span>
+                </div>
+                <button class="special-offer-button" onclick="window.open('https://27special.garciafamilymedicine.care', '_blank')">
+                    Learn More →
+                </button>
+            </div>
+        </div>
         <!-- CoreLift Slide -->
         <div class="hero-slide active" style="background-image: url('CoreLift_Confidence_with_Emsella.png');">
             <div class="slide-overlay"></div>
@@ -238,14 +526,12 @@
                 <p>Combating obesity in our families, friends, neighbors, and community - one person at a time, with compassion and evidence-based care. We provide Direct Primary Care that prioritizes the doctor-patient relationship above all else. We are honored to serve our veterans and their families, recognizing their sacrifice and commitment to our nation.</p>
             </div>
             
-            <!-- Dr. Tess Welcome Video Placeholder -->
-            <div class="video-placeholder">
-                <div class="video-placeholder-content">
-                    <div class="video-icon">🎥</div>
-                    <h3>Meet Dr. Tess Garcia</h3>
-                    <p>Welcome video coming soon!</p>
-                    <span class="video-duration">60-90 seconds</span>
-                </div>
+            <!-- Dr. Tess Welcome Video -->
+            <div class="video-container" style="margin-top: 40px;">
+                <video controls controlsList="nodownload" poster="">
+                    <source src="https://pub-8d85596a59d94f3fbf2c9edc256f91d2.r2.dev/Welcome.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
@@ -336,6 +622,22 @@
                         <p class="team-bio">Coming soon! Maria is the friendly voice you'll hear when you call Garcia Family Medicine. She ensures every patient interaction is warm and professional, coordinating appointments, answering questions, and making sure your experience with our practice is smooth from the very first call.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DPC Video Section -->
+    <section class="video-section">
+        <div class="video-section-container">
+            <div class="video-intro">
+                <h2>What is Direct Primary Care?</h2>
+                <p>Discover how our Direct Primary Care model removes the barriers of traditional insurance-based medicine, giving you unlimited access to quality healthcare for one simple, affordable monthly fee. No copays, no deductibles, no surprise bills.</p>
+            </div>
+            <div class="video-container">
+                <video controls controlsList="nodownload" poster="">
+                    <source src="https://pub-8d85596a59d94f3fbf2c9edc256f91d2.r2.dev/DPC.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
@@ -520,14 +822,12 @@
                         <p><strong>Results You Can Expect:</strong></p>
                         <p>Clinical studies show that 95% of patients report significant improvement in their quality of life. Many patients experience a dramatic reduction in pad usage, with some no longer needing pads at all. Results typically improve over 2-4 weeks following your treatment series.</p>
                         
-                        <!-- CoreLift Demo Video Placeholder -->
-                        <div class="video-placeholder">
-                            <div class="video-placeholder-content">
-                                <div class="video-icon">🎥</div>
-                                <h4>See CoreLift in Action</h4>
-                                <p>Treatment demonstration video coming soon!</p>
-                                <span class="video-duration">90-120 seconds</span>
-                            </div>
+                        <!-- CoreLift Demo Video -->
+                        <div class="video-container" style="margin: 30px 0;">
+                            <video controls controlsList="nodownload" poster="">
+                                <source src="https://pub-8d85596a59d94f3fbf2c9edc256f91d2.r2.dev/CoreLift.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                         
                         <p class="service-cta"><button class="cta-button" onclick="location.href='#contact'" style="cursor: pointer; background: linear-gradient(135deg, #FF6633, #0066B2); color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1rem; font-weight: 600; margin-top: 20px;">Regain your confidence and freedom. Contact us to schedule your CoreLift consultation!</button></p>
@@ -638,14 +938,12 @@
                         <p><strong>Compassion and Acceptance:</strong></p>
                         <p>We believe that any weight management program that perpetuates feelings of shame or failure should not be in business. Compassion and acceptance are major parts of our weight management program. We do not allow you to be alone on your weight loss journey.</p>
                         
-                        <!-- Weight Management Success Video Placeholder -->
-                        <div class="video-placeholder">
-                            <div class="video-placeholder-content">
-                                <div class="video-icon">🎥</div>
-                                <h4>Weight Management Success Stories</h4>
-                                <p>Patient transformation videos coming soon!</p>
-                                <span class="video-duration">60-90 seconds</span>
-                            </div>
+                        <!-- Weight Management Success Video -->
+                        <div class="video-container" style="margin: 30px 0;">
+                            <video controls controlsList="nodownload" poster="">
+                                <source src="https://pub-8d85596a59d94f3fbf2c9edc256f91d2.r2.dev/Weight%20Mgmt.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                         
                         <p class="service-cta"><button class="cta-button" onclick="window.open('https://27special.garciafamilymedicine.care', '_blank')" style="cursor: pointer; background: linear-gradient(135deg, #FF6633, #0066B2); color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1rem; font-weight: 600; margin-top: 20px;">Start your transformation today with our special $27 first month offer!</button></p>
@@ -1119,7 +1417,7 @@
                     </div>
                     <div class="contact-item">
                         <h4>✉️ Email</h4>
-                        <p><a href="mailto:gigi@garciafamilymedicine.care">gigi@garciafamilymedicine.care</a></p>
+                        <p><a href="/cdn-cgi/l/email-protection#c2a5aba5ab82a5a3b0a1aba3a4a3afabaebbafa7a6aba1abaca7eca1a3b0a7"><span class="__cf_email__" data-cfemail="ff98969896bf989e8d9c969e999e92969386929a9b969c96919ad19c9e8d9a">[email&#160;protected]</span></a></p>
                     </div>
                     <div class="contact-item">
                         <h4>🕐 Hours</h4>
@@ -1215,7 +1513,7 @@
         <span>Back to Top</span>
     </button>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Language Toggle Functionality
         let currentLang = 'en';
         
@@ -1282,5 +1580,5 @@
     </script>
 
     <script src="script.js"></script>
-</body>
-</html>
+    
+    <!-- Sticky Mobile CTA for $27 Speci
