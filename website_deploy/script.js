@@ -1,99 +1,102 @@
-// Garcia Family Medicine - Complete JavaScript
+// Garcia Family Medicine - JavaScript Functions
 
-// ===== Carousel Functionality =====
-let currentSlide = 0;
-let autoPlayInterval;
+// ============================================================================
+// CAROUSEL AUTO-ROTATION (8 seconds)
+// ============================================================================
 
-function goToSlide(n) {
+let currentSlideIndex = 0;
+let autoRotateInterval;
+
+function showSlide(index) {
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot');
     
-    // Remove active class from current slide
-    if (slides[currentSlide]) {
-        slides[currentSlide].classList.remove('active');
-    }
-    if (dots[currentSlide]) {
-        dots[currentSlide].classList.remove('active');
+    if (index >= slides.length) {
+        currentSlideIndex = 0;
+    } else if (index < 0) {
+        currentSlideIndex = slides.length - 1;
+    } else {
+        currentSlideIndex = index;
     }
     
-    // Set new current slide
-    currentSlide = (n + slides.length) % slides.length;
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
     
-    // Add active class to new slide
-    if (slides[currentSlide]) {
-        slides[currentSlide].classList.add('active');
-    }
-    if (dots[currentSlide]) {
-        dots[currentSlide].classList.add('active');
-    }
+    // Add active class to current slide and dot
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
 }
 
-function nextSlide() {
-    goToSlide(currentSlide + 1);
+function changeSlide(direction) {
+    // Stop auto-rotation when user manually changes slides
+    clearInterval(autoRotateInterval);
+    
+    showSlide(currentSlideIndex + direction);
+    
+    // Restart auto-rotation after manual change
+    startAutoRotate();
 }
 
-function prevSlide() {
-    goToSlide(currentSlide - 1);
+function currentSlide(index) {
+    // Stop auto-rotation when user clicks a dot
+    clearInterval(autoRotateInterval);
+    
+    showSlide(index);
+    
+    // Restart auto-rotation after manual change
+    startAutoRotate();
 }
 
-function startAutoPlay() {
-    autoPlayInterval = setInterval(() => {
-        nextSlide();
+function startAutoRotate() {
+    autoRotateInterval = setInterval(() => {
+        showSlide(currentSlideIndex + 1);
     }, 8000); // 8 seconds
 }
 
-function stopAutoPlay() {
-    clearInterval(autoPlayInterval);
-}
-
-// Initialize carousel when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    startAutoPlay();
-    
-    // Pause on hover
-    const carousel = document.querySelector('.hero-carousel');
-    if (carousel) {
-        carousel.addEventListener('mouseenter', stopAutoPlay);
-        carousel.addEventListener('mouseleave', startAutoPlay);
-    }
+// Initialize carousel on page load
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(0);
+    startAutoRotate();
 });
 
-// ===== Read More Toggle =====
+
+// ============================================================================
+// READ MORE / READ LESS TOGGLE
+// ============================================================================
+
 function toggleReadMore(button) {
-    const serviceBox = button.closest('.service-box') || button.closest('.service-card');
-    if (!serviceBox) return;
+    const card = button.closest('.team-card, .service-box');
+    const fullContent = card.querySelector('.team-bio-full, .service-full');
     
-    const shortContent = serviceBox.querySelector('.service-short');
-    const fullContent = serviceBox.querySelector('.service-full');
-    
-    if (fullContent && fullContent.classList.contains('hidden')) {
+    if (fullContent.classList.contains('hidden')) {
+        // Show full content
         fullContent.classList.remove('hidden');
         button.textContent = 'Read Less';
-    } else if (fullContent) {
+    } else {
+        // Hide full content
         fullContent.classList.add('hidden');
         button.textContent = 'Read More';
     }
 }
 
-function toggleTeamBio(button) {
-    const teamCard = button.closest('.team-card');
-    if (!teamCard) return;
-    
-    const shortBio = teamCard.querySelector('.team-bio-short');
-    const fullBio = teamCard.querySelector('.team-bio-full');
-    
-    if (fullBio && fullBio.classList.contains('hidden')) {
-        fullBio.classList.remove('hidden');
-        if (shortBio) shortBio.classList.add('hidden');
-        button.textContent = 'Read Less';
-    } else if (fullBio) {
-        fullBio.classList.add('hidden');
-        if (shortBio) shortBio.classList.remove('hidden');
-        button.textContent = 'Read More';
-    }
-}
 
-// ===== Back to Top Button =====
+// ============================================================================
+// BACK TO TOP BUTTON
+// ============================================================================
+
+// Show/hide back to top button based on scroll position
+window.addEventListener('scroll', () => {
+    const backToTopButton = document.getElementById('backToTop');
+    
+    if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+    } else {
+        backToTopButton.classList.remove('visible');
+    }
+});
+
+// Scroll to top smoothly when button is clicked
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -101,41 +104,27 @@ function scrollToTop() {
     });
 }
 
-// Show/hide back to top button on scroll
-window.addEventListener('scroll', function() {
-    const backToTopButton = document.getElementById('backToTop');
-    if (backToTopButton) {
-        if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('visible');
-        } else {
-            backToTopButton.classList.remove('visible');
-        }
-    }
-});
 
-// ===== Smooth Scrolling for Navigation =====
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('a[href^="#"]');
+// ============================================================================
+// SMOOTH SCROLL FOR NAVIGATION LINKS
+// ============================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('header nav a');
     
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // Skip if href is just "#"
-            if (href === '#') return;
-            
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
             
-            const targetId = href.substring(1);
-            const targetSection = document.getElementById(targetId);
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                const headerOffset = 100;
-                const elementPosition = targetSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight;
                 
                 window.scrollTo({
-                    top: offsetPosition,
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
             }
@@ -143,78 +132,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ===== Contact Form Handling =====
-document.addEventListener('DOMContentLoaded', function() {
+
+// ============================================================================
+// FORM VALIDATION (Optional - can be enhanced)
+// ============================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('.contact-form form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
+            // Basic validation
+            const name = contactForm.querySelector('input[name="name"]').value;
+            const email = contactForm.querySelector('input[name="email"]').value;
+            const message = contactForm.querySelector('textarea[name="message"]').value;
             
-            // You would typically send this to a server
-            // For now, just show a confirmation
-            alert('Thank you for your interest! We will contact you soon.');
-            this.reset();
+            if (name && email && message) {
+                // Form is valid - you can add your form submission logic here
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
         });
     }
 });
-
-// ===== Exit Intent Popup =====
-let exitPopupShown = false;
-
-function showExitPopup() {
-    const popup = document.getElementById('exitPopup');
-    if (popup && !exitPopupShown) {
-        popup.classList.remove('hidden');
-        exitPopupShown = true;
-    }
-}
-
-function closeExitPopup() {
-    const popup = document.getElementById('exitPopup');
-    if (popup) {
-        popup.classList.add('hidden');
-    }
-}
-
-// Detect exit intent
-document.addEventListener('DOMContentLoaded', function() {
-    document.addEventListener('mouseout', function(e) {
-        // If mouse leaves through top of viewport
-        if (e.clientY < 0 && !exitPopupShown) {
-            showExitPopup();
-        }
-    });
-    
-    // Close popup when clicking overlay
-    const overlay = document.querySelector('.exit-popup-overlay');
-    if (overlay) {
-        overlay.addEventListener('click', closeExitPopup);
-    }
-});
-
-// ===== Language Toggle (if needed) =====
-function toggleLanguage() {
-    // Language toggle functionality
-    const langButtons = document.querySelectorAll('.lang-en, .lang-es');
-    langButtons.forEach(btn => {
-        btn.classList.toggle('hidden');
-    });
-    
-    // You would implement full language switching here
-    console.log('Language toggle clicked');
-}
-
-// ===== Mobile Menu Toggle (if needed) =====
-function toggleMobileMenu() {
-    const nav = document.querySelector('header nav');
-    if (nav) {
-        nav.classList.toggle('active');
-    }
-}
-
-// ===== Initialize all functionality =====
-console.log('Garcia Family Medicine website loaded successfully!');
