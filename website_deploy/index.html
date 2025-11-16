@@ -4,548 +4,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Garcia Family Medicine - Direct Primary Care in Blue Springs, MO | $99/Month</title>
-    <meta name="description" content="Direct Primary Care in Blue Springs, Missouri. Board-certified family medicine and obesity medicine. Treating the whole patient: Spirit, Body, and Soul. Se Habla Español.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
+    <title>Garcia Family Medicine - Direct Primary Care in Blue Springs, MO</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- BACK TO TOP BUTTON -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
 
-    <!-- HEADER -->
-    <header class="main-header">
-        <div class="header-container">
+    <!-- Header -->
+    <header>
+        <div class="container">
             <div class="logo">
-                <img src="Logo_New_GFM.webp" alt="Garcia Family Medicine Logo" class="logo-img">
+                <img src="Logo_New_GFM.webp" alt="Garcia Family Medicine">
             </div>
             <nav>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
-                <ul class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#tesstalk">TessTalk</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#schedule" class="btn btn-primary">Schedule Now</a></li>
+                    <li class="spanish">Se Habla Español</li>
                 </ul>
             </nav>
+            <a href="#contact" class="btn-primary">Schedule Now</a>
         </div>
     </header>
 
-    <!-- CAROUSEL -->
-    <section class="carousel-section">
-        <div class="carousel-wrapper">
-            <div class="carousel-container">
+    <!-- Hero Carousel -->
+    <section id="home" class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slides">
                 <div class="carousel-slide active">
-                    <div class="slide-content">
-                        <h1>Personalized Healthcare That Puts You First</h1>
-                        <p>Experience the Direct Primary Care difference - unlimited visits, same-day appointments, and a doctor who truly knows you. All for just $99/month.</p>
-                        <a href="#dpc" class="btn btn-primary btn-large">Learn About DPC</a>
-                    </div>
-                    <div class="slide-image">
-                        <img src="Logo_New_GFM.webp" alt="Garcia Family Medicine">
+                    <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift Confidence with Emsella">
+                    <div class="carousel-content">
+                        <h1 class="gradient-text">Discover CoreLift</h1>
+                        <p>Revolutionary non-invasive treatment for pelvic floor health</p>
+                        <a href="#services" class="btn-primary">Learn More</a>
                     </div>
                 </div>
-                
                 <div class="carousel-slide">
-                    <div class="slide-content">
-                        <h1>Confidence with CoreLift™</h1>
-                        <p>Revolutionary non-invasive treatment for pelvic floor strength, urinary incontinence, and intimate wellness. Feel confident again with Emsella technology.</p>
-                        <a href="#corelift" class="btn btn-primary btn-large">Discover CoreLift</a>
-                    </div>
-                    <div class="slide-image">
-                        <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift Emsella Treatment">
+                    <img src="Dr_Tess_Emsella.png" alt="Dr. Tess Garcia">
+                    <div class="carousel-content">
+                        <h1 class="gradient-text">Meet Dr. Tess Garcia</h1>
+                        <p>Board-Certified Family Medicine & Obesity Medicine Physician</p>
+                        <a href="#about" class="btn-primary">About Dr. Tess</a>
                     </div>
                 </div>
-                
                 <div class="carousel-slide">
-                    <div class="slide-content">
-                        <h1>Transform Your Health Journey</h1>
-                        <p>Achieve lasting weight loss with our comprehensive program including GLP-1 medications, personalized nutrition, and ongoing support from Dr. Tess.</p>
-                        <a href="#weight-management" class="btn btn-primary btn-large">Start Your Journey</a>
-                    </div>
-                    <div class="slide-image">
-                        <img src="Dr_Tess_Emsella.png" alt="Dr. Tess Garcia">
+                    <img src="Gigi_Orange.png" alt="Gigi - Practice Manager">
+                    <div class="carousel-content">
+                        <h1 class="gradient-text">Direct Primary Care</h1>
+                        <p>Affordable, accessible healthcare without insurance hassles</p>
+                        <a href="#services" class="btn-primary">Explore DPC</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="carousel-controls">
-                <button class="carousel-btn carousel-prev">‹</button>
-                <div class="carousel-dots">
-                    <button class="carousel-dot active"></button>
-                    <button class="carousel-dot"></button>
-                    <button class="carousel-dot"></button>
-                </div>
-                <button class="carousel-btn carousel-next">›</button>
-            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+            <div class="carousel-dots"></div>
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
+    <!-- Mission Statement -->
+    <section class="mission">
         <div class="container">
-            <h2 class="text-center gradient-text">Welcome to Garcia Family Medicine</h2>
-            <p class="text-center mb-xl" style="max-width: 800px; margin-left: auto; margin-right: auto; font-size: 1.125rem;">
-                Where healthcare is personal, accessible, and focused on YOU. Dr. Tess Garcia and her team are dedicated to treating the whole patient: Spirit, Body, and Soul.
-            </p>
-            <p class="text-center mb-lg" style="font-weight: 600; color: var(--primary-orange); font-size: 1.125rem;">
-                Se Habla Español
-            </p>
-            
+            <h2 class="gradient-text">Our Mission</h2>
+            <p class="mission-statement">Treating the whole patient: Spirit, Body, and Soul</p>
+        </div>
+    </section>
+
+    <!-- TessTalk Video -->
+    <section class="tesstalk">
+        <div class="container">
+            <h2 class="gradient-text">TessTalk with Dr. Tess</h2>
             <div class="video-container">
-                <video controls>
-                    <source src="https://pub-8d85596a59d94f3fbf2c9edc256f91d2.r2.dev/Welcome.mp4" type="video/mp4">
-                </video>
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section section-alt">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="text-center gradient-text">Our Services</h2>
-            <p class="text-center mb-xl">Comprehensive care designed around your unique needs</p>
-            
+            <h2 class="gradient-text">About Garcia Family Medicine</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Dr. Tess Garcia</h3>
+                    <p class="credentials">Board-Certified Family Medicine & Obesity Medicine Physician</p>
+                    <p>Dr. Tess Garcia brings compassionate, comprehensive care to Blue Springs, Missouri. With board certifications in both Family Medicine and Obesity Medicine, Dr. Tess is uniquely qualified to address your whole-person health needs.</p>
+                    <button class="read-more-btn">Read More</button>
+                    <div class="read-more-content">
+                        <p>Our Direct Primary Care model means you get the time and attention you deserve. No rushed appointments, no insurance hassles - just quality healthcare focused on you.</p>
+                        <p>We believe in treating the whole patient: Spirit, Body, and Soul. This holistic approach ensures that every aspect of your wellbeing is addressed.</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="Dr_Tess_Emsella.png" alt="Dr. Tess Garcia">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="gradient-text">Our Services</h2>
             <div class="services-grid">
-                <!-- DPC -->
-                <div id="dpc" class="service-card">
-                    <div class="service-header">
-                        <div class="service-title">
-                            <h3>Direct Primary Care</h3>
-                        </div>
-                        <p class="service-subtitle">$99/Month - Unlimited Care</p>
-                    </div>
-                    
-                    <div class="service-video">
+                <!-- Service 1: Welcome -->
+                <div class="service-card">
+                    <h3>Welcome to Direct Primary Care</h3>
+                    <div class="video-wrapper">
                         <video controls>
-                            <source src="https://pub-8d85596a59d94f3fbf2c9edc256f91d2.r2.dev/DPC.mp4" type="video/mp4">
+                            <source src="https://pub-7f9ff2c995d74a5e809f025ded0e4984.r2.dev/GFM_Welcome_Final.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
-                    
-                    <div class="short-text">
-                        <p>Experience healthcare the way it should be - personal, accessible, and focused on prevention. Our Direct Primary Care model eliminates insurance hassles and gives you direct access to Dr. Tess whenever you need her.</p>
+                    <p>Discover how Direct Primary Care can transform your healthcare experience with affordable, accessible, and personalized medical care.</p>
+                    <button class="read-more-btn">Read More</button>
+                    <div class="read-more-content">
+                        <p>Direct Primary Care eliminates insurance hassles and provides you with direct access to your physician. Enjoy longer appointments, same-day or next-day visits, and comprehensive care tailored to your needs.</p>
                     </div>
-                    
-                    <div class="full-text">
-                        <p>Experience healthcare the way it should be - personal, accessible, and focused on prevention. Our Direct Primary Care model eliminates insurance hassles and gives you direct access to Dr. Tess whenever you need her.</p>
-                        
-                        <h4>What's Included:</h4>
-                        <ul class="service-features">
-                            <li>Unlimited office visits (in-person or virtual)</li>
-                            <li>Same-day or next-day appointments</li>
-                            <li>Direct communication via phone, text, or email</li>
-                            <li>Comprehensive annual physical exams</li>
-                            <li>Chronic disease management</li>
-                            <li>Preventive care and wellness coaching</li>
-                            <li>Extended appointment times (30-60 minutes)</li>
-                            <li>Wholesale pricing on labs and medications</li>
-                            <li>Personalized treatment plans</li>
-                        </ul>
-                        
-                        <p><strong>Perfect for:</strong> Individuals and families who want a personal relationship with their doctor, same-day access to care, and freedom from insurance limitations.</p>
-                    </div>
-                    
-                    <button class="read-more-btn">Read More ↓</button>
                 </div>
 
-                <!-- CoreLift -->
-                <div id="corelift" class="service-card">
-                    <div class="service-header">
-                        <div class="service-title">
-                            <h3>CoreLift™ with Emsella</h3>
-                        </div>
-                        <p class="service-subtitle">Reclaim Your Confidence</p>
-                    </div>
-                    
-                    <div class="service-video">
+                <!-- Service 2: DPC Explained -->
+                <div class="service-card">
+                    <h3>What is Direct Primary Care?</h3>
+                    <div class="video-wrapper">
                         <video controls>
-                            <source src="https://pub-8d85596a59d94f3fbf2c9edc256f91d2.r2.dev/CoreLift.mp4" type="video/mp4">
+                            <source src="https://pub-7f9ff2c995d74a5e809f025ded0e4984.r2.dev/GFM_DPC_Final.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
-                    
-                    <div class="short-text">
-                        <p>Revolutionary FDA-cleared treatment using high-intensity focused electromagnetic (HIFEM) technology to strengthen your pelvic floor muscles. Completely non-invasive - you remain fully clothed during the 28-minute session.</p>
+                    <p>Learn about our innovative healthcare model that puts you first, without the complexity of traditional insurance.</p>
+                    <button class="read-more-btn">Read More</button>
+                    <div class="read-more-content">
+                        <p>With a simple monthly membership fee, you get unlimited access to primary care services, including office visits, phone consultations, basic lab work, and care coordination.</p>
                     </div>
-                    
-                    <div class="full-text">
-                        <p>Revolutionary FDA-cleared treatment using high-intensity focused electromagnetic (HIFEM) technology to strengthen your pelvic floor muscles. Completely non-invasive - you remain fully clothed during the 28-minute session.</p>
-                        
-                        <h4>Benefits:</h4>
-                        <ul class="service-features">
-                            <li>Treats urinary and fecal incontinence</li>
-                            <li>Strengthens pelvic floor muscles</li>
-                            <li>Improves intimate wellness and sensation</li>
-                            <li>No downtime - return to activities immediately</li>
-                            <li>Painless and non-surgical</li>
-                            <li>Results visible after 2-3 sessions</li>
-                            <li>Over 11,000 muscle contractions per session</li>
-                        </ul>
-                        
-                        <p><strong>Treatment Protocol:</strong> Most patients achieve optimal results with 6 sessions scheduled twice weekly over 3 weeks. Many experience improvement after just 2-3 sessions.</p>
-                        
-                        <p><strong>Perfect for:</strong> Anyone experiencing bladder leakage, pelvic floor weakness, or wanting to improve intimate wellness - for both women and men.</p>
-                    </div>
-                    
-                    <button class="read-more-btn">Read More ↓</button>
                 </div>
 
-                <!-- Weight Management -->
-                <div id="weight-management" class="service-card">
-                    <div class="service-header">
-                        <div class="service-title">
-                            <h3>Weight Management Program</h3>
-                        </div>
-                        <p class="service-subtitle">Sustainable Results with GLP-1 Therapy</p>
-                    </div>
-                    
-                    <div class="service-video">
+                <!-- Service 3: CoreLift -->
+                <div class="service-card">
+                    <h3>CoreLift with BTL Emsella</h3>
+                    <div class="video-wrapper">
                         <video controls>
-                            <source src="https://pub-8d85596a59d94f3fbf2c9edc256f91d2.r2.dev/WeightManagement.mp4" type="video/mp4">
+                            <source src="https://pub-7f9ff2c995d74a5e809f025ded0e4984.r2.dev/GFM_CoreLift_Final.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
-                    
-                    <div class="short-text">
-                        <p>Achieve lasting weight loss with our comprehensive program featuring FDA-approved GLP-1 medications (Semaglutide/Tirzepatide), personalized nutrition guidance, and ongoing support from Dr. Tess.</p>
+                    <p>Revolutionary non-invasive treatment for pelvic floor strengthening and urinary incontinence.</p>
+                    <button class="read-more-btn">Read More</button>
+                    <div class="read-more-content">
+                        <p>CoreLift uses electromagnetic technology to strengthen pelvic floor muscles without surgery or downtime. Fully clothed treatments take just 28 minutes. Experience improved bladder control and confidence.</p>
                     </div>
-                    
-                    <div class="full-text">
-                        <p>Achieve lasting weight loss with our comprehensive program featuring FDA-approved GLP-1 medications (Semaglutide/Tirzepatide), personalized nutrition guidance, and ongoing support from Dr. Tess.</p>
-                        
-                        <h4>Program Includes:</h4>
-                        <ul class="service-features">
-                            <li>Initial consultation and health assessment</li>
-                            <li>GLP-1 medication management (Semaglutide or Tirzepatide)</li>
-                            <li>Monthly follow-up appointments</li>
-                            <li>Personalized meal planning and nutrition coaching</li>
-                            <li>Exercise recommendations tailored to you</li>
-                            <li>Ongoing support and accountability</li>
-                            <li>Lab monitoring as needed</li>
-                            <li>Lifestyle modification strategies</li>
-                        </ul>
-                        
-                        <h4>How GLP-1 Works:</h4>
-                        <p>GLP-1 medications work with your body's natural hormones to reduce appetite, slow digestion, and help you feel full longer. Combined with lifestyle changes, patients typically lose 15-20% of their body weight.</p>
-                        
-                        <p><strong>Perfect for:</strong> Anyone struggling with weight loss despite diet and exercise, those with obesity-related health conditions, or anyone seeking a medically supervised weight loss program.</p>
-                    </div>
-                    
-                    <button class="read-more-btn">Read More ↓</button>
                 </div>
 
-                <!-- Mental Health -->
-                <div id="mental-health" class="service-card">
-                    <div class="service-header">
-                        <div class="service-title">
-                            <h3>Mental Health Support</h3>
-                        </div>
-                        <p class="service-subtitle">Treating the Whole Person</p>
+                <!-- Service 4: Weight Management -->
+                <div class="service-card">
+                    <h3>Weight Management & Obesity Medicine</h3>
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="https://pub-7f9ff2c995d74a5e809f025ded0e4984.r2.dev/GFM_WeightManagement_Final.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-                    
-                    <div class="short-text">
-                        <p>Your mental health is just as important as your physical health. Dr. Tess provides compassionate care for anxiety, depression, stress management, and other mental health concerns as part of your comprehensive care.</p>
+                    <p>Comprehensive, evidence-based weight management programs tailored to your unique needs.</p>
+                    <button class="read-more-btn">Read More</button>
+                    <div class="read-more-content">
+                        <p>Dr. Tess is board-certified in Obesity Medicine and offers personalized weight management programs including nutritional counseling, medication management, and lifestyle coaching to help you achieve sustainable results.</p>
                     </div>
-                    
-                    <div class="full-text">
-                        <p>Your mental health is just as important as your physical health. Dr. Tess provides compassionate care for anxiety, depression, stress management, and other mental health concerns as part of your comprehensive care.</p>
-                        
-                        <h4>Services Include:</h4>
-                        <ul class="service-features">
-                            <li>Mental health assessments and screening</li>
-                            <li>Medication management for anxiety and depression</li>
-                            <li>Stress and burnout support</li>
-                            <li>Sleep disorder management</li>
-                            <li>Lifestyle counseling for mental wellness</li>
-                            <li>Referrals to specialized therapists when needed</li>
-                            <li>Integrative approaches combining mind and body</li>
-                        </ul>
-                        
-                        <h4>Our Approach:</h4>
-                        <p>We believe mental and physical health are deeply connected. Dr. Tess takes time to understand your complete picture - your stressors, lifestyle, relationships, and health goals - to create a personalized treatment plan that addresses root causes, not just symptoms.</p>
-                        
-                        <p><strong>Perfect for:</strong> Anyone experiencing anxiety, depression, stress, sleep issues, or seeking support for life transitions and mental wellness.</p>
-                    </div>
-                    
-                    <button class="read-more-btn">Read More ↓</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESSTALK -->
-    <section id="tesstalk" class="section">
+    <!-- Testimonials Section -->
+    <section class="testimonials">
         <div class="container">
-            <h2 class="text-center gradient-text">TessTalk</h2>
-            <p class="text-center mb-xl">Weekly health insights, tips, and inspiration from Dr. Tess Garcia</p>
-            
-            <div class="video-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/50nIdYuTyRE" 
-                    title="TessTalk"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section section-alt">
-        <div class="container">
-            <h2 class="text-center gradient-text">Patient Success Stories</h2>
-            <p class="text-center mb-xl">Hear from real patients about their experience with Garcia Family Medicine</p>
-            
+            <h2 class="gradient-text">Patient Testimonials</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="video-placeholder testimonial-video">
-                        <div class="video-placeholder-content">
-                            <p class="video-placeholder-title">Patient Testimonial Video</p>
-                            <p style="color: var(--text-light); font-size: 0.875rem;">Video coming soon</p>
-                        </div>
+                    <div class="video-placeholder">
+                        <p>Video Testimonial Coming Soon</p>
                     </div>
-                    
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">S</div>
-                        <div class="testimonial-info">
-                            <h4>Sarah M.</h4>
-                            <p class="testimonial-service">DPC Member</p>
-                        </div>
-                    </div>
-                    
-                    <div class="short-text">
-                        <p class="testimonial-quote">"Switching to Direct Primary Care with Dr. Tess was the best healthcare decision I've made. Finally, a doctor who actually listens and has time for me!"</p>
-                    </div>
-                    
-                    <div class="full-text">
-                        <p class="testimonial-quote">"Switching to Direct Primary Care with Dr. Tess was the best healthcare decision I've made. Finally, a doctor who actually listens and has time for me! I can text or call whenever I need advice, and I never wait weeks for an appointment. Dr. Tess helped me get my diabetes under control and lose 30 pounds. She treats me like family, not a number."</p>
-                    </div>
-                    
-                    <div class="stars">★★★★★</div>
-                    <button class="read-more-btn">Read More ↓</button>
+                    <p>"Dr. Tess and her team truly care about my health. The Direct Primary Care model has been life-changing for my family."</p>
+                    <p class="testimonial-author">- Maria S.</p>
                 </div>
-
                 <div class="testimonial-card">
-                    <div class="video-placeholder testimonial-video">
-                        <div class="video-placeholder-content">
-                            <p class="video-placeholder-title">Patient Testimonial Video</p>
-                            <p style="color: var(--text-light); font-size: 0.875rem;">Video coming soon</p>
-                        </div>
+                    <div class="video-placeholder">
+                        <p>Video Testimonial Coming Soon</p>
                     </div>
-                    
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">J</div>
-                        <div class="testimonial-info">
-                            <h4>Jennifer L.</h4>
-                            <p class="testimonial-service">CoreLift Patient</p>
-                        </div>
-                    </div>
-                    
-                    <div class="short-text">
-                        <p class="testimonial-quote">"CoreLift changed my life! After two kids, I struggled with bladder leakage for years. After just 6 sessions, I'm completely dry and feel like myself again."</p>
-                    </div>
-                    
-                    <div class="full-text">
-                        <p class="testimonial-quote">"CoreLift changed my life! After two kids, I struggled with bladder leakage for years. I was embarrassed to exercise or even laugh too hard. After just 6 sessions of CoreLift, I'm completely dry and feel like myself again. The treatment was painless and I could go right back to work. I wish I had known about this years ago! Dr. Tess and her team made me feel so comfortable discussing something I was ashamed of for so long."</p>
-                    </div>
-                    
-                    <div class="stars">★★★★★</div>
-                    <button class="read-more-btn">Read More ↓</button>
+                    <p>"CoreLift has given me my confidence back. I can't thank Dr. Tess enough for this treatment!"</p>
+                    <p class="testimonial-author">- Jennifer L.</p>
                 </div>
-
                 <div class="testimonial-card">
-                    <div class="video-placeholder testimonial-video">
-                        <div class="video-placeholder-content">
-                            <p class="video-placeholder-title">Patient Testimonial Video</p>
-                            <p style="color: var(--text-light); font-size: 0.875rem;">Video coming soon</p>
-                        </div>
+                    <div class="video-placeholder">
+                        <p>Video Testimonial Coming Soon</p>
                     </div>
-                    
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">M</div>
-                        <div class="testimonial-info">
-                            <h4>Michael R.</h4>
-                            <p class="testimonial-service">Weight Management</p>
-                        </div>
-                    </div>
-                    
-                    <div class="short-text">
-                        <p class="testimonial-quote">"I've tried every diet out there. Dr. Tess's weight management program with GLP-1 medication finally gave me the results I needed - down 45 pounds and keeping it off!"</p>
-                    </div>
-                    
-                    <div class="full-text">
-                        <p class="testimonial-quote">"I've tried every diet out there. Dr. Tess's weight management program with GLP-1 medication finally gave me the results I needed - down 45 pounds and keeping it off! But it's not just about the medication. Dr. Tess helped me understand my relationship with food, created a realistic eating plan, and checked in with me every month. She celebrated my wins and helped me through challenges. For the first time in my life, I feel in control of my health."</p>
-                    </div>
-                    
-                    <div class="stars">★★★★★</div>
-                    <button class="read-more-btn">Read More ↓</button>
+                    <p>"The weight management program is comprehensive and supportive. Dr. Tess understands the whole picture."</p>
+                    <p class="testimonial-author">- Robert M.</p>
                 </div>
-
                 <div class="testimonial-card">
-                    <div class="video-placeholder testimonial-video">
-                        <div class="video-placeholder-content">
-                            <p class="video-placeholder-title">Patient Testimonial Video</p>
-                            <p style="color: var(--text-light); font-size: 0.875rem;">Video coming soon</p>
-                        </div>
+                    <div class="video-placeholder">
+                        <p>Video Testimonial Coming Soon</p>
                     </div>
-                    
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">L</div>
-                        <div class="testimonial-info">
-                            <h4>Lisa K.</h4>
-                            <p class="testimonial-service">Mental Health Support</p>
-                        </div>
-                    </div>
-                    
-                    <div class="short-text">
-                        <p class="testimonial-quote">"Dr. Tess doesn't just treat symptoms - she takes time to understand what's really going on. Her compassionate approach to my anxiety made all the difference."</p>
-                    </div>
-                    
-                    <div class="full-text">
-                        <p class="testimonial-quote">"Dr. Tess doesn't just treat symptoms - she takes time to understand what's really going on. Her compassionate approach to my anxiety and depression made all the difference. She addresses both my physical and mental health together, which no other doctor has done. I finally feel heard and supported. The DPC model means I can reach out when I'm struggling instead of waiting weeks for an appointment. That immediate access has been life-changing for my mental health."</p>
-                    </div>
-                    
-                    <div class="stars">★★★★★</div>
-                    <button class="read-more-btn">Read More ↓</button>
+                    <p>"Finally, a doctor who takes time to listen. The care here is exceptional."</p>
+                    <p class="testimonial-author">- Sandra P.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DR. TESS BIO -->
-    <section id="doctor" class="section">
+    <!-- CareCredit Section -->
+    <section class="carecredit">
         <div class="container">
-            <div class="bio-section">
-                <div class="bio-header">
-                    <img src="Dr_Tess_Emsella.png" alt="Dr. Tess Garcia" class="bio-image">
-                    <h2>Meet Dr. Tess Garcia</h2>
-                    <p class="service-subtitle">Board-Certified Family Medicine & Obesity Medicine Physician</p>
-                </div>
-                
-                <div class="bio-content">
-                    <div class="short-text">
-                        <p>Dr. Tess Garcia is board-certified in both Family Medicine and Obesity Medicine, dedicated to providing personalized, compassionate care to patients in Blue Springs and the greater Kansas City metro area. She believes in treating the whole patient - Spirit, Body, and Soul.</p>
-                    </div>
-                    
-                    <div class="full-text">
-                        <p>Dr. Tess Garcia is board-certified in both Family Medicine and Obesity Medicine, dedicated to providing personalized, compassionate care to patients in Blue Springs and the greater Kansas City metro area. She believes in treating the whole patient - Spirit, Body, and Soul - addressing not just physical symptoms but the complete picture of health and wellness.</p>
-                        
-                        <h4>Education & Training:</h4>
-                        <p>Dr. Garcia completed her medical degree and family medicine residency with honors, where she developed a passion for preventive care and patient education. She continues to pursue ongoing education in integrative medicine, weight management, and wellness coaching.</p>
-                        
-                        <h4>Philosophy of Care:</h4>
-                        <p>"I became a doctor because I wanted to build real relationships with my patients and make a lasting impact on their lives. The Direct Primary Care model allows me to practice medicine the way I've always envisioned - with time to listen, educate, and truly partner with my patients in their health journey. Whether we're managing a chronic condition, helping you lose weight, or addressing mental health concerns, you deserve a doctor who knows your story and treats you like family."</p>
-                        
-                        <h4>Specialties:</h4>
-                        <ul class="service-features">
-                            <li>Direct Primary Care & Preventive Medicine</li>
-                            <li>Obesity Medicine & Weight Management</li>
-                            <li>Women's Health & Pelvic Floor Wellness</li>
-                            <li>Mental Health & Integrative Care</li>
-                            <li>Chronic Disease Management</li>
-                        </ul>
-                        
-                        <p>When she's not caring for patients, Dr. Tess enjoys spending time with her family, staying active, and exploring the beautiful Blue Springs community she serves.</p>
-                    </div>
-                    
-                    <button class="read-more-btn">Read More ↓</button>
-                </div>
-            </div>
+            <h2 class="gradient-text">Financing Options</h2>
+            <p>We offer flexible payment options through CareCredit</p>
+            <img src="CareCredit.png" alt="CareCredit Financing" class="carecredit-logo">
         </div>
     </section>
 
-    <!-- PAYMENT OPTIONS -->
-    <section class="section section-alt">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <h2 class="text-center gradient-text">Flexible Payment Options</h2>
-            <p class="text-center mb-lg">We accept CareCredit for your convenience</p>
-            
-            <div class="payment-options">
-                <img src="CareCredit.png" alt="CareCredit Accepted" class="payment-logo">
+            <h2 class="gradient-text">Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>Blue Springs, Missouri</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p>(Your Phone Number)</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>info@garciafamilymedicine.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                </div>
             </div>
-            
-            <p class="text-center">CareCredit allows you to finance your healthcare expenses with flexible payment plans. Ask us about special financing options available for CoreLift and weight management programs.</p>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <h2 class="text-center gradient-text">Get Started Today</h2>
-            <p class="text-center mb-xl">Ready to experience personalized healthcare? Contact us to schedule your consultation.</p>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Call Us</h3>
-                    <a href="tel:+18165551234">(816) 555-1234</a>
-                    <p style="margin-top: var(--spacing-xs); color: var(--text-light);">Monday - Friday: 8am - 5pm</p>
-                </div>
-                
-                <div class="contact-card">
-                    <h3>Email Us</h3>
-                    <a href="mailto:info@garciafamilymedicine.care">info@garciafamilymedicine.care</a>
-                    <p style="margin-top: var(--spacing-xs); color: var(--text-light);">We'll respond within 24 hours</p>
-                </div>
-                
-                <div id="schedule" class="contact-card">
-                    <h3>Schedule Online</h3>
-                    <a href="#" class="btn btn-primary" style="margin-top: var(--spacing-sm);">Book Appointment</a>
-                    <p style="margin-top: var(--spacing-sm); color: var(--text-light);">New patients welcome!</p>
-                </div>
-            </div>
-            
-            <div style="margin-top: var(--spacing-xl); padding: var(--spacing-lg); background: var(--bg-light); border-radius: 1rem; text-align: center;">
-                <h3 style="margin-bottom: var(--spacing-sm);">Location</h3>
-                <p><strong>Garcia Family Medicine</strong></p>
-                <p>Blue Springs, Missouri 64014</p>
-                <p style="margin-top: var(--spacing-sm);">Serving Blue Springs, Jackson County, and the Kansas City Metro Area</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Garcia Family Medicine</h3>
-                <p>Direct Primary Care</p>
-                <p>Blue Springs, MO 64014</p>
-                <p>(816) 555-1234</p>
-                <p>info@garciafamilymedicine.care</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="#dpc">Direct Primary Care</a>
-                <a href="#corelift">CoreLift with Emsella</a>
-                <a href="#weight-management">Weight Management</a>
-                <a href="#mental-health">Mental Health Support</a>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="#about">About Us</a>
-                <a href="#doctor">Meet Dr. Tess</a>
-                <a href="#testimonials">Patient Stories</a>
-                <a href="#schedule">Schedule Appointment</a>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Office Hours</h3>
-                <p>Monday - Friday</p>
-                <p>8:00 AM - 5:00 PM</p>
-                <p style="margin-top: var(--spacing-sm);">DPC Members: 24/7 Access</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2024 Garcia Family Medicine. All rights reserved.</p>
-            <p>Treating the whole patient: Spirit, Body, and Soul | Se Habla Español</p>
+            <p>&copy; 2025 Garcia Family Medicine. All rights reserved.</p>
+            <p class="spanish">Se Habla Español</p>
         </div>
     </footer>
 
