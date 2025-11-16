@@ -1,133 +1,136 @@
-// Carousel Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    const dotsContainer = document.querySelector('.carousel-dots');
-    
-    let currentSlide = 0;
-    let autoPlayInterval;
-    
-    // Create dots
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-    
+// Garcia Family Medicine - Complete JavaScript
+
+// ===== Carousel Functionality =====
+let currentSlide = 0;
+let autoPlayInterval;
+
+function goToSlide(n) {
+    const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot');
     
-    // Show specific slide with fade effect
-    function goToSlide(n) {
+    // Remove active class from current slide
+    if (slides[currentSlide]) {
         slides[currentSlide].classList.remove('active');
+    }
+    if (dots[currentSlide]) {
         dots[currentSlide].classList.remove('active');
-        
-        currentSlide = (n + slides.length) % slides.length;
-        
+    }
+    
+    // Set new current slide
+    currentSlide = (n + slides.length) % slides.length;
+    
+    // Add active class to new slide
+    if (slides[currentSlide]) {
         slides[currentSlide].classList.add('active');
+    }
+    if (dots[currentSlide]) {
         dots[currentSlide].classList.add('active');
     }
-    
-    // Next slide
-    function nextSlide() {
-        goToSlide(currentSlide + 1);
-    }
-    
-    // Previous slide
-    function prevSlide() {
-        goToSlide(currentSlide - 1);
-    }
-    
-    // Auto-play carousel every 8 seconds
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, 8000);
-    }
-    
-    // Stop auto-play
-    function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
-    }
-    
-    // Event listeners for buttons
-    nextBtn.addEventListener('click', () => {
+}
+
+function nextSlide() {
+    goToSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    goToSlide(currentSlide - 1);
+}
+
+function startAutoPlay() {
+    autoPlayInterval = setInterval(() => {
         nextSlide();
-        stopAutoPlay();
-        startAutoPlay();
-    });
-    
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        stopAutoPlay();
-        startAutoPlay();
-    });
-    
-    // Start auto-play
+    }, 8000); // 8 seconds
+}
+
+function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+}
+
+// Initialize carousel when page loads
+document.addEventListener('DOMContentLoaded', function() {
     startAutoPlay();
     
     // Pause on hover
-    const carouselContainer = document.querySelector('.carousel-container');
-    carouselContainer.addEventListener('mouseenter', stopAutoPlay);
-    carouselContainer.addEventListener('mouseleave', startAutoPlay);
+    const carousel = document.querySelector('.hero-carousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
+    }
 });
 
-// Read More Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+// ===== Read More Toggle =====
+function toggleReadMore(button) {
+    const serviceBox = button.closest('.service-box') || button.closest('.service-card');
+    if (!serviceBox) return;
     
-    readMoreButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            
-            if (content && content.classList.contains('read-more-content')) {
-                content.classList.toggle('active');
-                
-                if (content.classList.contains('active')) {
-                    this.textContent = 'Read Less';
-                } else {
-                    this.textContent = 'Read More';
-                }
-            }
-        });
+    const shortContent = serviceBox.querySelector('.service-short');
+    const fullContent = serviceBox.querySelector('.service-full');
+    
+    if (fullContent && fullContent.classList.contains('hidden')) {
+        fullContent.classList.remove('hidden');
+        button.textContent = 'Read Less';
+    } else if (fullContent) {
+        fullContent.classList.add('hidden');
+        button.textContent = 'Read More';
+    }
+}
+
+function toggleTeamBio(button) {
+    const teamCard = button.closest('.team-card');
+    if (!teamCard) return;
+    
+    const shortBio = teamCard.querySelector('.team-bio-short');
+    const fullBio = teamCard.querySelector('.team-bio-full');
+    
+    if (fullBio && fullBio.classList.contains('hidden')) {
+        fullBio.classList.remove('hidden');
+        if (shortBio) shortBio.classList.add('hidden');
+        button.textContent = 'Read Less';
+    } else if (fullBio) {
+        fullBio.classList.add('hidden');
+        if (shortBio) shortBio.classList.remove('hidden');
+        button.textContent = 'Read More';
+    }
+}
+
+// ===== Back to Top Button =====
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
-});
+}
 
-// Back to Top Button
-document.addEventListener('DOMContentLoaded', function() {
+// Show/hide back to top button on scroll
+window.addEventListener('scroll', function() {
     const backToTopButton = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', function() {
+    if (backToTopButton) {
         if (window.pageYOffset > 300) {
             backToTopButton.classList.add('visible');
         } else {
             backToTopButton.classList.remove('visible');
         }
-    });
-    
-    backToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+    }
 });
 
-// Smooth Scrolling for Navigation Links
+// ===== Smooth Scrolling for Navigation =====
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href^="#"]');
     
     links.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Skip if href is just "#"
+            if (href === '#') return;
+            
             e.preventDefault();
             
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetSection = document.querySelector(targetId);
+            const targetId = href.substring(1);
+            const targetSection = document.getElementById(targetId);
             
             if (targetSection) {
-                const headerOffset = 80;
+                const headerOffset = 100;
                 const elementPosition = targetSection.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 
@@ -139,3 +142,79 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ===== Contact Form Handling =====
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // You would typically send this to a server
+            // For now, just show a confirmation
+            alert('Thank you for your interest! We will contact you soon.');
+            this.reset();
+        });
+    }
+});
+
+// ===== Exit Intent Popup =====
+let exitPopupShown = false;
+
+function showExitPopup() {
+    const popup = document.getElementById('exitPopup');
+    if (popup && !exitPopupShown) {
+        popup.classList.remove('hidden');
+        exitPopupShown = true;
+    }
+}
+
+function closeExitPopup() {
+    const popup = document.getElementById('exitPopup');
+    if (popup) {
+        popup.classList.add('hidden');
+    }
+}
+
+// Detect exit intent
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('mouseout', function(e) {
+        // If mouse leaves through top of viewport
+        if (e.clientY < 0 && !exitPopupShown) {
+            showExitPopup();
+        }
+    });
+    
+    // Close popup when clicking overlay
+    const overlay = document.querySelector('.exit-popup-overlay');
+    if (overlay) {
+        overlay.addEventListener('click', closeExitPopup);
+    }
+});
+
+// ===== Language Toggle (if needed) =====
+function toggleLanguage() {
+    // Language toggle functionality
+    const langButtons = document.querySelectorAll('.lang-en, .lang-es');
+    langButtons.forEach(btn => {
+        btn.classList.toggle('hidden');
+    });
+    
+    // You would implement full language switching here
+    console.log('Language toggle clicked');
+}
+
+// ===== Mobile Menu Toggle (if needed) =====
+function toggleMobileMenu() {
+    const nav = document.querySelector('header nav');
+    if (nav) {
+        nav.classList.toggle('active');
+    }
+}
+
+// ===== Initialize all functionality =====
+console.log('Garcia Family Medicine website loaded successfully!');
