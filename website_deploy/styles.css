@@ -441,7 +441,13 @@ header nav a:hover {
     line-height: 1.8;
 }
 
-.team-bio-short,
+.team-bio-short {
+    display: block !important;
+    margin-bottom: 1rem;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 .team-bio-full {
     margin-bottom: 1rem;
 }
@@ -470,6 +476,9 @@ header nav a:hover {
     border-radius: 10px;
     margin-top: 1.5rem;
     border-left: 4px solid #FF6633;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .dr-tess-highlight h4,
