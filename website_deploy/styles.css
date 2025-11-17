@@ -1,16 +1,20 @@
 /* ==========================================================================
-   Garcia Family Medicine - Complete Styles
+   Garcia Family Medicine - Complete Comprehensive Styles
    ========================================================================== */
 
-/* Reset & Base */
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #333;
     background: #fff;
@@ -26,13 +30,14 @@ body {
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    line-height: 1.2;
 }
 
 .section-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #FF5500 0%, #0047AB 100%);
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -41,12 +46,20 @@ h1, h2, h3, h4 {
 .section-subtitle {
     text-align: center;
     color: #666;
+    font-size: 1.1rem;
     margin-bottom: 3rem;
 }
 
-/* Header */
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
 header {
-    background: linear-gradient(135deg, #FF5500 0%, #0047AB 100%);
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
     color: white;
     padding: 1.5rem 0;
     position: sticky;
@@ -63,12 +76,17 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .header-left {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+
+.logo-wrapper {
+    flex-shrink: 0;
 }
 
 .header-logo {
@@ -86,18 +104,19 @@ header {
     font-style: italic;
     opacity: 0.95;
     margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem;
 }
 
 .phone-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     background: white;
-    color: #FF5500;
-    padding: 0.5rem 1rem;
+    color: #FF6633;
+    padding: 0.6rem 1.2rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: all 0.3s;
 }
 
@@ -106,10 +125,24 @@ header {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.phone-button.breathing {
+    animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.phone-icon {
+    font-size: 1.2rem;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 header nav a {
@@ -117,18 +150,21 @@ header nav a {
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.3s;
+    padding: 0.5rem;
 }
 
 header nav a:hover {
     opacity: 0.8;
 }
 
-/* Spanish Banner */
+/* ==========================================================================
+   SPANISH BANNER
+   ========================================================================== */
+
 .spanish-banner {
-    background: linear-gradient(135deg, #0047AB 0%, #FF5500 100%);
+    background: linear-gradient(135deg, #0066B2 0%, #FF6633 100%);
     color: white;
     padding: 0.75rem 0;
-    text-align: center;
 }
 
 .banner-content {
@@ -136,17 +172,37 @@ header nav a:hover {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.banner-icon {
+    font-size: 1.5rem;
 }
 
 .banner-text {
     font-size: 0.95rem;
 }
 
-.hidden {
-    display: none !important;
+.language-toggle {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
 }
 
-/* Hero Carousel */
+.language-toggle:hover {
+    background: white;
+    color: #0066B2;
+}
+
+/* ==========================================================================
+   HERO CAROUSEL
+   ========================================================================== */
+
 .hero-carousel {
     position: relative;
     height: 600px;
@@ -199,25 +255,59 @@ header nav a:hover {
 .slide-content p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.read-more-btn {
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.read-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 102, 51, 0.4);
+}
+
+.special-badge {
+    display: inline-block;
+    background: #FFD700;
+    color: #333;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 85, 0, 0.8);
+    background: rgba(255, 102, 51, 0.8);
     color: white;
     border: none;
-    font-size: 2rem;
-    padding: 1rem 1.5rem;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     z-index: 20;
     transition: all 0.3s;
-    border-radius: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-button:hover {
-    background: rgba(255, 85, 0, 1);
+    background: rgba(255, 102, 51, 1);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .carousel-button-left {
@@ -249,14 +339,17 @@ header nav a:hover {
 }
 
 .dot.active {
-    background: #FF5500;
+    background: #FF6633;
     transform: scale(1.3);
 }
 
-/* About Section */
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
+
 .about-section {
     padding: 4rem 0;
-    background: linear-gradient(135deg, rgba(255, 85, 0, 0.05) 0%, rgba(0, 71, 171, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(255, 102, 51, 0.05) 0%, rgba(0, 102, 178, 0.05) 100%);
 }
 
 .lead-text {
@@ -276,11 +369,14 @@ header nav a:hover {
 }
 
 .mission-box h3 {
-    color: #FF5500;
+    color: #FF6633;
     margin-bottom: 1rem;
 }
 
-/* Team Section */
+/* ==========================================================================
+   TEAM SECTION
+   ========================================================================== */
+
 .team-section {
     padding: 4rem 0;
     background: white;
@@ -302,7 +398,7 @@ header nav a:hover {
 
 .team-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 85, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 102, 51, 0.2);
 }
 
 .team-photo img {
@@ -312,34 +408,46 @@ header nav a:hover {
 }
 
 .photo-placeholder {
-    background: linear-gradient(135deg, rgba(255, 85, 0, 0.1) 0%, rgba(0, 71, 171, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(255, 102, 51, 0.1) 0%, rgba(0, 102, 178, 0.1) 100%);
     border-radius: 10px;
     padding: 4rem 2rem;
     text-align: center;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.placeholder-text {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
 }
 
 .team-info h3 {
-    color: #FF5500;
+    color: #FF6633;
     margin-bottom: 0.5rem;
 }
 
 .team-title {
-    color: #0047AB;
+    color: #0066B2;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .team-bio {
     margin-bottom: 1rem;
+    line-height: 1.8;
 }
 
+.team-bio-short,
 .team-bio-full {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .read-more-toggle {
-    background: linear-gradient(135deg, #FF5500 0%, #0047AB 100%);
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -352,13 +460,31 @@ header nav a:hover {
 
 .read-more-toggle:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 85, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 102, 51, 0.4);
 }
 
-/* Services Section */
+.dr-tess-highlight,
+.testimony-box {
+    background: linear-gradient(135deg, rgba(255, 102, 51, 0.1) 0%, rgba(0, 102, 178, 0.1) 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    border-left: 4px solid #FF6633;
+}
+
+.dr-tess-highlight h4,
+.testimony-box h4 {
+    color: #FF6633;
+    margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   SERVICES SECTION
+   ========================================================================== */
+
 .services-section {
     padding: 4rem 0;
-    background: linear-gradient(135deg, rgba(255, 85, 0, 0.05) 0%, rgba(0, 71, 171, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(255, 102, 51, 0.05) 0%, rgba(0, 102, 178, 0.05) 100%);
 }
 
 .services-grid {
@@ -372,11 +498,30 @@ header nav a:hover {
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transition: all 0.3s;
+    position: relative;
 }
 
 .service-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 85, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 102, 51, 0.2);
+}
+
+.service-box.special-box {
+    border: 3px solid #FFD700;
+}
+
+.special-ribbon {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #333;
+    padding: 0.5rem 3rem;
+    transform: rotate(45deg);
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    z-index: 10;
 }
 
 .service-image img {
@@ -390,7 +535,7 @@ header nav a:hover {
 }
 
 .service-content h3 {
-    color: #FF5500;
+    color: #FF6633;
     margin-bottom: 1rem;
     font-size: 1.8rem;
 }
@@ -413,7 +558,7 @@ header nav a:hover {
 }
 
 .pricing-badge {
-    background: linear-gradient(135deg, #FF5500 0%, #0047AB 100%);
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
     color: white;
     padding: 1rem 2rem;
     border-radius: 30px;
@@ -421,10 +566,112 @@ header nav a:hover {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 1rem 0;
+    transition: all 0.3s;
+}
+
+.pricing-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 102, 51, 0.4);
+}
+
+.pricing-box {
+    background: linear-gradient(135deg, rgba(255, 102, 51, 0.05) 0%, rgba(0, 102, 178, 0.05) 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+}
+
+.pricing-box h4 {
+    color: #0066B2;
+    margin-bottom: 1rem;
+}
+
+.first-visit-note {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #FF6633;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.price-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.price {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FF6633;
+    margin: 0.5rem 0;
+}
+
+.savings-comparison {
+    margin: 2rem 0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.comparison-table thead th {
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.comparison-table .total-row {
+    font-weight: 700;
+    background: rgba(255, 102, 51, 0.05);
+}
+
+.highlight-green {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.cost-red {
+    color: #dc3545;
+}
+
+.cost-green {
+    color: #28a745;
+}
+
+.savings-note {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
 
 .cta-button {
-    background: linear-gradient(135deg, #FF5500 0%, #0047AB 100%);
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -433,31 +680,90 @@ header nav a:hover {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
+    margin-top: 1rem;
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 85, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 102, 51, 0.4);
 }
 
-/* Video Placeholder */
+/* ==========================================================================
+   VIDEO PLACEHOLDERS
+   ========================================================================== */
+
 .video-placeholder {
-    background: linear-gradient(135deg, rgba(255, 85, 0, 0.1) 0%, rgba(0, 71, 171, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(255, 102, 51, 0.1) 0%, rgba(0, 102, 178, 0.1) 100%);
     border-radius: 10px;
     padding: 3rem 2rem;
     text-align: center;
     margin: 2rem 0;
 }
 
-.video-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.video-placeholder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-/* Testimonials */
+.video-icon {
+    font-size: 3rem;
+}
+
+.video-placeholder-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.video-duration {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   TESSTALK SECTION
+   ========================================================================== */
+
+.tesstalk-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.tesstalk-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.tesstalk-video iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.tesstalk-description {
+    padding: 1rem;
+}
+
+/* ==========================================================================
+   TESTIMONIALS SECTION
+   ========================================================================== */
+
 .testimonials-section,
 .written-testimonials-section {
     padding: 4rem 0;
+}
+
+.testimonials-section {
+    background: linear-gradient(135deg, rgba(255, 102, 51, 0.05) 0%, rgba(0, 102, 178, 0.05) 100%);
+}
+
+.written-testimonials-section {
     background: white;
 }
 
@@ -475,6 +781,22 @@ header nav a:hover {
     padding: 2rem;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     text-align: center;
+    transition: all 0.3s;
+}
+
+.testimonial-card:hover,
+.testimonial-card-written:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 102, 51, 0.2);
+}
+
+.testimonial-video {
+    margin-bottom: 1rem;
+}
+
+.testimonial-info h4 {
+    color: #FF6633;
+    margin-bottom: 0.5rem;
 }
 
 .stars {
@@ -487,17 +809,21 @@ header nav a:hover {
     font-style: italic;
     margin-bottom: 1rem;
     color: #555;
+    line-height: 1.8;
 }
 
 .testimonial-author {
     font-weight: 600;
-    color: #FF5500;
+    color: #FF6633;
 }
 
-/* Contact Section */
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+
 .contact-section {
     padding: 4rem 0;
-    background: linear-gradient(135deg, rgba(255, 85, 0, 0.05) 0%, rgba(0, 71, 171, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(255, 102, 51, 0.05) 0%, rgba(0, 102, 178, 0.05) 100%);
 }
 
 .contact-grid {
@@ -511,13 +837,18 @@ header nav a:hover {
 }
 
 .contact-item h4 {
-    color: #FF5500;
+    color: #FF6633;
     margin-bottom: 0.5rem;
 }
 
 .contact-item a {
-    color: #0047AB;
+    color: #0066B2;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #FF6633;
 }
 
 .contact-form {
@@ -525,6 +856,11 @@ header nav a:hover {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+    color: #FF6633;
+    margin-bottom: 1.5rem;
 }
 
 .contact-form input,
@@ -536,10 +872,18 @@ header nav a:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #FF6633;
 }
 
 .submit-btn {
-    background: linear-gradient(135deg, #FF5500 0%, #0047AB 100%);
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
     color: white;
     border: none;
     padding: 0.75rem 2rem;
@@ -551,29 +895,189 @@ header nav a:hover {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 85, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 102, 51, 0.4);
 }
 
-/* Footer */
+/* ==========================================================================
+   EXIT POPUP
+   ========================================================================== */
+
+.exit-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.exit-popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.exit-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.exit-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.exit-popup-close:hover {
+    color: #FF6633;
+}
+
+.exit-popup-body {
+    padding: 2rem;
+}
+
+.exit-popup-body h2 {
+    color: #FF6633;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.exit-special-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.exit-special-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.exit-special-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FF6633;
+}
+
+.exit-popup-body h3 {
+    text-align: center;
+    color: #0066B2;
+    margin-bottom: 1rem;
+}
+
+.exit-description {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.exit-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.exit-benefits li {
+    padding: 0.5rem 0;
+    color: #333;
+}
+
+.exit-cta-text {
+    text-align: center;
+    color: #FF6633;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.exit-popup-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.exit-btn-primary,
+.exit-btn-secondary {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
+.exit-btn-primary {
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
+    color: white;
+}
+
+.exit-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 102, 51, 0.4);
+}
+
+.exit-btn-secondary {
+    background: white;
+    color: #0066B2;
+    border: 2px solid #0066B2;
+}
+
+.exit-btn-secondary:hover {
+    background: #0066B2;
+    color: white;
+}
+
+.exit-disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 1rem;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
 footer {
-    background: linear-gradient(135deg, #FF5500 0%, #0047AB 100%);
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
     color: white;
     padding: 3rem 0;
     text-align: center;
 }
 
+.footer-logo-wrapper {
+    margin-bottom: 1rem;
+}
+
 .footer-logo {
     height: 100px;
-    margin-bottom: 1rem;
+    width: auto;
 }
 
 footer p {
     margin: 0.5rem 0;
-}
-
-footer .spanish {
-    font-style: italic;
-    margin-top: 1rem;
 }
 
 .footer-credits {
@@ -582,12 +1086,24 @@ footer .spanish {
     margin-top: 1rem;
 }
 
-/* Back to Top Button */
+.footer-credits a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-credits a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   BACK TO TOP BUTTON
+   ========================================================================== */
+
 .back-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: linear-gradient(135deg, #FF5500 0%, #0047AB 100%);
+    background: linear-gradient(135deg, #FF6633 0%, #0066B2 100%);
     color: white;
     border: none;
     width: 60px;
@@ -599,18 +1115,11 @@ footer .spanish {
     transition: all 0.3s;
     z-index: 999;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    font-size: 1.2rem;
-    font-weight: 600;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.back-to-top span {
-    font-size: 0.65rem;
-    margin-top: 0.15rem;
-    font-weight: 500;
+    gap: 0.25rem;
 }
 
 .back-to-top.visible {
@@ -622,7 +1131,15 @@ footer .spanish {
     transform: translateY(-5px);
 }
 
-/* Responsive Design */
+.back-to-top span {
+    font-size: 0.65rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -637,6 +1154,7 @@ footer .spanish {
     header nav ul {
         flex-direction: column;
         gap: 0.5rem;
+        text-align: center;
     }
     
     .slide-content h2 {
@@ -653,5 +1171,18 @@ footer .spanish {
     
     .section-title {
         font-size: 2rem;
+    }
+    
+    .tesstalk-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .banner-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
     }
 }
