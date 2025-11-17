@@ -294,7 +294,7 @@ function isInViewport(element) {
 
 // Function to handle animations on scroll
 function handleScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.service-box, .team-card, .testimonial-card');
+    const animatedElements = document.querySelectorAll('.service-box, .testimonial-card');
     
     animatedElements.forEach(element => {
         if (isInViewport(element)) {
@@ -306,8 +306,8 @@ function handleScrollAnimations() {
 
 // Initialize scroll animations
 document.addEventListener('DOMContentLoaded', function() {
-    // Set initial state for animated elements
-    const animatedElements = document.querySelectorAll('.service-box, .team-card, .testimonial-card');
+    // Set initial state for animated elements (REMOVED team-card to keep bios visible!)
+    const animatedElements = document.querySelectorAll('.service-box, .testimonial-card');
     animatedElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
