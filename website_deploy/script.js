@@ -1,336 +1,338 @@
-// Garcia Family Medicine - Complete JavaScript Functionality
+// GARCIA FAMILY MEDICINE - COMPLETE JAVASCRIPT
+// All buttons and interactions properly connected
 
-// ============================================================================
-// CAROUSEL FUNCTIONALITY
-// ============================================================================
-
-let currentSlide = 0;
-let autoSlideInterval;
-
-// Initialize carousel on page load
 document.addEventListener('DOMContentLoaded', function() {
-    initCarousel();
-    initBackToTop();
-    initSmoothScroll();
-    initExitPopup();
-});
+    console.log('Garcia Family Medicine website loaded! 💙');
 
-function initCarousel() {
-    showSlide(currentSlide);
-    startAutoSlide();
-}
-
-function showSlide(index) {
+    // ========================================
+    // HERO CAROUSEL
+    // ========================================
+    let currentSlide = 0;
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot');
-    
-    if (slides.length === 0) return;
-    
-    // Wrap around
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        if (slides[index]) slides[index].classList.add('active');
+        if (dots[index]) dots[index].classList.add('active');
     }
-    
-    // Remove active class from all slides and dots
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-    
-    // Add active class to current slide and dot
-    slides[currentSlide].classList.add('active');
-    if (dots[currentSlide]) {
-        dots[currentSlide].classList.add('active');
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
     }
-}
 
-function nextSlide() {
-    stopAutoSlide();
-    showSlide(currentSlide + 1);
-    startAutoSlide();
-}
-
-function prevSlide() {
-    stopAutoSlide();
-    showSlide(currentSlide - 1);
-    startAutoSlide();
-}
-
-function goToSlide(index) {
-    stopAutoSlide();
-    showSlide(index);
-    startAutoSlide();
-}
-
-function startAutoSlide() {
-    stopAutoSlide(); // Clear any existing interval
-    autoSlideInterval = setInterval(() => {
-        showSlide(currentSlide + 1);
-    }, 8000); // 8 seconds
-}
-
-function stopAutoSlide() {
-    if (autoSlideInterval) {
-        clearInterval(autoSlideInterval);
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
     }
-}
 
-// ============================================================================
-// READ MORE / READ LESS TOGGLE (For Services)
-// ============================================================================
+    // Auto-advance carousel every 8 seconds
+    let carouselInterval = setInterval(nextSlide, 8000);
 
-function toggleReadMore(button) {
-    const serviceBox = button.closest('.service-box');
-    const fullContent = serviceBox.querySelector('.service-full');
+    // Left/Right buttons
+    const leftButton = document.querySelector('.carousel-button-left');
+    const rightButton = document.querySelector('.carousel-button-right');
+
+    if (leftButton) {
+        leftButton.addEventListener('click', function() {
+            clearInterval(carouselInterval);
+            prevSlide();
+            carouselInterval = setInterval(nextSlide, 8000);
+        });
+    }
+
+    if (rightButton) {
+        rightButton.addEventListener('click', function() {
+            clearInterval(carouselInterval);
+            nextSlide();
+            carouselInterval = setInterval(nextSlide, 8000);
+        });
+    }
+
+    // Dot indicators
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            clearInterval(carouselInterval);
+            currentSlide = index;
+            showSlide(currentSlide);
+            carouselInterval = setInterval(nextSlide, 8000);
+        });
+    });
+
+    // Initialize carousel
+    showSlide(0);
+
+    // ========================================
+    // READ MORE - TEAM BIOS
+    // ========================================
+    const bioToggles = document.querySelectorAll('.read-more-toggle');
     
-    if (fullContent) {
-        if (fullContent.classList.contains('hidden')) {
-            // Show full content
-            fullContent.classList.remove('hidden');
-            button.textContent = 'Read Less';
-        } else {
-            // Hide full content
-            fullContent.classList.add('hidden');
-            button.textContent = 'Read More';
+    bioToggles.forEach(button => {
+        button.addEventListener('click', function() {
+            const teamCard = this.closest('.team-card');
+            const shortBio = teamCard.querySelector('.team-bio-short');
+            const fullBio = teamCard.querySelector('.team-bio-full');
             
-            // Scroll to top of service box
-            serviceBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-}
+            if (fullBio.classList.contains('hidden')) {
+                fullBio.classList.remove('hidden');
+                shortBio.classList.add('hidden');
+                this.textContent = 'Read Less';
+            } else {
+                fullBio.classList.add('hidden');
+                shortBio.classList.remove('hidden');
+                this.textContent = 'Read More';
+            }
+        });
+    });
 
-// ============================================================================
-// TEAM BIO TOGGLE (For Team Members)
-// ============================================================================
-
-function toggleTeamBio(button) {
-    const teamCard = button.closest('.team-card');
-    const fullBio = teamCard.querySelector('.team-bio-full');
+    // ========================================
+    // READ MORE - SERVICES
+    // ========================================
+    const serviceButtons = document.querySelectorAll('.read-more-btn');
     
-    if (fullBio) {
-        if (fullBio.classList.contains('hidden')) {
-            // Show full bio
-            fullBio.classList.remove('hidden');
-            button.textContent = 'Read Less';
-        } else {
-            // Hide full bio
-            fullBio.classList.add('hidden');
-            button.textContent = 'Read More';
+    serviceButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const serviceBox = this.closest('.service-box');
+            const shortDesc = serviceBox.querySelector('.service-short');
+            const fullDesc = serviceBox.querySelector('.service-full');
             
-            // Scroll to top of team card
-            teamCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-}
+            if (fullDesc.classList.contains('hidden')) {
+                fullDesc.classList.remove('hidden');
+                shortDesc.classList.add('hidden');
+                this.textContent = 'Read Less';
+                
+                // Smooth scroll to keep the box in view
+                setTimeout(() => {
+                    serviceBox.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
+                    });
+                }, 100);
+            } else {
+                fullDesc.classList.add('hidden');
+                shortDesc.classList.remove('hidden');
+                this.textContent = 'Read More';
+            }
+        });
+    });
 
-// ============================================================================
-// BACK TO TOP BUTTON
-// ============================================================================
+    // ========================================
+    // CTA BUTTONS - SCROLL TO CONTACT
+    // ========================================
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Only prevent default if it's not already a link with href="#contact"
+            if (!this.getAttribute('href') || this.getAttribute('href') === '#') {
+                e.preventDefault();
+            }
+            
+            const contactSection = document.querySelector('#contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            }
+        });
+    });
 
-function initBackToTop() {
-    const backToTopButton = document.getElementById('backToTop');
+    // ========================================
+    // BACK TO TOP BUTTON
+    // ========================================
+    const backToTopButton = document.querySelector('.back-to-top');
     
-    if (!backToTopButton) return;
-    
-    // Show/hide based on scroll position
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
             backToTopButton.classList.add('visible');
         } else {
             backToTopButton.classList.remove('visible');
         }
     });
-}
 
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-
-// ============================================================================
-// SMOOTH SCROLL FOR NAVIGATION LINKS
-// ============================================================================
-
-function initSmoothScroll() {
-    const navLinks = document.querySelectorAll('header nav a[href^="#"]');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
-}
 
-// ============================================================================
-// EXIT INTENT POPUP
-// ============================================================================
-
-let exitPopupShown = false;
-
-function initExitPopup() {
-    const exitPopup = document.getElementById('exitPopup');
-    
-    if (!exitPopup) return;
-    
-    // Track mouse movement to detect exit intent
-    document.addEventListener('mouseleave', (e) => {
-        // Check if mouse is leaving from the top of the page
-        if (e.clientY <= 0 && !exitPopupShown) {
-            showExitPopup();
-        }
-    });
-    
-    // Also show on tab visibility change (user switching tabs)
-    document.addEventListener('visibilitychange', () => {
-        if (document.hidden && !exitPopupShown) {
-            // Don't show immediately on tab switch
-            // Could be annoying
-        }
-    });
-}
-
-function showExitPopup() {
-    const exitPopup = document.getElementById('exitPopup');
-    if (exitPopup && !exitPopupShown) {
-        exitPopup.classList.remove('hidden');
-        exitPopupShown = true;
-        
-        // Set a cookie/localStorage so it doesn't show again
-        localStorage.setItem('exitPopupShown', 'true');
-    }
-}
-
-function closeExitPopup() {
-    const exitPopup = document.getElementById('exitPopup');
-    if (exitPopup) {
-        exitPopup.classList.add('hidden');
-    }
-}
-
-// Check if popup was already shown in this session
-if (localStorage.getItem('exitPopupShown') === 'true') {
-    exitPopupShown = true;
-}
-
-// ============================================================================
-// FORM HANDLING
-// ============================================================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.contact-form form');
+    // ========================================
+    // CONTACT FORM SUBMISSION
+    // ========================================
+    const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
             const name = this.querySelector('input[type="text"]').value;
             const email = this.querySelector('input[type="email"]').value;
             const phone = this.querySelector('input[type="tel"]').value;
-            const interest = this.querySelector('select').value;
+            const service = this.querySelector('select').value;
             const message = this.querySelector('textarea').value;
             
-            // Basic validation
-            if (!name || !email || !interest) {
-                alert('Please fill in all required fields (Name, Email, and Interest).');
-                return;
-            }
+            // Create email subject and body
+            const subject = encodeURIComponent('Website Contact - ' + service);
+            const body = encodeURIComponent(
+                'Name: ' + name + '\n' +
+                'Email: ' + email + '\n' +
+                'Phone: ' + phone + '\n' +
+                'Service Interested In: ' + service + '\n\n' +
+                'Message:\n' + message
+            );
             
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
+            // Open default email client
+            window.location.href = 'mailto:contact@garciafamilymedicine.com?subject=' + subject + '&body=' + body;
             
-            // In a real implementation, you would send this data to a server
-            // For now, just show a success message
-            alert('Thank you for your message! We will get back to you soon.');
+            // Show confirmation
+            alert('Thank you for contacting us! Your email client will open with your message. If it doesn\'t open automatically, please call us at (816) 708-0884.');
             
             // Reset form
             this.reset();
         });
     }
-});
 
-// ============================================================================
-// LANGUAGE TOGGLE (Basic Implementation)
-// ============================================================================
+    // ========================================
+    // EXIT POPUP
+    // ========================================
+    const exitPopup = document.querySelector('.exit-popup');
+    const closePopupButton = document.querySelector('.exit-popup-close');
+    const exitSecondaryButton = document.querySelector('.exit-btn-secondary');
+    let popupShown = false;
 
-// Note: The full translation functionality is in the HTML inline script
-// This is a placeholder for any additional language-related JS
+    function showExitPopup() {
+        if (!popupShown && exitPopup) {
+            exitPopup.classList.remove('hidden');
+            popupShown = true;
+            console.log('Exit popup displayed');
+        }
+    }
 
-// ============================================================================
-// UTILITY FUNCTIONS
-// ============================================================================
+    function closeExitPopup() {
+        if (exitPopup) {
+            exitPopup.classList.add('hidden');
+        }
+    }
 
-// Function to check if element is in viewport
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Function to handle animations on scroll
-function handleScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.service-box, .testimonial-card');
-    
-    animatedElements.forEach(element => {
-        if (isInViewport(element)) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
+    // Show popup when mouse leaves window (going to close tab)
+    document.addEventListener('mouseleave', function(e) {
+        if (e.clientY < 0) {
+            showExitPopup();
         }
     });
-}
 
-// Initialize scroll animations
-document.addEventListener('DOMContentLoaded', function() {
-    // Set initial state for animated elements (REMOVED team-card to keep bios visible!)
-    const animatedElements = document.querySelectorAll('.service-box, .testimonial-card');
-    animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.5s, transform 0.5s';
+    // Close button
+    if (closePopupButton) {
+        closePopupButton.addEventListener('click', closeExitPopup);
+    }
+
+    // "I'll Look Around First" button
+    if (exitSecondaryButton) {
+        exitSecondaryButton.addEventListener('click', closeExitPopup);
+    }
+
+    // Primary button ("Call Now") - goes to phone
+    const exitPrimaryButton = document.querySelector('.exit-btn-primary');
+    if (exitPrimaryButton) {
+        exitPrimaryButton.addEventListener('click', function() {
+            window.location.href = 'tel:+18167080884';
+        });
+    }
+
+    // Close popup when clicking outside content
+    if (exitPopup) {
+        exitPopup.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeExitPopup();
+            }
+        });
+    }
+
+    // ========================================
+    // SPANISH TOGGLE
+    // ========================================
+    const languageToggle = document.querySelector('.language-toggle');
+    let isSpanish = false;
+
+    if (languageToggle) {
+        languageToggle.addEventListener('click', function() {
+            isSpanish = !isSpanish;
+            
+            if (isSpanish) {
+                this.textContent = 'View in English';
+                alert('¡Contenido en español próximamente! Por favor llámenos al (816) 708-0884 para asistencia en español.');
+            } else {
+                this.textContent = 'Ver en Español';
+            }
+        });
+    }
+
+    // ========================================
+    // SMOOTH SCROLL FOR ALL ANCHOR LINKS
+    // ========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            
+            // Only handle if it's an actual anchor (not just "#")
+            if (href !== '#' && href.length > 1) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
     });
-    
-    // Trigger animations on scroll
-    window.addEventListener('scroll', handleScrollAnimations);
-    
-    // Initial check
-    handleScrollAnimations();
-});
 
-// ============================================================================
-// MOBILE MENU TOGGLE (If needed in future)
-// ============================================================================
+    // ========================================
+    // SCROLL ANIMATIONS
+    // ========================================
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
 
-// Placeholder for mobile menu functionality
-// Can be expanded if mobile hamburger menu is added
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
 
-// ============================================================================
-// CONSOLE LOG (For debugging - remove in production)
-// ============================================================================
+    // Observe elements for animation
+    document.querySelectorAll('.service-box, .testimonial-card, .testimonial-card-written, .value-card, .team-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
 
-console.log('Garcia Family Medicine - Website Loaded Successfully');
-console.log('Carousel initialized with ' + document.querySelectorAll('.hero-slide').length + ' slides');
+    // ========================================
+    // PHONE BUTTON CLICK TRACKING
+    // ========================================
+    const phoneButtons = document.querySelectorAll('a[href^="tel:"]');
+    phoneButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log('Phone call initiated: (816) 708-0884');
+        });
+    });
+
+    // ========================================
+    // LOG SUCCESS MESSAGE
+    // ========================================
+    console.log('✅ All buttons connected successfully!');
+    console.log('📞 Phone: (816) 708-0884');
+    console.log('💙 Garcia Family Medicine - Treating Spirit, Body, and Soul');
+
+}); // End DOMContentLoaded
