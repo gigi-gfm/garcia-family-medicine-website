@@ -4,90 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Garcia Family Medicine - Direct Primary Care in Blue Springs, MO | $99/Month</title>
-    <meta name="description" content="Garcia Family Medicine offers affordable Direct Primary Care in Blue Springs, MO for just $99/month. Comprehensive healthcare treating Spirit, Body, and Soul. Now accepting new patients.">
-    <meta name="keywords" content="Direct Primary Care, Blue Springs MO, family medicine, affordable healthcare, $99 monthly membership, Dr. Tess Garcia, CoreLift, mental health, weight management">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
+    <title>Garcia Family Medicine | Direct Primary Care in Blue Springs, MO</title>
+    <meta name="description" content="Experience compassionate Direct Primary Care in Blue Springs, Missouri. Weight management, CoreLift treatments, and faith-based family medicine.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <div class="header-left">
-                <img src="Logo_New_GFM.webp" alt="Garcia Family Medicine Logo" class="header-logo">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo-section">
+                <img src="Logo_New_GFM.webp" alt="Garcia Family Medicine Logo" class="logo">
                 <div class="header-text">
                     <h1>Garcia Family Medicine</h1>
-                    <p class="tagline">Treating the whole patient: Spirit, Body, and Soul</p>
-                    <a href="tel:+18165258346" class="phone-button">📞 (816) 525-8346</a>
+                    <p class="tagline">Treating the whole patient: Spirit, Body, and Soul | Se Habla Español</p>
                 </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#team">Our Team</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <nav class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#team">Our Team</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
             </nav>
+            <div class="header-cta">
+                <a href="tel:+18165258346" class="phone-btn">📞 (816) 525-8346</a>
+            </div>
         </div>
     </header>
 
-    <!-- Spanish Language Banner -->
-    <div class="spanish-banner">
-        <div class="banner-content">
-            <span class="banner-text">🌟 ¡Hablamos Español! Se Habla Español - Spanish-Speaking Services Available 🌟</span>
-        </div>
-    </div>
-
-    <!-- Hero Carousel -->
+    <!-- HERO CAROUSEL -->
     <section id="home" class="hero-carousel">
-        <div class="hero-slide active" style="background-image: url('CoreLift_Confidence_with_Emsella.png');">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <h2>CoreLift Confidence with Emsella</h2>
-                <p>Revolutionary non-invasive treatment for pelvic floor strength</p>
+        <div class="carousel-slides">
+            <div class="carousel-slide active">
+                <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift Confidence with Emsella">
+                <div class="slide-content">
+                    <h2>CoreLift Confidence with Emsella</h2>
+                    <p>Revolutionary non-invasive pelvic floor treatment</p>
+                    <a href="#services" class="cta-btn">Learn More</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="Dr_Tess_Emsella.png" alt="Dr. Tess Garcia">
+                <div class="slide-content">
+                    <h2>Meet Dr. Tess Garcia</h2>
+                    <p>Board-Certified in Family Medicine & Obesity Medicine</p>
+                    <a href="#team" class="cta-btn">Meet Our Team</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="weight-management.png" alt="Medical Weight Management">
+                <div class="slide-content">
+                    <h2>Medical Weight Management</h2>
+                    <p>Comprehensive, compassionate care for lasting results</p>
+                    <a href="#services" class="cta-btn">Start Your Journey</a>
+                </div>
             </div>
         </div>
-        <div class="hero-slide" style="background-image: url('Dr_Tess_Emsella.png');">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <h2>Meet Dr. Tess Garcia</h2>
-                <p>Compassionate care for you and your family</p>
-            </div>
-        </div>
-        <div class="hero-slide" style="background-image: url('gigi-wellness.png');">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <h2>Wellness Coaching</h2>
-                <p>Personalized guidance for your health journey</p>
-            </div>
-        </div>
-        
-        <button class="carousel-button carousel-button-left" onclick="changeSlide(-1)">‹</button>
-        <button class="carousel-button carousel-button-right" onclick="changeSlide(1)">›</button>
-        
-        <div class="carousel-nav">
-            <button class="dot active" onclick="currentSlide(0)"></button>
-            <button class="dot" onclick="currentSlide(1)"></button>
-            <button class="dot" onclick="currentSlide(2)"></button>
+        <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
+        <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="about-section">
         <div class="container">
             <h2 class="section-title">Welcome to Garcia Family Medicine</h2>
+            
+            <!-- Welcome Video -->
+            <div class="welcome-video">
+                <iframe width="100%" height="500" 
+                    src="https://www.youtube.com/embed/Nu6kxJXanfc" 
+                    title="Welcome to Garcia Family Medicine" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
             <p class="lead-text">
                 At Garcia Family Medicine, we believe in treating the whole person—Spirit, Body, and Soul. 
                 Our Direct Primary Care model offers affordable, accessible healthcare without the hassle of insurance billing.
@@ -101,538 +99,313 @@
                     relationships with our patients, ensuring personalized care that addresses your unique health needs.
                 </p>
             </div>
+        </div>
+    </section>
 
-            <div class="mission-box">
-                <h3>Why Choose Direct Primary Care?</h3>
-                <p>
-                    For just $99/month, you get unlimited access to primary care services—no co-pays, no surprise bills, 
-                    no insurance headaches. We spend more time with you because we work for you, not insurance companies.
-                </p>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            
+            <div class="services-grid">
+                <!-- Direct Primary Care -->
+                <div class="service-card">
+                    <img src="elderly-care.png" alt="Direct Primary Care">
+                    <h3>Direct Primary Care</h3>
+                    <p class="service-price">Only $99/month</p>
+                    <p class="service-preview">Unlimited access to your physician without insurance hassles...</p>
+                    <div class="service-details hidden">
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/48yHIwnzGZM" 
+                            title="Direct Primary Care Explained" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p>Our Direct Primary Care model eliminates the middleman and puts you and your doctor back in control of your healthcare. For just $99/month, you get:</p>
+                        <ul>
+                            <li>Unlimited office visits with no copays</li>
+                            <li>Same-day or next-day appointments</li>
+                            <li>Longer appointment times (30-60 minutes)</li>
+                            <li>Direct access to Dr. Garcia via phone, text, or email</li>
+                            <li>Wholesale pricing on labs and medications</li>
+                            <li>Comprehensive care for acute and chronic conditions</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleService(this)">Read More</button>
+                </div>
+
+                <!-- CoreLift -->
+                <div class="service-card">
+                    <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift Pelvic Health">
+                    <h3>CoreLift Confidence with Emsella</h3>
+                    <p class="service-price">Transform Your Pelvic Health</p>
+                    <p class="service-preview">Revolutionary FDA-cleared treatment for pelvic floor strengthening...</p>
+                    <div class="service-details hidden">
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/7LUSfr1ov-0" 
+                            title="CoreLift Treatment" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/3pc60PTMGH8" 
+                            title="CoreLift Pelvic Health" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p>CoreLift uses the BTL Emsella chair to deliver thousands of supramaximal pelvic floor contractions in just 28 minutes. This completely non-invasive treatment helps with:</p>
+                        <ul>
+                            <li>Stress and urge incontinence</li>
+                            <li>Pelvic floor weakness</li>
+                            <li>Post-pregnancy pelvic floor recovery</li>
+                            <li>Improved intimacy and confidence</li>
+                            <li>No downtime - fully clothed treatment</li>
+                        </ul>
+                        <p><strong>Special Offer:</strong> Package pricing available. Contact us for details!</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleService(this)">Read More</button>
+                </div>
+
+                <!-- Mental Health -->
+                <div class="service-card">
+                    <img src="mental-health.png" alt="Mental Health Services">
+                    <h3>Mental Health Counseling</h3>
+                    <p class="service-price">Compassionate Support</p>
+                    <p class="service-preview">Addressing anxiety, depression, and stress with whole-person care...</p>
+                    <div class="service-details hidden">
+                        <p>Mental health is an integral part of overall wellness. Dr. Garcia provides compassionate mental health care including:</p>
+                        <ul>
+                            <li>Anxiety and depression management</li>
+                            <li>Stress management counseling</li>
+                            <li>Medication management when appropriate</li>
+                            <li>Faith-based counseling available</li>
+                            <li>Coordination with specialist therapists as needed</li>
+                        </ul>
+                        <p>We treat mental health with the same importance as physical health, providing a safe, judgment-free environment for healing.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleService(this)">Read More</button>
+                </div>
+
+                <!-- Weight Management -->
+                <div class="service-card">
+                    <img src="weight-management.png" alt="Medical Weight Management">
+                    <h3>Medical Weight Management</h3>
+                    <p class="service-price">First Month Only $27</p>
+                    <p class="service-preview">Comprehensive, medically-supervised weight loss program...</p>
+                    <div class="service-details hidden">
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/4e52AQY8-m4" 
+                            title="Medical Weight Management Program" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p>Dr. Garcia, board-certified in Obesity Medicine, offers a comprehensive approach to sustainable weight loss:</p>
+                        <ul>
+                            <li>Personalized nutrition and exercise plans</li>
+                            <li>GLP-1 medications (Semaglutide, Tirzepatide) when appropriate</li>
+                            <li>Hormone evaluation and optimization</li>
+                            <li>Metabolic testing</li>
+                            <li>Ongoing support and accountability</li>
+                            <li>Treatment of obesity-related conditions</li>
+                        </ul>
+                        <p><strong>Special:</strong> First month only $27! Start your journey to better health today.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleService(this)">Read More</button>
+                </div>
+
+                <!-- Wellness Coaching with Gigi -->
+                <div class="service-card">
+                    <img src="gigi-wellness.png" alt="Wellness Coaching">
+                    <h3>Wellness Coaching with Gigi</h3>
+                    <p class="service-price">Personalized Guidance</p>
+                    <p class="service-preview">One-on-one coaching for lifestyle transformation...</p>
+                    <div class="service-details hidden">
+                        <p>Gigi, our Practice Manager and Wellness Coach, provides personalized support for your health journey:</p>
+                        <ul>
+                            <li>Nutrition education and meal planning</li>
+                            <li>Lifestyle modification strategies</li>
+                            <li>Accountability and motivation</li>
+                            <li>Supplement guidance</li>
+                            <li>Stress management techniques</li>
+                            <li>Goal setting and tracking</li>
+                        </ul>
+                        <p>Gigi brings personal experience and passion to help you achieve sustainable lifestyle changes.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleService(this)">Read More</button>
+                </div>
+
+                <!-- Pain Management -->
+                <div class="service-card">
+                    <img src="pain-management.png" alt="Pain Management">
+                    <h3>Pain Management</h3>
+                    <p class="service-price">Relief & Recovery</p>
+                    <p class="service-preview">Comprehensive approach to chronic and acute pain...</p>
+                    <div class="service-details hidden">
+                        <p>We offer holistic pain management solutions including:</p>
+                        <ul>
+                            <li>Joint and muscle pain treatment</li>
+                            <li>Trigger point injections</li>
+                            <li>Physical therapy referrals</li>
+                            <li>Medication management</li>
+                            <li>Alternative pain relief strategies</li>
+                            <li>Coordination with pain specialists when needed</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleService(this)">Read More</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- TESSTALK SECTION -->
+    <section id="tesstalk" class="tesstalk-section">
+        <div class="container">
+            <h2 class="section-title">TessTalk with Dr. Tess Garcia</h2>
+            <p class="lead-text">Join Dr. Tess as she discusses important health topics with compassion and expertise.</p>
+            
+            <div class="tesstalk-video">
+                <iframe width="100%" height="500" 
+                    src="https://www.youtube.com/embed/50nIdYuTyRE" 
+                    title="TessTalk: Addressing Fat Shaming" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <h3>Episode: The Truth About Fat Shaming</h3>
+                <p>Dr. Tess addresses the harmful effects of fat shaming and shares a compassionate, medical perspective on weight and health.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
     <section id="team" class="team-section">
         <div class="container">
             <h2 class="section-title">Meet Our Team</h2>
-            <p class="section-subtitle">Dedicated professionals committed to your health and wellness</p>
             
             <div class="team-grid">
                 <!-- Dr. Tess Garcia -->
                 <div class="team-card">
-                    <div class="team-photo">
-                        <img src="Dr_Tess_Emsella.png" alt="Dr. Tess Garcia">
+                    <img src="Dr_Tess_Emsella.png" alt="Dr. Tess Garcia">
+                    <h3>Dr. Tess Garcia, DO</h3>
+                    <p class="team-title">Board-Certified Family Medicine & Obesity Medicine Physician</p>
+                    <p class="team-preview">Dr. Garcia is passionate about providing comprehensive, faith-based healthcare...</p>
+                    <div class="team-details hidden">
+                        <p>Dr. Tess Garcia graduated from Kansas City University of Medicine and Biosciences and completed her Family Medicine residency in Kansas City. She is board-certified in both Family Medicine and Obesity Medicine.</p>
+                        <p>Dr. Garcia believes in treating the whole person—Spirit, Body, and Soul. She combines evidence-based medicine with compassionate care, taking time to truly listen to her patients and address their individual needs.</p>
+                        <p>Her special interests include:</p>
+                        <ul>
+                            <li>Medical weight management and obesity medicine</li>
+                            <li>Women's health and pelvic floor disorders</li>
+                            <li>Mental health and wellness</li>
+                            <li>Chronic disease management</li>
+                            <li>Faith-based family medicine</li>
+                        </ul>
+                        <p>When not caring for patients, Dr. Garcia enjoys spending time with her family and serving her community.</p>
                     </div>
-                    <div class="team-info">
-                        <h3>Dr. Tess Garcia, DO</h3>
-                        <p class="team-title">Family Medicine Physician</p>
-                        <p class="team-bio">
-                            Dr. Tess Garcia is a board-certified family medicine physician passionate about providing 
-                            whole-person care to patients of all ages.
-                        </p>
-                        <div class="team-bio-full hidden">
-                            <p>
-                                With years of experience in both traditional and Direct Primary Care settings, 
-                                Dr. Garcia founded Garcia Family Medicine to offer a better healthcare experience—one 
-                                where patients are treated as individuals, not numbers. She specializes in preventive care, 
-                                chronic disease management, and helping patients achieve their wellness goals.
-                            </p>
-                            <p>
-                                Dr. Garcia is fluent in Spanish and deeply committed to serving the diverse community 
-                                of Blue Springs and surrounding areas.
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
+                    <button class="read-more-btn" onclick="toggleService(this)">Read More</button>
                 </div>
 
-                <!-- Gigi - Practice Manager & Wellness Coach -->
+                <!-- Gigi -->
                 <div class="team-card">
-                    <div class="team-photo">
-                        <img src="Gigi_Orange.png" alt="Gigi - Practice Manager">
+                    <img src="Gigi_Orange.png" alt="Gigi - Practice Manager">
+                    <h3>Gigi Garcia</h3>
+                    <p class="team-title">Practice Manager & Wellness Coach</p>
+                    <p class="team-preview">Gigi brings passion and personal experience to helping patients achieve their health goals...</p>
+                    <div class="team-details hidden">
+                        <p>Gigi is the heart of Garcia Family Medicine, managing practice operations while serving as a dedicated wellness coach. She founded gigiSafeHOUSE, a nonprofit organization focused on removing financial barriers to healthcare access.</p>
+                        <p>As a Filipina American, Gigi brings cultural sensitivity and warmth to patient care. She is also a children's book author, having written "Bahay Kubo" to celebrate cultural heritage.</p>
+                        <p>Gigi's approach to wellness coaching includes:</p>
+                        <ul>
+                            <li>Personalized nutrition guidance</li>
+                            <li>Lifestyle modification support</li>
+                            <li>Accountability and encouragement</li>
+                            <li>Resource navigation and assistance</li>
+                            <li>Community health education</li>
+                        </ul>
+                        <p>Her mission, rooted in a sacred covenant made in 2010, is to serve others with compassion "no matter the outcome."</p>
                     </div>
-                    <div class="team-info">
-                        <h3>Gigi</h3>
-                        <p class="team-title">Practice Manager & Wellness Coach</p>
-                        <p class="team-bio">
-                            Gigi brings warmth, compassion, and extensive healthcare experience to Garcia Family Medicine, 
-                            ensuring every patient feels welcomed and cared for.
-                        </p>
-                        <div class="team-bio-full hidden">
-                            <p>
-                                As Practice Manager, Gigi oversees daily operations and patient experience. As a Wellness Coach, 
-                                she provides personalized guidance for weight management, lifestyle changes, and overall wellness goals.
-                            </p>
-                            <p>
-                                Gigi is also the founder of gigiSafeHOUSE, a nonprofit dedicated to removing financial barriers 
-                                to healthcare and combating obesity in families and communities. Her mission-driven approach brings 
-                                heart and soul to everything she does.
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
+                    <button class="read-more-btn" onclick="toggleService(this)">Read More</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive care for your whole health</p>
-            
-            <div class="services-grid">
-                
-                <!-- Direct Primary Care -->
-                <div class="service-box">
-                    <div class="service-image">
-                        <img src="elderly-care.png" alt="Direct Primary Care">
-                    </div>
-                    <div class="service-content">
-                        <h3>Direct Primary Care - $99/Month</h3>
-                        <div class="pricing-badge">$99/Month Membership</div>
-                        <p class="service-short">
-                            Unlimited access to comprehensive primary care without insurance hassles. Same-day or next-day appointments, 
-                            longer visit times, and 24/7 access to your doctor.
-                        </p>
-                        <div class="service-full hidden">
-                            <p><strong>What's Included:</strong></p>
-                            <ul class="service-benefits">
-                                <li>Unlimited office visits (no co-pays!)</li>
-                                <li>Same-day or next-day appointments</li>
-                                <li>Extended visit times (30-60 minutes)</li>
-                                <li>24/7 phone, text, and email access</li>
-                                <li>Basic lab work and testing at wholesale prices</li>
-                                <li>Chronic disease management</li>
-                                <li>Preventive care and wellness visits</li>
-                                <li>Minor procedures in-office</li>
-                            </ul>
-                            <p>
-                                No surprise bills, no dealing with insurance for primary care. We work for YOU, not insurance companies.
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- CoreLift Confidence with Emsella -->
-                <div class="service-box">
-                    <div class="service-image">
-                        <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift Confidence with Emsella">
-                    </div>
-                    <div class="service-content">
-                        <h3>CoreLift Confidence with Emsella</h3>
-                        <p class="service-short">
-                            Revolutionary FDA-approved treatment for pelvic floor strengthening and urinary incontinence. 
-                            Non-invasive, no downtime, and proven results.
-                        </p>
-                        <div class="service-full hidden">
-                            <p><strong>What is Emsella?</strong></p>
-                            <p>
-                                Emsella is a breakthrough treatment that uses electromagnetic technology to deliver thousands 
-                                of supramaximal pelvic floor muscle contractions in a single session—equivalent to 11,000 Kegel exercises!
-                            </p>
-                            <p><strong>Benefits:</strong></p>
-                            <ul class="service-benefits">
-                                <li>Treats urinary incontinence</li>
-                                <li>Strengthens pelvic floor muscles</li>
-                                <li>Improves intimate wellness</li>
-                                <li>Non-invasive—remain fully clothed</li>
-                                <li>No downtime—return to activities immediately</li>
-                                <li>28-minute comfortable sessions</li>
-                                <li>Visible results in as few as 6 sessions</li>
-                            </ul>
-                            <p>
-                                Regain your confidence and improve your quality of life. Perfect for postpartum women, 
-                                those experiencing menopause, or anyone struggling with bladder control.
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- Mental Health Services -->
-                <div class="service-box">
-                    <div class="service-image">
-                        <img src="mental-health.png" alt="Mental Health Services">
-                    </div>
-                    <div class="service-content">
-                        <h3>Mental Health Services</h3>
-                        <p class="service-short">
-                            Compassionate mental health care integrated with your primary care. We treat anxiety, depression, 
-                            stress management, and more—because mental health IS health.
-                        </p>
-                        <div class="service-full hidden">
-                            <p><strong>Comprehensive Mental Wellness Support:</strong></p>
-                            <ul class="service-benefits">
-                                <li>Depression and anxiety treatment</li>
-                                <li>Stress and burnout management</li>
-                                <li>Medication management</li>
-                                <li>Counseling and therapy referrals</li>
-                                <li>Holistic approach combining body and mind</li>
-                                <li>Confidential, judgment-free care</li>
-                            </ul>
-                            <p>
-                                At Garcia Family Medicine, we understand that mental and physical health are deeply connected. 
-                                We provide integrated care that addresses both, ensuring you receive comprehensive support for your wellbeing.
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- Weight Management -->
-                <div class="service-box">
-                    <div class="service-image">
-                        <img src="weight-management.png" alt="Weight Management Program">
-                    </div>
-                    <div class="service-content">
-                        <h3>Weight Management & Wellness</h3>
-                        <p class="service-short">
-                            Personalized weight management programs combining medical supervision, nutrition guidance, 
-                            and wellness coaching. Sustainable results, not quick fixes.
-                        </p>
-                        <div class="service-full hidden">
-                            <p><strong>Our Approach:</strong></p>
-                            <p>
-                                We believe in treating the root causes of weight challenges—not just symptoms. Our comprehensive 
-                                program addresses metabolism, hormones, nutrition, activity, sleep, and stress.
-                            </p>
-                            <p><strong>What We Offer:</strong></p>
-                            <ul class="service-benefits">
-                                <li>Medical evaluation and metabolic testing</li>
-                                <li>Personalized nutrition plans</li>
-                                <li>Exercise and movement guidance</li>
-                                <li>Prescription weight loss medications when appropriate</li>
-                                <li>One-on-one wellness coaching with Gigi</li>
-                                <li>Ongoing support and accountability</li>
-                                <li>Body composition monitoring</li>
-                            </ul>
-                            <p>
-                                Our goal isn't just weight loss—it's helping you build a healthier, more vibrant life.
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- Wellness Coaching -->
-                <div class="service-box">
-                    <div class="service-image">
-                        <img src="gigi-wellness.png" alt="Wellness Coaching with Gigi">
-                    </div>
-                    <div class="service-content">
-                        <h3>Wellness Coaching</h3>
-                        <p class="service-short">
-                            One-on-one wellness coaching with Gigi to help you achieve your health goals. 
-                            Personalized support for lifestyle changes, habit formation, and lasting wellness.
-                        </p>
-                        <div class="service-full hidden">
-                            <p><strong>What is Wellness Coaching?</strong></p>
-                            <p>
-                                Wellness coaching is a partnership where Gigi helps you identify your health goals and 
-                                creates a personalized action plan to achieve them. It's not about quick fixes—it's about 
-                                sustainable change.
-                            </p>
-                            <p><strong>Areas of Focus:</strong></p>
-                            <ul class="service-benefits">
-                                <li>Nutrition and healthy eating habits</li>
-                                <li>Physical activity and movement</li>
-                                <li>Stress management techniques</li>
-                                <li>Sleep improvement strategies</li>
-                                <li>Behavior change and habit formation</li>
-                                <li>Accountability and motivation</li>
-                                <li>Overcoming obstacles to wellness</li>
-                            </ul>
-                            <p>
-                                Gigi brings compassion, lived experience, and a mission-driven approach to every coaching session. 
-                                She meets you where you are and helps you move forward at your own pace.
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- Independent Medical Exams -->
-                <div class="service-box">
-                    <div class="service-image">
-                        <div class="video-placeholder">
-                            <div class="video-icon">🩺</div>
-                            <p>Independent Medical Examinations</p>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Independent Medical Exams (IME)</h3>
-                        <p class="service-short">
-                            Objective, thorough medical evaluations for legal, insurance, or disability cases. 
-                            Professional assessments you can trust.
-                        </p>
-                        <div class="service-full hidden">
-                            <p><strong>What is an IME?</strong></p>
-                            <p>
-                                An Independent Medical Exam is an objective medical evaluation performed by a qualified physician 
-                                to assess an individual's health status, functional capacity, or disability level.
-                            </p>
-                            <p><strong>Common Uses:</strong></p>
-                            <ul class="service-benefits">
-                                <li>Workers' compensation claims</li>
-                                <li>Disability determinations</li>
-                                <li>Personal injury cases</li>
-                                <li>Insurance claim evaluations</li>
-                                <li>Return-to-work assessments</li>
-                            </ul>
-                            <p>
-                                Dr. Garcia provides thorough, unbiased evaluations with detailed written reports. 
-                                Professional, respectful, and timely service.
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- DOT Physicals -->
-                <div class="service-box">
-                    <div class="service-image">
-                        <div class="video-placeholder">
-                            <div class="video-icon">🚛</div>
-                            <p>DOT Physical Examinations</p>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3>DOT Physicals</h3>
-                        <p class="service-short">
-                            Department of Transportation physical exams for commercial drivers. 
-                            Quick, thorough, and certified examinations to keep you on the road.
-                        </p>
-                        <div class="service-full hidden">
-                            <p><strong>What is a DOT Physical?</strong></p>
-                            <p>
-                                A DOT physical is a medical examination required by the Federal Motor Carrier Safety Administration (FMCSA) 
-                                for commercial motor vehicle drivers.
-                            </p>
-                            <p><strong>What to Expect:</strong></p>
-                            <ul class="service-benefits">
-                                <li>Vision and hearing tests</li>
-                                <li>Blood pressure and pulse check</li>
-                                <li>Urinalysis</li>
-                                <li>Physical examination</li>
-                                <li>Review of medical history</li>
-                                <li>Medical Examiner's Certificate issued on-site</li>
-                            </ul>
-                            <p>
-                                Same-day appointments available. Walk-ins welcome. Get back on the road quickly!
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- Pain Management -->
-                <div class="service-box">
-                    <div class="service-image">
-                        <img src="pain-management.png" alt="Pain Management Services">
-                    </div>
-                    <div class="service-content">
-                        <h3>Pain Management</h3>
-                        <p class="service-short">
-                            Comprehensive pain management focusing on improving function and quality of life. 
-                            We treat acute and chronic pain with a multimodal approach.
-                        </p>
-                        <div class="service-full hidden">
-                            <p><strong>Our Philosophy:</strong></p>
-                            <p>
-                                Pain management isn't just about masking symptoms—it's about identifying causes and 
-                                restoring function. We use a comprehensive approach combining medications, therapies, 
-                                and lifestyle modifications.
-                            </p>
-                            <p><strong>Conditions We Treat:</strong></p>
-                            <ul class="service-benefits">
-                                <li>Chronic back and neck pain</li>
-                                <li>Arthritis and joint pain</li>
-                                <li>Headaches and migraines</li>
-                                <li>Nerve pain (neuropathy)</li>
-                                <li>Post-surgical pain</li>
-                                <li>Sports injuries</li>
-                                <li>Fibromyalgia</li>
-                            </ul>
-                            <p><strong>Treatment Options:</strong></p>
-                            <ul class="service-benefits">
-                                <li>Medication management</li>
-                                <li>Injection therapies</li>
-                                <li>Physical therapy referrals</li>
-                                <li>Lifestyle and ergonomic counseling</li>
-                                <li>Alternative therapies</li>
-                            </ul>
-                            <p>
-                                Our goal is to help you live a fuller, more active life—not just manage pain, but overcome it.
-                            </p>
-                        </div>
-                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Testimonials -->
+    <!-- TESTIMONIALS SECTION -->
     <section id="testimonials" class="testimonials-section">
         <div class="container">
-            <h2 class="section-title">What Our Patients Say</h2>
-            <p class="section-subtitle">Real stories from real patients</p>
+            <h2 class="section-title">Patient Testimonials</h2>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="video-placeholder">
-                        <div class="video-icon">▶️</div>
-                        <p>Video Testimonial Coming Soon</p>
+                    <div class="testimonial-video">
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/m0S31koeG-A" 
+                            title="Patient Testimonial" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
                     </div>
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-author">Patient Video Testimonial #1</p>
+                    <p class="testimonial-text">"Ernie shares his incredible weight management journey with Dr. Garcia and the transformative impact it's had on his life."</p>
+                    <p class="testimonial-author">- Ernie, Weight Management Patient</p>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="video-placeholder">
-                        <div class="video-icon">▶️</div>
-                        <p>Video Testimonial Coming Soon</p>
-                    </div>
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-author">Patient Video Testimonial #2</p>
+                    <p class="testimonial-text">"The Direct Primary Care model has been life-changing for our family. We actually get to spend time with our doctor, and she really knows us. No more rushing through appointments or waiting weeks to be seen."</p>
+                    <p class="testimonial-author">- Sarah M., Blue Springs</p>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="video-placeholder">
-                        <div class="video-icon">▶️</div>
-                        <p>Video Testimonial Coming Soon</p>
-                    </div>
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-author">Patient Video Testimonial #3</p>
+                    <p class="testimonial-text">"CoreLift changed my life! After having three children, I was struggling with incontinence. After just a few treatments, I have my confidence back. This is truly life-changing."</p>
+                    <p class="testimonial-author">- Jennifer L., Independence</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Written Testimonials -->
-    <section class="written-testimonials-section">
-        <div class="container">
-            <h2 class="section-title">Patient Reviews</h2>
-            
-            <div class="testimonials-grid-written">
-                <div class="testimonial-card-written">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Dr. Garcia and Gigi truly care about their patients. The Direct Primary Care model has been 
-                        life-changing for my family—no more waiting weeks for appointments or surprise bills!"
-                    </p>
-                    <p class="testimonial-author">— Sarah M.</p>
-                </div>
-
-                <div class="testimonial-card-written">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "The Emsella treatment has given me my confidence back. I can't thank Dr. Garcia enough. 
-                        The results were better than I ever expected!"
-                    </p>
-                    <p class="testimonial-author">— Jennifer L.</p>
-                </div>
-
-                <div class="testimonial-card-written">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Gigi's wellness coaching helped me finally lose the weight I'd been struggling with for years. 
-                        She's supportive, knowledgeable, and genuinely cares about my success."
-                    </p>
-                    <p class="testimonial-author">— Michael R.</p>
-                </div>
-
-                <div class="testimonial-card-written">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "This practice treats me like family. Dr. Garcia takes time to really listen and explain everything. 
-                        I never feel rushed. Best healthcare experience I've ever had!"
-                    </p>
-                    <p class="testimonial-author">— Maria G.</p>
-                </div>
-
-                <div class="testimonial-card-written">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "The fact that they speak Spanish made all the difference for my parents. 
-                        They finally have a doctor they can communicate with comfortably. ¡Gracias!"
-                    </p>
-                    <p class="testimonial-author">— Carlos P.</p>
-                </div>
-
-                <div class="testimonial-card-written">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Affordable, accessible, and compassionate care. Garcia Family Medicine is what healthcare should be. 
-                        I'm so grateful I found them!"
-                    </p>
-                    <p class="testimonial-author">— Amanda K.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-subtitle">We're here to answer your questions</p>
+            <h2 class="section-title">Contact Us</h2>
             
             <div class="contact-grid">
                 <div class="contact-info">
+                    <h3>Get in Touch</h3>
                     <div class="contact-item">
-                        <h4>📍 Location</h4>
-                        <p>Blue Springs, Missouri</p>
+                        <strong>Phone:</strong>
+                        <a href="tel:+18165258346">(816) 525-8346</a>
                     </div>
-
                     <div class="contact-item">
-                        <h4>📞 Phone</h4>
-                        <p><a href="tel:+18165258346">(816) 525-8346</a></p>
+                        <strong>Email:</strong>
+                        <a href="mailto:gigi@garciafamilymedicine.care">gigi@garciafamilymedicine.care</a>
                     </div>
-
                     <div class="contact-item">
-                        <h4>✉️ Email</h4>
-                        <p><a href="mailto:info@garciafamilymedicine.com">info@garciafamilymedicine.com</a></p>
+                        <strong>Address:</strong>
+                        <p>801 NW Saint Mary's Drive, Suite 209<br>Blue Springs, MO 64014</p>
                     </div>
-
                     <div class="contact-item">
-                        <h4>🕒 Hours</h4>
-                        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                        <p>Saturday & Sunday: Closed</p>
-                        <p><em>24/7 phone access for members</em></p>
+                        <strong>Office Hours:</strong>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday & Sunday: Closed</p>
                     </div>
-
-                    <div class="contact-item">
-                        <h4>💳 Payment Options</h4>
-                        <img src="CareCredit.png" alt="CareCredit Accepted" style="max-width: 200px; margin-top: 10px;">
-                        <p style="margin-top: 10px;">We accept CareCredit for services</p>
+                    
+                    <div class="payment-options">
+                        <h4>We Accept:</h4>
+                        <img src="CareCredit.png" alt="CareCredit Accepted" class="payment-logo">
+                        <p>Flexible payment plans available through CareCredit</p>
                     </div>
                 </div>
 
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form action="#" method="POST">
-                        <input type="text" name="name" placeholder="Your Name *" required>
-                        <input type="email" name="email" placeholder="Your Email *" required>
-                        <input type="tel" name="phone" placeholder="Your Phone Number">
-                        <select name="interest" required>
-                            <option value="">What are you interested in? *</option>
-                            <option value="dpc">Direct Primary Care Membership</option>
-                            <option value="corelift">CoreLift with Emsella</option>
-                            <option value="mental-health">Mental Health Services</option>
-                            <option value="weight-management">Weight Management</option>
-                            <option value="wellness-coaching">Wellness Coaching</option>
-                            <option value="ime">Independent Medical Exam</option>
-                            <option value="dot">DOT Physical</option>
-                            <option value="pain">Pain Management</option>
-                            <option value="other">General Inquiry</option>
-                        </select>
-                        <textarea name="message" rows="5" placeholder="Your Message *" required></textarea>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <input type="tel" id="phone" placeholder="Your Phone">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
@@ -640,30 +413,53 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="container">
-            <img src="Logo_New_GFM.webp" alt="Garcia Family Medicine Logo" class="footer-logo">
-            <h3>Garcia Family Medicine</h3>
-            <p>Treating the whole patient: Spirit, Body, and Soul</p>
-            <p>📞 (816) 525-8346 | ✉️ info@garciafamilymedicine.com</p>
-            <p>📍 Blue Springs, Missouri</p>
-            <p class="spanish">¡Hablamos Español!</p>
-            
-            <div class="footer-credits">
-                <p>&copy; 2024 Garcia Family Medicine. All rights reserved.</p>
-                <p>Website created with ❤️ by Gigi</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo_New_GFM.webp" alt="Garcia Family Medicine">
+                    <p>Treating the whole patient: Spirit, Body, and Soul</p>
+                    <p>Se Habla Español</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#team">Our Team</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📞 (816) 525-8346</p>
+                    <p>✉️ gigi@garciafamilymedicine.care</p>
+                    <p>📍 Blue Springs, MO 64014</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2019-2025 Garcia Family Medicine. All rights reserved.</p>
+                <p>In partnership with gigiSafeHOUSE nonprofit organization</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
-        ↑
-        <span>Top</span>
-    </button>
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">↑</button>
 
-    <!-- JavaScript -->
+    <!-- EXIT POPUP -->
+    <div id="exitPopup" class="exit-popup hidden">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePopup()">×</button>
+            <h2>Wait! Special Offer!</h2>
+            <p class="popup-highlight">Start Your Weight Management Journey</p>
+            <p class="popup-price">First Month Only $27</p>
+            <p>Don't miss this limited-time offer for our comprehensive medical weight management program.</p>
+            <a href="tel:+18165258346" class="popup-cta">Call Now: (816) 525-8346</a>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 </body>
 </html>
