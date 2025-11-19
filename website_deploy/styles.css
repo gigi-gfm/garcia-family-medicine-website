@@ -355,6 +355,53 @@ header nav a:hover {
     box-shadow: 0 5px 15px rgba(255, 85, 0, 0.4);
 }
 
+/* Dr. Tess Highlight Box */
+.dr-tess-highlight {
+    background: linear-gradient(135deg, rgba(0, 71, 171, 0.1) 0%, rgba(255, 85, 0, 0.05) 100%);
+    border-left: 4px solid #0047AB;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dr-tess-highlight h4 {
+    color: #0047AB;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.dr-tess-highlight p {
+    color: #333;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Testimony Box */
+.testimony-box {
+    background: linear-gradient(135deg, rgba(255, 85, 0, 0.1) 0%, rgba(0, 71, 171, 0.05) 100%);
+    border-left: 4px solid #FF5500;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.testimony-box h4 {
+    color: #FF5500;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.testimony-box p {
+    color: #333;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+
 /* Services Section */
 .services-section {
     padding: 4rem 0;
