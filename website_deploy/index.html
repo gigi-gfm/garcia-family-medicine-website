@@ -4,592 +4,666 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garcia Family Medicine | Direct Primary Care in Blue Springs, MO</title>
-    <meta name="description" content="Experience compassionate Direct Primary Care in Blue Springs, Missouri. Weight management, CoreLift treatments, and faith-based family medicine.">
+    
+    <!-- Primary Meta Tags -->
+    <title>Garcia Family Medicine - Direct Primary Care in Blue Springs, MO | $99/Month</title>
+    <meta name="description" content="Garcia Family Medicine offers affordable Direct Primary Care in Blue Springs, MO for just $99/month. Comprehensive healthcare treating Spirit, Body, and Soul. Now accepting new patients.">
+    <meta name="keywords" content="Direct Primary Care, Blue Springs MO, family medicine, affordable healthcare, $99 monthly membership, Dr. Tess Garcia, CoreLift, mental health, weight management">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container header-content">
-            <div class="logo-section">
-                <img src="GFM Logo.png" alt="Garcia Family Medicine Logo" class="logo">
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <img src="Logo_New_GFM.webp" alt="Garcia Family Medicine Logo" class="header-logo">
+                <div class="header-text">
+                    <h1>Garcia Family Medicine</h1>
+                    <p class="tagline">Treating the whole patient: Spirit, Body, and Soul</p>
+                    <a href="tel:+18165258346" class="phone-button">📞 (816) 525-8346</a>
+                </div>
             </div>
-            <nav class="nav-menu">
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#tesstalk">TessTalk</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
-            <div class="header-actions">
-                <a href="tel:+18167080884" class="phone-button breathing">
-                    <span class="phone-icon">📞</span> (816) 708-0884
-                </a>
-                <button class="language-toggle">Ver en Español</button>
-            </div>
         </div>
     </header>
 
-    <!-- HERO CAROUSEL -->
-    <section class="hero-carousel">
-        <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('Family.png');">
-            <div class="hero-content">
-                <h1 class="hero-title">Faith-Based Family Medicine</h1>
-                <p class="hero-subtitle">Treating the Whole Patient: Spirit, Body, and Soul</p>
-                <a href="#contact" class="cta-button">Schedule Your Visit</a>
+    <!-- Spanish Language Banner -->
+    <div class="spanish-banner">
+        <div class="banner-content">
+            <span class="banner-text">🌟 ¡Hablamos Español! Se Habla Español - Spanish-Speaking Services Available 🌟</span>
+        </div>
+    </div>
+
+    <!-- Hero Carousel -->
+    <section id="home" class="hero-carousel">
+        <div class="hero-slide active" style="background-image: url('CoreLift_Confidence_with_Emsella.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2>CoreLift Confidence with Emsella</h2>
+                <p>Revolutionary non-invasive treatment for pelvic floor strength</p>
             </div>
         </div>
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('Pain Mgmt.png');">
-            <div class="hero-content">
-                <h1 class="hero-title">CoreLift Pelvic Health</h1>
-                <p class="hero-subtitle">Revolutionary Non-Invasive Treatment</p>
-                <a href="#contact" class="cta-button">Learn More</a>
+        <div class="hero-slide" style="background-image: url('Dr_Tess_Emsella.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2>Meet Dr. Tess Garcia</h2>
+                <p>Compassionate care for you and your family</p>
             </div>
         </div>
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('Anxiety.png');">
-            <div class="hero-content">
-                <h1 class="hero-title">Direct Primary Care</h1>
-                <p class="hero-subtitle">Unlimited Access to Your Doctor</p>
-                <a href="#contact" class="cta-button">Join Our Practice</a>
+        <div class="hero-slide" style="background-image: url('gigi-wellness.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2>Wellness Coaching</h2>
+                <p>Personalized guidance for your health journey</p>
             </div>
         </div>
-        <button class="carousel-button carousel-button-left" aria-label="Previous slide">‹</button>
-        <button class="carousel-button carousel-button-right" aria-label="Next slide">›</button>
-        <div class="carousel-indicators">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+        
+        <button class="carousel-button carousel-button-left" onclick="changeSlide(-1)">‹</button>
+        <button class="carousel-button carousel-button-right" onclick="changeSlide(1)">›</button>
+        
+        <div class="carousel-nav">
+            <button class="dot active" onclick="currentSlide(0)"></button>
+            <button class="dot" onclick="currentSlide(1)"></button>
+            <button class="dot" onclick="currentSlide(2)"></button>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <h2 class="section-title">Welcome to Garcia Family Medicine</h2>
+            <p class="lead-text">
+                At Garcia Family Medicine, we believe in treating the whole person—Spirit, Body, and Soul. 
+                Our Direct Primary Care model offers affordable, accessible healthcare without the hassle of insurance billing.
+            </p>
             
-            <!-- DR. TESS WELCOME VIDEO -->
-            <div class="welcome-video-container">
-                <iframe width="100%" height="500" 
-                        src="https://www.youtube.com/embed/Nu6kxJXanfc" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
+            <div class="mission-box">
+                <h3>Our Mission</h3>
+                <p>
+                    We are dedicated to providing comprehensive, compassionate healthcare to individuals and families 
+                    in Blue Springs, Missouri and the surrounding communities. Our practice focuses on building lasting 
+                    relationships with our patients, ensuring personalized care that addresses your unique health needs.
+                </p>
             </div>
 
-            <div class="about-content">
-                <p class="lead-text">At Garcia Family Medicine, we believe in treating the whole person—Spirit, Body, and Soul. Our Direct Primary Care model means you get unlimited access to compassionate, personalized healthcare without the hassle of insurance billing.</p>
-                
-                <div class="values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">🙏</span>
-                        <h3>Faith-Based Care</h3>
-                        <p>We integrate spiritual wellness into our medical practice</p>
+            <div class="mission-box">
+                <h3>Why Choose Direct Primary Care?</h3>
+                <p>
+                    For just $99/month, you get unlimited access to primary care services—no co-pays, no surprise bills, 
+                    no insurance headaches. We spend more time with you because we work for you, not insurance companies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <p class="section-subtitle">Dedicated professionals committed to your health and wellness</p>
+            
+            <div class="team-grid">
+                <!-- Dr. Tess Garcia -->
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="Dr_Tess_Emsella.png" alt="Dr. Tess Garcia">
                     </div>
-                    <div class="value-card">
-                        <span class="value-icon">💙</span>
-                        <h3>Compassionate</h3>
-                        <p>Every patient is treated like family</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">⏰</span>
-                        <h3>Accessible</h3>
-                        <p>Same-day appointments and 24/7 text access</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🌟</span>
-                        <h3>Holistic</h3>
-                        <p>Treating root causes, not just symptoms</p>
+                    <div class="team-info">
+                        <h3>Dr. Tess Garcia, DO</h3>
+                        <p class="team-title">Family Medicine Physician</p>
+                        <p class="team-bio">
+                            Dr. Tess Garcia is a board-certified family medicine physician passionate about providing 
+                            whole-person care to patients of all ages.
+                        </p>
+                        <div class="team-bio-full hidden">
+                            <p>
+                                With years of experience in both traditional and Direct Primary Care settings, 
+                                Dr. Garcia founded Garcia Family Medicine to offer a better healthcare experience—one 
+                                where patients are treated as individuals, not numbers. She specializes in preventive care, 
+                                chronic disease management, and helping patients achieve their wellness goals.
+                            </p>
+                            <p>
+                                Dr. Garcia is fluent in Spanish and deeply committed to serving the diverse community 
+                                of Blue Springs and surrounding areas.
+                            </p>
+                        </div>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
                     </div>
                 </div>
-            </div>
 
-            <!-- TEAM SECTION -->
-            <div class="team-section">
-                <h3 class="subsection-title">Meet Our Team</h3>
-                <div class="team-grid">
-                    <!-- DR. TESS -->
-                    <div class="team-card">
-                        <img src="Dr Tess Vest.png" alt="Dr. Tess Garcia" class="team-photo">
-                        <h4>Dr. Tess Garcia</h4>
-                        <p class="team-role">Family Medicine Physician</p>
-                        <div class="team-bio-short">
-                            <p>Board-certified family physician dedicated to compassionate, faith-based care. Specializing in weight management, CoreLift treatments, and Direct Primary Care.</p>
-                        </div>
-                        <div class="team-bio-full hidden">
-                            <p>Dr. Tess Garcia is a board-certified family medicine physician with a passion for treating the whole person—Spirit, Body, and Soul. With years of experience in family medicine, she founded Garcia Family Medicine to provide personalized, accessible healthcare through the Direct Primary Care model.</p>
-                            <p>Dr. Garcia specializes in medical weight management, CoreLift pelvic health treatments, and comprehensive family care. She is fluent in Spanish and committed to serving diverse communities with compassion and excellence.</p>
-                            <p><strong>Education:</strong> Medical Degree from [Medical School], Residency in Family Medicine</p>
-                            <p><strong>Special Interests:</strong> Weight Management, Pelvic Health, Faith-Based Medicine, Preventive Care</p>
-                        </div>
-                        <button class="read-more-toggle">Read More</button>
+                <!-- Gigi - Practice Manager & Wellness Coach -->
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="Gigi_Orange.png" alt="Gigi - Practice Manager">
                     </div>
-
-                    <!-- GIGI -->
-                    <div class="team-card">
-                        <img src="Gigi Left.png" alt="Gigi - Practice Manager" class="team-photo">
-                        <h4>Gigi</h4>
-                        <p class="team-role">Practice Manager & Wellness Coach</p>
-                        <div class="team-bio-short">
-                            <p>Passionate advocate for removing financial barriers to healthcare. Founder of gigiSafeHOUSE nonprofit, dedicated to combating obesity and improving community health.</p>
-                        </div>
+                    <div class="team-info">
+                        <h3>Gigi</h3>
+                        <p class="team-title">Practice Manager & Wellness Coach</p>
+                        <p class="team-bio">
+                            Gigi brings warmth, compassion, and extensive healthcare experience to Garcia Family Medicine, 
+                            ensuring every patient feels welcomed and cared for.
+                        </p>
                         <div class="team-bio-full hidden">
-                            <p>As Practice Manager and Wellness Coach at Garcia Family Medicine, Gigi brings a unique combination of administrative excellence and heartfelt dedication to patient care. She is the founder of gigiSafeHOUSE, a 501(c)(3) nonprofit organization focused on removing financial barriers to healthcare access and combating obesity in families and communities.</p>
-                            <p>Gigi's personal journey of healing led to a sacred covenant in 2010 to dedicate her life to serving others with compassion "no matter the outcome." She works tirelessly to ensure every patient receives the care they need, regardless of their financial situation.</p>
-                            <p><strong>Mission:</strong> Removing barriers to healthcare access and combating obesity with compassion</p>
-                            <p><strong>Special Focus:</strong> Weight management support, community outreach, patient advocacy</p>
+                            <p>
+                                As Practice Manager, Gigi oversees daily operations and patient experience. As a Wellness Coach, 
+                                she provides personalized guidance for weight management, lifestyle changes, and overall wellness goals.
+                            </p>
+                            <p>
+                                Gigi is also the founder of gigiSafeHOUSE, a nonprofit dedicated to removing financial barriers 
+                                to healthcare and combating obesity in families and communities. Her mission-driven approach brings 
+                                heart and soul to everything she does.
+                            </p>
                         </div>
-                        <button class="read-more-toggle">Read More</button>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
+    <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
-            <p class="section-intro">Comprehensive healthcare designed around your needs</p>
-
-            <div class="services-grid">
-                <!-- DIRECT PRIMARY CARE -->
-                <div class="service-box">
-                    <span class="service-icon">💙</span>
-                    <h3>Direct Primary Care</h3>
-                    <div class="service-short">
-                        <p>Unlimited access to your doctor for one simple monthly fee. No insurance hassles, no surprise bills—just quality healthcare when you need it.</p>
-                    </div>
-                    <div class="service-full hidden">
-                        <p><strong>What is Direct Primary Care?</strong></p>
-                        <p>Direct Primary Care (DPC) is a revolutionary healthcare model where you pay a simple monthly membership fee for unlimited access to your doctor. This means:</p>
-                        <ul>
-                            <li>✅ Same-day or next-day appointments</li>
-                            <li>✅ Longer appointment times (30-60 minutes)</li>
-                            <li>✅ Direct access to Dr. Garcia via text, email, or phone</li>
-                            <li>✅ No copays, no deductibles, no surprise bills</li>
-                            <li>✅ Affordable lab tests and medications at wholesale prices</li>
-                            <li>✅ Preventive care and chronic disease management</li>
-                        </ul>
-                        
-                        <!-- DPC VIDEO -->
-                        <div class="service-video">
-                            <iframe width="100%" height="400" 
-                                    src="https://www.youtube.com/embed/48yHIwnzGZM" 
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <p><strong>Monthly Membership Rates:</strong></p>
-                        <ul>
-                            <li>Adults (19-64): $85/month</li>
-                            <li>Seniors (65+): $75/month</li>
-                            <li>Children (0-18): $50/month</li>
-                            <li>Family discounts available!</li>
-                        </ul>
-                        <p>Medicare, Medicaid, and all insurance accepted in addition to membership for services not covered by DPC.</p>
-                    </div>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-
-                <!-- MEDICAL WEIGHT MANAGEMENT -->
-                <div class="service-box">
-                    <span class="service-icon">⚖️</span>
-                    <h3>Medical Weight Management</h3>
-                    <div class="service-short">
-                        <p>Comprehensive, medically-supervised weight loss programs tailored to your unique needs. We treat obesity as a medical condition, not a moral failing.</p>
-                    </div>
-                    <div class="service-full hidden">
-                        <p><strong>Our Approach to Weight Management</strong></p>
-                        <p>At Garcia Family Medicine, we understand that weight loss is not just about willpower—it's about addressing the complex medical, metabolic, and emotional factors that contribute to obesity. Our comprehensive program includes:</p>
-                        
-                        <!-- WEIGHT MANAGEMENT VIDEO -->
-                        <div class="service-video">
-                            <iframe width="100%" height="400" 
-                                    src="https://www.youtube.com/embed/4e52AQY8-m4" 
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <p><strong>Our Program Includes:</strong></p>
-                        <ul>
-                            <li>✅ Comprehensive metabolic testing</li>
-                            <li>✅ Personalized nutrition planning</li>
-                            <li>✅ FDA-approved weight loss medications (including GLP-1s like Wegovy, Ozempic, Mounjaro)</li>
-                            <li>✅ Regular monitoring and support</li>
-                            <li>✅ Behavioral counseling</li>
-                            <li>✅ Exercise guidance</li>
-                            <li>✅ Treatment of underlying conditions (thyroid, PCOS, insulin resistance)</li>
-                        </ul>
-                        <p><strong>We Accept:</strong> Most insurance plans, Medicare, Medicaid, and offer affordable self-pay options.</p>
-                        <p><em>"We don't shame. We heal."</em> - Dr. Tess Garcia</p>
-                    </div>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-
-                <!-- CORELIFT PELVIC HEALTH -->
-                <div class="service-box">
-                    <span class="service-icon">🌸</span>
-                    <h3>CoreLift Pelvic Health</h3>
-                    <div class="service-short">
-                        <p>Revolutionary non-invasive treatment for urinary incontinence, pelvic pain, and intimate wellness. FDA-cleared technology that transforms lives.</p>
-                    </div>
-                    <div class="service-full hidden">
-                        <p><strong>What is CoreLift?</strong></p>
-                        <p>CoreLift is an FDA-cleared, non-invasive electromagnetic technology that strengthens your pelvic floor muscles without surgery, medication, or downtime. It's like doing 11,000 Kegel exercises in just 28 minutes!</p>
-                        
-                        <!-- CORELIFT EDUCATION VIDEO -->
-                        <div class="service-video">
-                            <iframe width="100%" height="400" 
-                                    src="https://www.youtube.com/embed/3pc60PTMGH8" 
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <p><strong>CoreLift Treats:</strong></p>
-                        <ul>
-                            <li>✅ Urinary incontinence (stress, urge, mixed)</li>
-                            <li>✅ Pelvic organ prolapse</li>
-                            <li>✅ Pelvic pain</li>
-                            <li>✅ Post-pregnancy pelvic floor weakness</li>
-                            <li>✅ Intimate wellness concerns</li>
-                            <li>✅ Erectile dysfunction (for men)</li>
-                        </ul>
-
-                        <!-- CORELIFT DEMO VIDEO -->
-                        <div class="service-video">
-                            <iframe width="100%" height="400" 
-                                    src="https://www.youtube.com/embed/7LUSfr1ov-0" 
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <p><strong>Treatment Details:</strong></p>
-                        <ul>
-                            <li>⏰ 28-minute sessions</li>
-                            <li>📅 Typically 6-8 treatments over 3-4 weeks</li>
-                            <li>👗 Stay fully clothed</li>
-                            <li>💆 Comfortable, relaxing experience</li>
-                            <li>🏃 No downtime—return to normal activities immediately</li>
-                        </ul>
-                        <p><strong>Investment:</strong> Package pricing available. Insurance may cover for certain medical conditions. Call for consultation!</p>
-                    </div>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-
-                <!-- IME -->
-                <div class="service-box">
-                    <span class="service-icon">📋</span>
-                    <h3>Independent Medical Evaluations</h3>
-                    <div class="service-short">
-                        <p>Comprehensive medical evaluations for legal, insurance, and disability cases. Thorough, objective assessments with detailed documentation.</p>
-                    </div>
-                    <div class="service-full hidden">
-                        <p><strong>What is an Independent Medical Evaluation?</strong></p>
-                        <p>An Independent Medical Evaluation (IME) is a comprehensive medical assessment performed by an impartial physician to evaluate your medical condition, treatment needs, disability status, or work capacity. These evaluations are often required for:</p>
-                        <ul>
-                            <li>✅ Workers' compensation claims</li>
-                            <li>✅ Disability determinations</li>
-                            <li>✅ Personal injury cases</li>
-                            <li>✅ Insurance claims</li>
-                            <li>✅ Return-to-work assessments</li>
-                            <li>✅ Second opinions</li>
-                        </ul>
-                        <p><strong>What to Expect:</strong></p>
-                        <ul>
-                            <li>📋 Detailed review of your medical records</li>
-                            <li>🩺 Comprehensive physical examination</li>
-                            <li>📝 Thorough documentation and detailed report</li>
-                            <li>⚖️ Objective, unbiased assessment</li>
-                            <li>📞 Professional communication with referring parties</li>
-                        </ul>
-                        <p>Dr. Garcia provides thorough, well-documented IME reports within industry-standard timeframes. We understand the importance of these evaluations and treat each case with the utmost professionalism.</p>
-                    </div>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-
-                <!-- FAMILY MEDICINE -->
-                <div class="service-box">
-                    <span class="service-icon">👨‍👩‍👧‍👦</span>
-                    <h3>Comprehensive Family Medicine</h3>
-                    <div class="service-short">
-                        <p>Complete healthcare for your entire family—from newborns to seniors. Preventive care, chronic disease management, and acute illness treatment.</p>
-                    </div>
-                    <div class="service-full hidden">
-                        <p><strong>Family Medicine Services Include:</strong></p>
-                        <ul>
-                            <li>✅ Annual wellness exams and physicals</li>
-                            <li>✅ Well-child visits and immunizations</li>
-                            <li>✅ Sports physicals</li>
-                            <li>✅ Chronic disease management (diabetes, hypertension, asthma, etc.)</li>
-                            <li>✅ Acute illness care (colds, flu, infections)</li>
-                            <li>✅ Minor procedures (sutures, wound care)</li>
-                            <li>✅ Women's health (contraception, Pap smears, menopause management)</li>
-                            <li>✅ Men's health (testosterone therapy, prostate health)</li>
-                            <li>✅ Mental health support (depression, anxiety screening and treatment)</li>
-                            <li>✅ Preventive screenings</li>
-                        </ul>
-                        <p><strong>We See Patients of All Ages:</strong></p>
-                        <ul>
-                            <li>👶 Infants and children</li>
-                            <li>👦 Adolescents and teens</li>
-                            <li>👨 Adults</li>
-                            <li>👵 Seniors</li>
-                        </ul>
-                        <p>We also provide care in Spanish and welcome patients from all backgrounds and faith traditions.</p>
-                    </div>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-
-                <!-- ADDITIONAL SERVICES -->
-                <div class="service-box">
-                    <span class="service-icon">🩺</span>
-                    <h3>Additional Services</h3>
-                    <div class="service-short">
-                        <p>Lab testing, joint injections, TB testing, DOT physicals, and more—all available in-office for your convenience.</p>
-                    </div>
-                    <div class="service-full hidden">
-                        <p><strong>In-Office Services:</strong></p>
-                        <ul>
-                            <li>✅ Laboratory testing (blood work, urinalysis, etc.)</li>
-                            <li>✅ Point-of-care testing (strep, flu, COVID, pregnancy)</li>
-                            <li>✅ Joint injections for pain relief</li>
-                            <li>✅ Trigger point injections</li>
-                            <li>✅ TB testing</li>
-                            <li>✅ DOT physicals for commercial drivers</li>
-                            <li>✅ Immigration physicals</li>
-                            <li>✅ Travel medicine consultations</li>
-                            <li>✅ Vitamin B12 injections</li>
-                            <li>✅ Minor laceration repair</li>
-                        </ul>
-                        <p><strong>Wholesale Pricing on Labs & Medications:</strong></p>
-                        <p>As a Direct Primary Care practice, we offer significantly discounted pricing on lab tests and medications—often 80-90% less than what you'd pay through insurance!</p>
-                    </div>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESSTALK SECTION -->
-    <section id="tesstalk" class="tesstalk-section">
-        <div class="container">
-            <h2 class="section-title">TessTalk: Real Conversations About Health</h2>
-            <p class="section-intro">Dr. Tess addresses the tough topics with compassion and truth</p>
+            <p class="section-subtitle">Comprehensive care for your whole health</p>
             
-            <div class="tesstalk-content">
-                <div class="tesstalk-featured">
-                    <h3>Fighting Fat Shame: Why Weight Isn't a Moral Issue</h3>
-                    <div class="tesstalk-video">
-                        <iframe width="100%" height="500" 
-                                src="https://www.youtube.com/embed/50nIdYuTyRE" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
+            <div class="services-grid">
+                
+                <!-- Direct Primary Care -->
+                <div class="service-box">
+                    <div class="service-image">
+                        <img src="elderly-care.png" alt="Direct Primary Care">
                     </div>
-                    <p class="tesstalk-description">In this powerful TessTalk episode, Dr. Tess addresses the harmful stigma surrounding weight and obesity. She explains why weight is a medical issue—not a character flaw—and how shame prevents people from seeking the help they need. If you've ever felt judged for your weight, this message is for you.</p>
+                    <div class="service-content">
+                        <h3>Direct Primary Care - $99/Month</h3>
+                        <div class="pricing-badge">$99/Month Membership</div>
+                        <p class="service-short">
+                            Unlimited access to comprehensive primary care without insurance hassles. Same-day or next-day appointments, 
+                            longer visit times, and 24/7 access to your doctor.
+                        </p>
+                        <div class="service-full hidden">
+                            <p><strong>What's Included:</strong></p>
+                            <ul class="service-benefits">
+                                <li>Unlimited office visits (no co-pays!)</li>
+                                <li>Same-day or next-day appointments</li>
+                                <li>Extended visit times (30-60 minutes)</li>
+                                <li>24/7 phone, text, and email access</li>
+                                <li>Basic lab work and testing at wholesale prices</li>
+                                <li>Chronic disease management</li>
+                                <li>Preventive care and wellness visits</li>
+                                <li>Minor procedures in-office</li>
+                            </ul>
+                            <p>
+                                No surprise bills, no dealing with insurance for primary care. We work for YOU, not insurance companies.
+                            </p>
+                        </div>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
+                    </div>
                 </div>
 
-                <div class="tesstalk-cta">
-                    <h4>Ready to Experience Healthcare Without Judgment?</h4>
-                    <p>At Garcia Family Medicine, you'll never be shamed for your weight, your struggles, or your story. We're here to help you heal—body, mind, and spirit.</p>
-                    <a href="#contact" class="cta-button">Schedule Your Appointment</a>
+                <!-- CoreLift Confidence with Emsella -->
+                <div class="service-box">
+                    <div class="service-image">
+                        <img src="CoreLift_Confidence_with_Emsella.png" alt="CoreLift Confidence with Emsella">
+                    </div>
+                    <div class="service-content">
+                        <h3>CoreLift Confidence with Emsella</h3>
+                        <p class="service-short">
+                            Revolutionary FDA-approved treatment for pelvic floor strengthening and urinary incontinence. 
+                            Non-invasive, no downtime, and proven results.
+                        </p>
+                        <div class="service-full hidden">
+                            <p><strong>What is Emsella?</strong></p>
+                            <p>
+                                Emsella is a breakthrough treatment that uses electromagnetic technology to deliver thousands 
+                                of supramaximal pelvic floor muscle contractions in a single session—equivalent to 11,000 Kegel exercises!
+                            </p>
+                            <p><strong>Benefits:</strong></p>
+                            <ul class="service-benefits">
+                                <li>Treats urinary incontinence</li>
+                                <li>Strengthens pelvic floor muscles</li>
+                                <li>Improves intimate wellness</li>
+                                <li>Non-invasive—remain fully clothed</li>
+                                <li>No downtime—return to activities immediately</li>
+                                <li>28-minute comfortable sessions</li>
+                                <li>Visible results in as few as 6 sessions</li>
+                            </ul>
+                            <p>
+                                Regain your confidence and improve your quality of life. Perfect for postpartum women, 
+                                those experiencing menopause, or anyone struggling with bladder control.
+                            </p>
+                        </div>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
+                    </div>
                 </div>
+
+                <!-- Mental Health Services -->
+                <div class="service-box">
+                    <div class="service-image">
+                        <img src="mental-health.png" alt="Mental Health Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Mental Health Services</h3>
+                        <p class="service-short">
+                            Compassionate mental health care integrated with your primary care. We treat anxiety, depression, 
+                            stress management, and more—because mental health IS health.
+                        </p>
+                        <div class="service-full hidden">
+                            <p><strong>Comprehensive Mental Wellness Support:</strong></p>
+                            <ul class="service-benefits">
+                                <li>Depression and anxiety treatment</li>
+                                <li>Stress and burnout management</li>
+                                <li>Medication management</li>
+                                <li>Counseling and therapy referrals</li>
+                                <li>Holistic approach combining body and mind</li>
+                                <li>Confidential, judgment-free care</li>
+                            </ul>
+                            <p>
+                                At Garcia Family Medicine, we understand that mental and physical health are deeply connected. 
+                                We provide integrated care that addresses both, ensuring you receive comprehensive support for your wellbeing.
+                            </p>
+                        </div>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Weight Management -->
+                <div class="service-box">
+                    <div class="service-image">
+                        <img src="weight-management.png" alt="Weight Management Program">
+                    </div>
+                    <div class="service-content">
+                        <h3>Weight Management & Wellness</h3>
+                        <p class="service-short">
+                            Personalized weight management programs combining medical supervision, nutrition guidance, 
+                            and wellness coaching. Sustainable results, not quick fixes.
+                        </p>
+                        <div class="service-full hidden">
+                            <p><strong>Our Approach:</strong></p>
+                            <p>
+                                We believe in treating the root causes of weight challenges—not just symptoms. Our comprehensive 
+                                program addresses metabolism, hormones, nutrition, activity, sleep, and stress.
+                            </p>
+                            <p><strong>What We Offer:</strong></p>
+                            <ul class="service-benefits">
+                                <li>Medical evaluation and metabolic testing</li>
+                                <li>Personalized nutrition plans</li>
+                                <li>Exercise and movement guidance</li>
+                                <li>Prescription weight loss medications when appropriate</li>
+                                <li>One-on-one wellness coaching with Gigi</li>
+                                <li>Ongoing support and accountability</li>
+                                <li>Body composition monitoring</li>
+                            </ul>
+                            <p>
+                                Our goal isn't just weight loss—it's helping you build a healthier, more vibrant life.
+                            </p>
+                        </div>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Wellness Coaching -->
+                <div class="service-box">
+                    <div class="service-image">
+                        <img src="gigi-wellness.png" alt="Wellness Coaching with Gigi">
+                    </div>
+                    <div class="service-content">
+                        <h3>Wellness Coaching</h3>
+                        <p class="service-short">
+                            One-on-one wellness coaching with Gigi to help you achieve your health goals. 
+                            Personalized support for lifestyle changes, habit formation, and lasting wellness.
+                        </p>
+                        <div class="service-full hidden">
+                            <p><strong>What is Wellness Coaching?</strong></p>
+                            <p>
+                                Wellness coaching is a partnership where Gigi helps you identify your health goals and 
+                                creates a personalized action plan to achieve them. It's not about quick fixes—it's about 
+                                sustainable change.
+                            </p>
+                            <p><strong>Areas of Focus:</strong></p>
+                            <ul class="service-benefits">
+                                <li>Nutrition and healthy eating habits</li>
+                                <li>Physical activity and movement</li>
+                                <li>Stress management techniques</li>
+                                <li>Sleep improvement strategies</li>
+                                <li>Behavior change and habit formation</li>
+                                <li>Accountability and motivation</li>
+                                <li>Overcoming obstacles to wellness</li>
+                            </ul>
+                            <p>
+                                Gigi brings compassion, lived experience, and a mission-driven approach to every coaching session. 
+                                She meets you where you are and helps you move forward at your own pace.
+                            </p>
+                        </div>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Independent Medical Exams -->
+                <div class="service-box">
+                    <div class="service-image">
+                        <div class="video-placeholder">
+                            <div class="video-icon">🩺</div>
+                            <p>Independent Medical Examinations</p>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Independent Medical Exams (IME)</h3>
+                        <p class="service-short">
+                            Objective, thorough medical evaluations for legal, insurance, or disability cases. 
+                            Professional assessments you can trust.
+                        </p>
+                        <div class="service-full hidden">
+                            <p><strong>What is an IME?</strong></p>
+                            <p>
+                                An Independent Medical Exam is an objective medical evaluation performed by a qualified physician 
+                                to assess an individual's health status, functional capacity, or disability level.
+                            </p>
+                            <p><strong>Common Uses:</strong></p>
+                            <ul class="service-benefits">
+                                <li>Workers' compensation claims</li>
+                                <li>Disability determinations</li>
+                                <li>Personal injury cases</li>
+                                <li>Insurance claim evaluations</li>
+                                <li>Return-to-work assessments</li>
+                            </ul>
+                            <p>
+                                Dr. Garcia provides thorough, unbiased evaluations with detailed written reports. 
+                                Professional, respectful, and timely service.
+                            </p>
+                        </div>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- DOT Physicals -->
+                <div class="service-box">
+                    <div class="service-image">
+                        <div class="video-placeholder">
+                            <div class="video-icon">🚛</div>
+                            <p>DOT Physical Examinations</p>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>DOT Physicals</h3>
+                        <p class="service-short">
+                            Department of Transportation physical exams for commercial drivers. 
+                            Quick, thorough, and certified examinations to keep you on the road.
+                        </p>
+                        <div class="service-full hidden">
+                            <p><strong>What is a DOT Physical?</strong></p>
+                            <p>
+                                A DOT physical is a medical examination required by the Federal Motor Carrier Safety Administration (FMCSA) 
+                                for commercial motor vehicle drivers.
+                            </p>
+                            <p><strong>What to Expect:</strong></p>
+                            <ul class="service-benefits">
+                                <li>Vision and hearing tests</li>
+                                <li>Blood pressure and pulse check</li>
+                                <li>Urinalysis</li>
+                                <li>Physical examination</li>
+                                <li>Review of medical history</li>
+                                <li>Medical Examiner's Certificate issued on-site</li>
+                            </ul>
+                            <p>
+                                Same-day appointments available. Walk-ins welcome. Get back on the road quickly!
+                            </p>
+                        </div>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Pain Management -->
+                <div class="service-box">
+                    <div class="service-image">
+                        <img src="pain-management.png" alt="Pain Management Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Pain Management</h3>
+                        <p class="service-short">
+                            Comprehensive pain management focusing on improving function and quality of life. 
+                            We treat acute and chronic pain with a multimodal approach.
+                        </p>
+                        <div class="service-full hidden">
+                            <p><strong>Our Philosophy:</strong></p>
+                            <p>
+                                Pain management isn't just about masking symptoms—it's about identifying causes and 
+                                restoring function. We use a comprehensive approach combining medications, therapies, 
+                                and lifestyle modifications.
+                            </p>
+                            <p><strong>Conditions We Treat:</strong></p>
+                            <ul class="service-benefits">
+                                <li>Chronic back and neck pain</li>
+                                <li>Arthritis and joint pain</li>
+                                <li>Headaches and migraines</li>
+                                <li>Nerve pain (neuropathy)</li>
+                                <li>Post-surgical pain</li>
+                                <li>Sports injuries</li>
+                                <li>Fibromyalgia</li>
+                            </ul>
+                            <p><strong>Treatment Options:</strong></p>
+                            <ul class="service-benefits">
+                                <li>Medication management</li>
+                                <li>Injection therapies</li>
+                                <li>Physical therapy referrals</li>
+                                <li>Lifestyle and ergonomic counseling</li>
+                                <li>Alternative therapies</li>
+                            </ul>
+                            <p>
+                                Our goal is to help you live a fuller, more active life—not just manage pain, but overcome it.
+                            </p>
+                        </div>
+                        <button class="read-more-toggle" onclick="toggleReadMore(this)">Read More</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
+    <!-- Video Testimonials -->
     <section id="testimonials" class="testimonials-section">
         <div class="container">
             <h2 class="section-title">What Our Patients Say</h2>
-            <p class="section-intro">Real stories from real people whose lives have been transformed</p>
-
+            <p class="section-subtitle">Real stories from real patients</p>
+            
             <div class="testimonials-grid">
-                <!-- VIDEO TESTIMONIAL 1 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-video">
-                        <iframe width="100%" height="315" 
-                                src="https://www.youtube.com/embed/m0S31koeG-A" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
+                    <div class="video-placeholder">
+                        <div class="video-icon">▶️</div>
+                        <p>Video Testimonial Coming Soon</p>
                     </div>
-                    <p class="testimonial-text">"Garcia Family Medicine changed my life. The CoreLift treatment gave me back my confidence and freedom."</p>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-author">Patient Video Testimonial #1</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="video-placeholder">
+                        <div class="video-icon">▶️</div>
+                        <p>Video Testimonial Coming Soon</p>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-author">Patient Video Testimonial #2</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="video-placeholder">
+                        <div class="video-icon">▶️</div>
+                        <p>Video Testimonial Coming Soon</p>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-author">Patient Video Testimonial #3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Written Testimonials -->
+    <section class="written-testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Patient Reviews</h2>
+            
+            <div class="testimonials-grid-written">
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Dr. Garcia and Gigi truly care about their patients. The Direct Primary Care model has been 
+                        life-changing for my family—no more waiting weeks for appointments or surprise bills!"
+                    </p>
                     <p class="testimonial-author">— Sarah M.</p>
                 </div>
 
-                <!-- VIDEO TESTIMONIAL 2 - ERNIE WEIGHT MANAGEMENT -->
-                <div class="testimonial-card">
-                    <div class="testimonial-video">
-                        <iframe width="100%" height="315" 
-                                src="https://www.youtube.com/embed/AKuQvGTtmNU" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                    <p class="testimonial-text">"With Dr. Garcia's weight management program, I finally found a doctor who understands that obesity is a medical condition, not a personal failure."</p>
-                    <p class="testimonial-author">— Ernie</p>
+                <div class="testimonial-card-written">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The Emsella treatment has given me my confidence back. I can't thank Dr. Garcia enough. 
+                        The results were better than I ever expected!"
+                    </p>
+                    <p class="testimonial-author">— Jennifer L.</p>
                 </div>
 
-                <!-- WRITTEN TESTIMONIAL 1 -->
                 <div class="testimonial-card-written">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Dr. Garcia is the first doctor who has truly listened to me and treated me like a whole person—not just a number. The Direct Primary Care model means I can text her anytime, and she actually responds! This is healthcare the way it should be."</p>
-                    <p class="testimonial-author">— Maria G., Blue Springs</p>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Gigi's wellness coaching helped me finally lose the weight I'd been struggling with for years. 
+                        She's supportive, knowledgeable, and genuinely cares about my success."
+                    </p>
+                    <p class="testimonial-author">— Michael R.</p>
                 </div>
 
-                <!-- WRITTEN TESTIMONIAL 2 -->
                 <div class="testimonial-card-written">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"I was skeptical about CoreLift, but after just 6 treatments, I no longer leak when I laugh or exercise. It's been life-changing! And the best part—no surgery, no downtime."</p>
-                    <p class="testimonial-author">— Jennifer L., Lee's Summit</p>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "This practice treats me like family. Dr. Garcia takes time to really listen and explain everything. 
+                        I never feel rushed. Best healthcare experience I've ever had!"
+                    </p>
+                    <p class="testimonial-author">— Maria G.</p>
                 </div>
 
-                <!-- WRITTEN TESTIMONIAL 3 -->
                 <div class="testimonial-card-written">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"As a veteran, I appreciate the respect and care I receive here. Dr. Garcia and Gigi treat me like family. The faith-based approach feels genuine, not forced. Highly recommend!"</p>
-                    <p class="testimonial-author">— Robert T., Kansas City</p>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The fact that they speak Spanish made all the difference for my parents. 
+                        They finally have a doctor they can communicate with comfortably. ¡Gracias!"
+                    </p>
+                    <p class="testimonial-author">— Carlos P.</p>
                 </div>
 
-                <!-- WRITTEN TESTIMONIAL 4 -->
                 <div class="testimonial-card-written">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"I've struggled with my weight my entire life. Dr. Garcia doesn't shame me—she helps me. With her weight management program and GLP-1 medication, I've lost 45 pounds and feel amazing."</p>
-                    <p class="testimonial-author">— David M., Blue Springs</p>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Affordable, accessible, and compassionate care. Garcia Family Medicine is what healthcare should be. 
+                        I'm so grateful I found them!"
+                    </p>
+                    <p class="testimonial-author">— Amanda K.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Get in Touch</h2>
-            <p class="section-intro">We'd love to hear from you! Schedule your appointment today.</p>
-
+            <p class="section-subtitle">We're here to answer your questions</p>
+            
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <span class="contact-icon">📍</span>
-                        <div>
-                            <h4>Visit Us</h4>
-                            <p>Garcia Family Medicine<br>
-                            Blue Springs, Missouri 64014</p>
-                        </div>
+                        <h4>📍 Location</h4>
+                        <p>Blue Springs, Missouri</p>
                     </div>
+
                     <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <div>
-                            <h4>Call Us</h4>
-                            <p><a href="tel:+18167080884">(816) 708-0884</a></p>
-                        </div>
+                        <h4>📞 Phone</h4>
+                        <p><a href="tel:+18165258346">(816) 525-8346</a></p>
                     </div>
+
                     <div class="contact-item">
-                        <span class="contact-icon">✉️</span>
-                        <div>
-                            <h4>Email Us</h4>
-                            <p><a href="mailto:contact@garciafamilymedicine.com">contact@garciafamilymedicine.com</a></p>
-                        </div>
+                        <h4>✉️ Email</h4>
+                        <p><a href="mailto:info@garciafamilymedicine.com">info@garciafamilymedicine.com</a></p>
                     </div>
+
                     <div class="contact-item">
-                        <span class="contact-icon">⏰</span>
-                        <div>
-                            <h4>Office Hours</h4>
-                            <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
-                            Saturday - Sunday: Closed<br>
-                            <em>24/7 text access for DPC members</em></p>
-                        </div>
+                        <h4>🕒 Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                        <p>Saturday & Sunday: Closed</p>
+                        <p><em>24/7 phone access for members</em></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>💳 Payment Options</h4>
+                        <img src="CareCredit.png" alt="CareCredit Accepted" style="max-width: 200px; margin-top: 10px;">
+                        <p style="margin-top: 10px;">We accept CareCredit for services</p>
                     </div>
                 </div>
 
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="tel" placeholder="Your Phone Number" required>
-                    <select required>
-                        <option value="">Select a Service</option>
-                        <option value="dpc">Direct Primary Care Membership</option>
-                        <option value="weight">Weight Management Program</option>
-                        <option value="corelift">CoreLift Treatment</option>
-                        <option value="ime">Independent Medical Evaluation</option>
-                        <option value="family">Family Medicine Appointment</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <textarea placeholder="Your Message" rows="5"></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Your Name *" required>
+                        <input type="email" name="email" placeholder="Your Email *" required>
+                        <input type="tel" name="phone" placeholder="Your Phone Number">
+                        <select name="interest" required>
+                            <option value="">What are you interested in? *</option>
+                            <option value="dpc">Direct Primary Care Membership</option>
+                            <option value="corelift">CoreLift with Emsella</option>
+                            <option value="mental-health">Mental Health Services</option>
+                            <option value="weight-management">Weight Management</option>
+                            <option value="wellness-coaching">Wellness Coaching</option>
+                            <option value="ime">Independent Medical Exam</option>
+                            <option value="dot">DOT Physical</option>
+                            <option value="pain">Pain Management</option>
+                            <option value="other">General Inquiry</option>
+                        </select>
+                        <textarea name="message" rows="5" placeholder="Your Message *" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <img src="GFM Logo.png" alt="Garcia Family Medicine" class="footer-logo">
-                    <p>Treating the whole patient: Spirit, Body, and Soul</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <a href="#services">Services</a>
-                    <a href="#about">About</a>
-                    <a href="#tesstalk">TessTalk</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <a href="#services">Direct Primary Care</a>
-                    <a href="#services">Weight Management</a>
-                    <a href="#services">CoreLift Treatment</a>
-                    <a href="#services">Family Medicine</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <p>📞 <a href="tel:+18167080884">(816) 708-0884</a></p>
-                    <p>✉️ <a href="mailto:contact@garciafamilymedicine.com">contact@garciafamilymedicine.com</a></p>
-                    <p>📍 Blue Springs, MO 64014</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
+            <img src="Logo_New_GFM.webp" alt="Garcia Family Medicine Logo" class="footer-logo">
+            <h3>Garcia Family Medicine</h3>
+            <p>Treating the whole patient: Spirit, Body, and Soul</p>
+            <p>📞 (816) 525-8346 | ✉️ info@garciafamilymedicine.com</p>
+            <p>📍 Blue Springs, Missouri</p>
+            <p class="spanish">¡Hablamos Español!</p>
+            
+            <div class="footer-credits">
                 <p>&copy; 2024 Garcia Family Medicine. All rights reserved.</p>
-                <p>In partnership with <a href="https://gigisafehouse.org" target="_blank">gigiSafeHOUSE</a> nonprofit</p>
+                <p>Website created with ❤️ by Gigi</p>
             </div>
         </div>
     </footer>
 
-    <!-- EXIT POPUP -->
-    <div class="exit-popup hidden">
-        <div class="exit-popup-content">
-            <button class="exit-popup-close">&times;</button>
-            <h3>Wait! Before You Go...</h3>
-            <p>📞 Call us now for a FREE consultation!</p>
-            <p class="exit-highlight">Special offer: Mention this popup for 10% off CoreLift packages</p>
-            <div class="exit-buttons">
-                <a href="tel:+18167080884" class="exit-btn-primary">Call Now: (816) 708-0884</a>
-                <button class="exit-btn-secondary">I'll Look Around First</button>
-            </div>
-        </div>
-    </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        ↑
+        <span>Top</span>
+    </button>
 
-    <!-- BACK TO TOP BUTTON -->
-    <button class="back-to-top" aria-label="Back to top">↑</button>
-
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
