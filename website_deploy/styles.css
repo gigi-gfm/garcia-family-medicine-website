@@ -290,7 +290,7 @@ header nav a:hover {
     }
 }
 
-/* Colorful $27 Special Badge on Carousel */
+/* Colorful $99 Special Badge on Carousel */
 .special-badge-colorful {
     display: inline-block;
     background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF6B35 100%);
@@ -325,7 +325,7 @@ header nav a:hover {
     }
 }
 
-/* Colorful $27 Special Ribbon on Service Box */
+/* Colorful $99 Special Ribbon on Service Box */
 .special-ribbon-colorful {
     position: absolute;
     top: 20px;
