@@ -25,7 +25,7 @@ Garcia Family Medicine is a Direct Primary Care practice serving Blue Springs, J
 ## Contact Information
 
 - **Address:** 801 NW Saint Mary's Drive, Suite 209, Blue Springs, MO 64014
-- **Phone:** (816) 427-5320
+- **Phone:** (816) 330-7575
 - **Fax:** (888) 807-2718
 - **Email:** admin@garciafamilymedicine.care
 - **Website:** https://www.garciafamilymedicine.care
